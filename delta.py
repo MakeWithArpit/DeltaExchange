@@ -15,35 +15,6 @@ def generate_signature(secret, method, path, timestamp, body="", query_string=""
     message = method + timestamp + path + query_string + body
     return hmac.new(secret.encode(), message.encode(), hashlib.sha256).hexdigest()
 
-def place_market_order(product_id, side, size):
-
-    method = "POST"
-    path = "/v2/orders"
-    url = BASE_URL + path
-    timestamp = str(int(time.time()))
-
-    body_dict = {
-        "product_id": product_id,
-        "size": size,
-        "side": side,
-        "order_type": "market_order",
-    }
-
-    body = json.dumps(body_dict, separators=(",", ":"))
-
-    signature = generate_signature(API_SECRET, method, path, timestamp, body)
-
-    headers = {
-        "api-key": API_KEY,
-        "timestamp": timestamp,
-        "signature": signature,
-        "User-Agent": "python-3.10",
-        "Content-Type": "application/json",
-    }
-
-    response = requests.post(url, headers=headers, data=body)
-    print("Order Response:")
-    print(response.json())
 
 def get_product_id(symbol_name):
     url = BASE_URL + "/v2/products"
@@ -55,6 +26,7 @@ def get_product_id(symbol_name):
             return product["id"]
 
     return None
+
 
 def show_live_price(symbol_name):
 
@@ -72,78 +44,169 @@ def show_live_price(symbol_name):
 
         if data.get("type") == "v2/ticker":
             price = float(data["mark_price"])
-            print(f"Live Price: {price}")
+            print(f"Live Price: {price:.3f}")
 
     ws = websocket.WebSocketApp(WS_URL, on_message=on_message, on_open=on_open)
     ws.run_forever()
 
-def place_limit_with_stoploss(product_id, side, size, limit_price, stop_price):
+
+def place_entry_with_oco(product_id, side, size, limit_price, stop_price, target_price):
 
     method = "POST"
     path = "/v2/orders"
     url = BASE_URL + path
+
+    headers = {
+        "api-key": API_KEY,
+        "User-Agent": "python-3.10",
+        "Content-Type": "application/json",
+    }
+
+    # =========================
+    # 1️⃣ ENTRY ORDER
+    # =========================
     timestamp = str(int(time.time()))
-    limit_body = {
+
+    entry_body = {
         "product_id": product_id,
         "size": size,
         "side": side,
         "order_type": "limit_order",
         "limit_price": str(limit_price),
-        "time_in_force": "gtc"
+        "time_in_force": "gtc",
     }
 
-    limit_json = json.dumps(limit_body, separators=(",", ":"))
-    signature = generate_signature(API_SECRET, method, path, timestamp, limit_json)
+    entry_json = json.dumps(entry_body, separators=(",", ":"))
+    signature = generate_signature(API_SECRET, method, path, timestamp, entry_json)
 
-    headers = {
-        "api-key": API_KEY,
-        "timestamp": timestamp,
-        "signature": signature,
-        "User-Agent": "python-3.10",
-        "Content-Type": "application/json",
-    }
-
-    limit_response = requests.post(url, headers=headers, data=limit_json)
-    print("Limit Order Response:")
-    print(limit_response.json())
-
-    time.sleep(1)
-    timestamp = str(int(time.time()))
-
-
-    stop_side = "sell" if side == "buy" else "buy"
-    stop_body = {
-        "product_id": product_id,
-        "size": size,
-        "side": stop_side,
-        "order_type": "stop_market_order",
-        "stop_price": str(stop_price)
-    }
-    
-    stop_json = json.dumps(stop_body, separators=(",", ":"))
-    signature = generate_signature(API_SECRET, method, path, timestamp, stop_json)
     headers["timestamp"] = timestamp
     headers["signature"] = signature
-    stop_response = requests.post(url, headers=headers, data=stop_json)
-    print("Stoploss Order Response:")
-    print(stop_response.json())
+
+    entry_res = requests.post(url, headers=headers, data=entry_json).json()
+    print("Entry:", entry_res)
+
+    if not entry_res.get("success"):
+        print("Entry failed")
+        return
+    
+
+    
+
+    entry_order_id = entry_res["result"]["id"]
+
+    # =========================
+    # 2️⃣ WAIT FOR FILL
+    # =========================
+    print("Waiting for entry fill...")
+
+    while True:
+        time.sleep(2)
+
+        order_check = requests.get(
+            BASE_URL + f"/v2/orders/{entry_order_id}", headers=headers
+        ).json()
+
+        status = order_check["result"]["state"]
+
+        if status == "filled":
+            print("Entry Filled!")
+            break
+
+        if status in ["cancelled", "rejected"]:
+            print("Entry not filled. Exiting.")
+            return
+
+    # =========================
+    # 3️⃣ PLACE SL + TP
+    # =========================
+
+    exit_side = "sell" if side == "buy" else "buy"
+
+    # Stoploss
+    timestamp = str(int(time.time()))
+    sl_body = {
+        "product_id": product_id,
+        "size": size,
+        "side": exit_side,
+        "order_type": "stop_market_order",
+        "stop_price": str(stop_price),
+    }
+
+    sl_json = json.dumps(sl_body, separators=(",", ":"))
+    signature = generate_signature(API_SECRET, method, path, timestamp, sl_json)
+
+    headers["timestamp"] = timestamp
+    headers["signature"] = signature
+
+    sl_res = requests.post(url, headers=headers, data=sl_json).json()
+    sl_id = sl_res["result"]["id"]
+    print("SL Placed:", sl_res)
+
+    time.sleep(1)
+
+    # Target
+    timestamp = str(int(time.time()))
+    tp_body = {
+        "product_id": product_id,
+        "size": size,
+        "side": exit_side,
+        "order_type": "limit_order",
+        "limit_price": str(target_price),
+        "time_in_force": "gtc",
+    }
+
+    tp_json = json.dumps(tp_body, separators=(",", ":"))
+    signature = generate_signature(API_SECRET, method, path, timestamp, tp_json)
+
+    headers["timestamp"] = timestamp
+    headers["signature"] = signature
+
+    tp_res = requests.post(url, headers=headers, data=tp_json).json()
+    tp_id = tp_res["result"]["id"]
+    print("TP Placed:", tp_res)
+
+    # =========================
+    # 4️⃣ OCO MONITOR
+    # =========================
+    print("Monitoring OCO...")
+
+    while True:
+        time.sleep(2)
+
+        sl_status = requests.get(
+            BASE_URL + f"/v2/orders/{sl_id}", headers=headers
+        ).json()["result"]["state"]
+
+        tp_status = requests.get(
+            BASE_URL + f"/v2/orders/{tp_id}", headers=headers
+        ).json()["result"]["state"]
+
+        if sl_status == "filled":
+            print("Stoploss hit. Cancelling TP...")
+            requests.delete(BASE_URL + f"/v2/orders/{tp_id}", headers=headers)
+            break
+
+        if tp_status == "filled":
+            print("Target hit. Cancelling SL...")
+            requests.delete(BASE_URL + f"/v2/orders/{sl_id}", headers=headers)
+            break
+
 
 if __name__ == "__main__":
 
-    SYMBOL = "BTCUSD"
-    SIDE = "sell"  # "buy" or "sell"
+    productID = get_product_id("BTCUSD")
+    LIMIT_PRICE = 30000
+    STOP_PRICE = 35000
+    TARGET_PRICE = 68140
+    SIDE = "sell"
     SIZE = 1
-    product_id = get_product_id(SYMBOL)
 
-    # place_market_order(product_id, SIDE, SIZE))
-    show_live_price(SYMBOL)
-
-    # place_limit_with_stoploss(
-    #     product_id=product_id,
-    #     side="sell",           # entry side
-    #     size=1,
-    #     limit_price=68045.8,    # entry price
-    #     stop_price=67900      # stoploss price
-    # )
-
-   
+    # show_live_price(SYMBOL)
+    place_entry_with_oco(
+        product_id=productID,
+        side=SIDE,
+        size=SIZE,
+        limit_price=LIMIT_PRICE,
+        stop_price=STOP_PRICE,
+        target_price=TARGET_PRICE,
+    )
