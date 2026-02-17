@@ -50,7 +50,7 @@ def show_live_price(symbol_name):
     ws.run_forever()
 
 
-def place_entry_with_oco(product_id, side, size, limit_price, stop_price, target_price):
+def buy_sell(product_id, side, size, limit_price, stop_price, target_price):
 
     method = "POST"
     path = "/v2/orders"
@@ -194,7 +194,7 @@ def place_entry_with_oco(product_id, side, size, limit_price, stop_price, target
 
 if __name__ == "__main__":
 
-    productID = get_product_id("BTCUSD")
+    # productID = get_product_id("BTCUSD")
     LIMIT_PRICE = 30000
     STOP_PRICE = 35000
     TARGET_PRICE = 68140
@@ -202,11 +202,22 @@ if __name__ == "__main__":
     SIZE = 1
 
     # show_live_price(SYMBOL)
-    place_entry_with_oco(
-        product_id=productID,
-        side=SIDE,
-        size=SIZE,
-        limit_price=LIMIT_PRICE,
-        stop_price=STOP_PRICE,
-        target_price=TARGET_PRICE,
-    )
+    # buy_sell(
+    #     product_id=productID,
+    #     side=SIDE,
+    #     size=SIZE,
+    #     limit_price=LIMIT_PRICE,
+    #     stop_price=STOP_PRICE,
+    #     target_price=TARGET_PRICE,
+    # )
+
+    headers = {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'api-key': API_KEY,
+        'signature': API_SECRET,
+        'timestamp': str(int(time.time()))
+    }
+
+    r = requests.put('https://cdn-ind.testnet.deltaex.org/v2/orders', params={}, headers = headers)
+    print(r.json())
