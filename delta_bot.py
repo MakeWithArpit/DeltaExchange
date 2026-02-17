@@ -93,9 +93,13 @@ class PriceFeed:
     Background thread mein chalta hai — bot ko block nahi karta.
     """
     def __init__(self, symbol: str):
-        self.symbol      = symbol
-        self.latest_price = None
-        self._thread     = None
+        self.symbol        = symbol
+        self.latest_price  = None
+        self._thread       = None
+        self._connected    = False          # WebSocket connected hai ya nahi
+        self._msg_count    = 0             # kitne messages aaye
+        self._last_msg_time = None         # last message ka time
+        self._error        = None          # agar koi error aayi
 
     def start(self):
         """Background thread shuru karo"""
@@ -105,6 +109,9 @@ class PriceFeed:
 
     def _run(self):
         def on_open(ws):
+            self._connected = True
+            self._error     = None
+            print(f"[WS] ✅ Connected!")
             msg = {
                 "type": "subscribe",
                 "payload": {
@@ -116,14 +123,19 @@ class PriceFeed:
         def on_message(ws, message):
             data = json.loads(message)
             if data.get("type") == "v2/ticker":
-                self.latest_price = float(data["mark_price"])
+                self.latest_price   = float(data["mark_price"])
+                self._msg_count    += 1
+                self._last_msg_time = time.time()
                 print(f"[PRICE] {self.symbol}: {self.latest_price:.2f}")
 
         def on_error(ws, error):
-            print(f"[WS ERROR] {error}")
+            self._error     = str(error)
+            self._connected = False
+            print(f"[WS ERROR] ❌ {error}")
 
         def on_close(ws, code, msg):
-            print(f"[WS] Connection closed: {code}")
+            self._connected = False
+            print(f"[WS] 🔌 Connection closed: {code}")
 
         ws = websocket.WebSocketApp(
             WS_URL,
@@ -133,6 +145,50 @@ class PriceFeed:
             on_close=on_close,
         )
         ws.run_forever(ping_interval=30, ping_timeout=10)
+
+    # ── STATUS CHECK METHODS ─────────────────
+    def is_running(self) -> bool:
+        """Thread chal raha hai?"""
+        return self._thread is not None and self._thread.is_alive()
+
+    def is_connected(self) -> bool:
+        """WebSocket connected hai?"""
+        return self._connected
+
+    def is_receiving(self, stale_after_sec: int = 10) -> bool:
+        """
+        Prices aa rahi hain?
+        agar last message 10 sec se zyada pehle aaya → stale maan lo
+        """
+        if self._last_msg_time is None:
+            return False
+        return (time.time() - self._last_msg_time) < stale_after_sec
+
+    def status(self):
+        """
+        Ek line mein poora status print karo.
+        Bot run karne ke baad kabhi bhi call karo:
+            price_feed.status()
+        """
+        thread_ok  = "✅ Chal raha hai" if self.is_running()    else "❌ Band hai"
+        ws_ok      = "✅ Connected"     if self.is_connected()  else "❌ Disconnected"
+        price_ok   = "✅ Aa rahi hai"  if self.is_receiving()  else "⚠️  Nahi aa rahi (stale)"
+        price_val  = f"{self.latest_price:.2f}" if self.latest_price else "—"
+        last_sec   = f"{time.time() - self._last_msg_time:.1f}s pehle" if self._last_msg_time else "kabhi nahi"
+        error_info = f"  Last Error : {self._error}" if self._error else ""
+
+        print(f"""
+┌─────────────────────────────────────┐
+│         PriceFeed STATUS            │
+├─────────────────────────────────────┤
+│  Symbol      : {self.symbol:<22}│
+│  Thread      : {thread_ok:<22}│
+│  WebSocket   : {ws_ok:<22}│
+│  Prices      : {price_ok:<22}│
+│  Last Price  : {price_val:<22}│
+│  Last Update : {last_sec:<22}│
+│  Msg Count   : {str(self._msg_count):<22}│{error_info}
+└─────────────────────────────────────┘""")
 
     def get_price(self) -> float | None:
         return self.latest_price
@@ -174,10 +230,18 @@ def cancel_order(order_id: int) -> bool:
 
 def place_order(product_id: int, side: str, size: int,
                 order_type: str, limit_price: float = None,
-                stop_price: float = None) -> dict | None:
+                stop_price: float = None,
+                post_only: bool = False) -> dict | None:
     """
     Generic order placer.
-    order_type: 'limit_order' | 'stop_market_order'
+    order_type : 'limit_order' | 'stop_market_order'
+
+    post_only=True  → MAKER order guarantee
+                      Agar order taker banega toh REJECT ho jaayega.
+                      Fees: ~0.02% (maker) vs ~0.05% (taker)
+                      Sirf limit_order pe kaam karta hai.
+
+    post_only=False → Normal limit order (default)
     """
     path = "/v2/orders"
 
@@ -193,6 +257,14 @@ def place_order(product_id: int, side: str, size: int,
     if stop_price is not None:
         body_dict["stop_price"] = str(stop_price)
 
+    # ── MAKER ONLY ───────────────────────────────────────────
+    # post_only sirf limit orders pe kaam karta hai.
+    # Stop orders pe kabhi mat lagao — woh market orders hote hain.
+    # Agar price already cross ho chuki ho aur order taker bane
+    # toh exchange khud reject kar dega — bot retry karega.
+    if post_only and order_type == "limit_order":
+        body_dict["post_only"] = True
+
     body_json = json.dumps(body_dict, separators=(",", ":"))
     headers   = make_headers("POST", path, body=body_json)
 
@@ -201,10 +273,17 @@ def place_order(product_id: int, side: str, size: int,
 
     if data.get("success"):
         oid = data["result"]["id"]
-        print(f"[ORDER] {order_type} {side} placed → id={oid}")
+        maker_tag = " [MAKER ✅]" if post_only else ""
+        print(f"[ORDER] {order_type} {side} placed → id={oid}{maker_tag}")
         return data["result"]
     else:
-        print(f"[ERROR] Order failed: {data}")
+        # post_only reject check
+        err = data.get("error", {})
+        if post_only and err.get("code") == "post_only_would_be_taker":
+            print(f"[MAKER REJECT] Order taker ban raha tha — reject hua.")
+            print(f"               Price adjust karo aur dobara try karo.")
+        else:
+            print(f"[ERROR] Order failed: {data}")
         return None
 
 
@@ -223,8 +302,11 @@ def execute_trade(product_id: int, side: str, size: int,
     """
 
     # ── 1. ENTRY ORDER ──────────────────────
-    print(f"\n[TRADE] Entry: {side.upper()} {size} @ {limit_price}")
-    entry = place_order(product_id, side, size, "limit_order", limit_price=limit_price)
+    print(f"\n[TRADE] Entry: {side.upper()} {size} @ {limit_price} [MAKER]")
+    entry = place_order(product_id, side, size, "limit_order",
+                        limit_price=limit_price, post_only=True)
+    # post_only=True → Maker order — agar taker bana toh reject hoga
+    # Agar reject hua toh price thodi adjust karke retry karo
     if not entry:
         print("[ABORT] Entry order fail. Trade nahi hua.")
         return
@@ -253,8 +335,10 @@ def execute_trade(product_id: int, side: str, size: int,
 
     time.sleep(1)  # slight delay between orders
 
-    print(f"[TP] Placing Take Profit @ {target_price}")
-    tp = place_order(product_id, exit_side, size, "limit_order", limit_price=target_price)
+    print(f"[TP] Placing Take Profit @ {target_price} [MAKER]")
+    tp = place_order(product_id, exit_side, size, "limit_order",
+                     limit_price=target_price, post_only=True)
+    # TP bhi Maker — jab price wahan pahunche tab fill hoga
 
     if not sl or not tp:
         print("[ERROR] SL ya TP place nahi hua! Manual check karo!")
@@ -411,13 +495,22 @@ if __name__ == "__main__":
         exit(1)
 
     # ── Live Price Feed shuru karo (background) ──
-    # Bug Fix: pehle yeh main thread block karta tha
     price_feed = PriceFeed(SYMBOL)
     price_feed.start()
 
-    # Thoda wait karo pehli price aane tak
-    time.sleep(2)
-    print(f"[INFO] Current Price: {price_feed.get_price()}")
+    # Pehli price aane ka smartly wait karo (max 15 sec)
+    print("[WAIT] Pehli price ka intezaar...")
+    for i in range(15):
+        time.sleep(1)
+        if price_feed.get_price() is not None:
+            print(f"[OK] Pehli price aayi ({i+1}s mein): {price_feed.get_price():.2f}")
+            break
+        print(f"       {i+1}s... abhi nahi aayi")
+    else:
+        print("[WARN] 15 sec mein price nahi aayi!")
+
+    # ✅ STATUS CHECK — ab sahi status dikhega
+    price_feed.status()
 
     # ── Trade execute karo ──
     execute_trade(
