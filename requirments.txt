@@ -1,0 +1,7 @@
+cffi==2.0.0
+gevent==25.9.1
+greenlet==3.3.1
+pycparser==3.0
+websocket==0.2.1
+zope.event==6.1
+zope.interface==8.2
