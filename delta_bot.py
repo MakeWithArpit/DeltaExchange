@@ -19,44 +19,50 @@ import threading
 # ─────────────────────────────────────────────
 # CONFIG  (Testnet credentials — real pe mat lagana!)
 # ─────────────────────────────────────────────
-API_KEY    = "iRB8OkexongFx2IWRJ7XrnmsIAdLSF"
+API_KEY = "iRB8OkexongFx2IWRJ7XrnmsIAdLSF"
 API_SECRET = "RaQ1xQPrIia9NgsnaRDs1y5q2vHr7o9jgbfSNQGWjZEet4SJN5OtHClufcmL"
-BASE_URL   = "https://cdn-ind.testnet.deltaex.org"
-WS_URL     = "wss://socket-ind.testnet.deltaex.org"
+BASE_URL = "https://cdn-ind.testnet.deltaex.org"
+WS_URL = "wss://socket-ind.testnet.deltaex.org"
 
 
 # ─────────────────────────────────────────────
 # 1. SIGNATURE GENERATOR
-# Bug Fix: hmac.new → Python mein hmac.new() sahi hai,
-#          lekin GET requests ke liye bhi signature chahiye
 # ─────────────────────────────────────────────
-def generate_signature(secret: str, method: str, path: str,
-                        timestamp: str, body: str = "", query_string: str = "") -> str:
+def generate_signature(
+    secret: str,
+    method: str,
+    path: str,
+    timestamp: str,
+    body: str = "",
+    query_string: str = "",
+) -> str:
     """
     Delta Exchange signature format:
     HMAC-SHA256 of: method + timestamp + path + query_string + body
     """
     message = method + timestamp + path + query_string + body
     return hmac.new(
-        secret.encode("utf-8"),
-        message.encode("utf-8"),
-        hashlib.sha256
+        secret.encode("utf-8"), message.encode("utf-8"), hashlib.sha256
     ).hexdigest()
 
 
-def make_headers(method: str, path: str, body: str = "", query_string: str = "") -> dict:
+def make_headers(
+    method: str, path: str, body: str = "", query_string: str = ""
+) -> dict:
     """
     Har request ke liye fresh timestamp + signature banao.
     Bug Fix: Pehle same headers reuse ho rahe the — timestamp expire ho jata tha.
     """
     timestamp = str(int(time.time()))
-    signature = generate_signature(API_SECRET, method, path, timestamp, body, query_string)
+    signature = generate_signature(
+        API_SECRET, method, path, timestamp, body, query_string
+    )
     return {
-        "api-key":       API_KEY,
-        "timestamp":     timestamp,
-        "signature":     signature,
-        "User-Agent":    "python-3.10",
-        "Content-Type":  "application/json",
+        "api-key": API_KEY,
+        "timestamp": timestamp,
+        "signature": signature,
+        "User-Agent": "python-3.10",
+        "Content-Type": "application/json",
     }
 
 
@@ -65,7 +71,7 @@ def make_headers(method: str, path: str, body: str = "", query_string: str = "")
 # ─────────────────────────────────────────────
 def get_product_id(symbol: str) -> int | None:
     """Symbol se product_id fetch karo (e.g. 'BTCUSD' → int id)"""
-    url  = BASE_URL + "/v2/products"
+    url = BASE_URL + "/v2/products"
     resp = requests.get(url, timeout=10)
     data = resp.json()
 
@@ -84,22 +90,21 @@ def get_product_id(symbol: str) -> int | None:
 
 # ─────────────────────────────────────────────
 # 3. LIVE PRICE FEED  (background thread mein)
-# Bug Fix: Pehle show_live_price() main thread block karta tha
-#          → buy_sell() kabhi run nahi hota tha
 # ─────────────────────────────────────────────
 class PriceFeed:
     """
     WebSocket se live mark price subscribe karo.
     Background thread mein chalta hai — bot ko block nahi karta.
     """
+
     def __init__(self, symbol: str):
-        self.symbol        = symbol
-        self.latest_price  = None
-        self._thread       = None
-        self._connected    = False          # WebSocket connected hai ya nahi
-        self._msg_count    = 0             # kitne messages aaye
-        self._last_msg_time = None         # last message ka time
-        self._error        = None          # agar koi error aayi
+        self.symbol = symbol
+        self.latest_price = None
+        self._thread = None
+        self._connected = False  # WebSocket connected hai ya nahi
+        self._msg_count = 0  # kitne messages aaye
+        self._last_msg_time = None  # last message ka time
+        self._error = None  # agar koi error aayi
 
     def start(self):
         """Background thread shuru karo"""
@@ -110,26 +115,26 @@ class PriceFeed:
     def _run(self):
         def on_open(ws):
             self._connected = True
-            self._error     = None
+            self._error = None
             print(f"[WS] ✅ Connected!")
             msg = {
                 "type": "subscribe",
                 "payload": {
                     "channels": [{"name": "v2/ticker", "symbols": [self.symbol]}]
-                }
+                },
             }
             ws.send(json.dumps(msg))
 
         def on_message(ws, message):
             data = json.loads(message)
             if data.get("type") == "v2/ticker":
-                self.latest_price   = float(data["mark_price"])
-                self._msg_count    += 1
+                self.latest_price = float(data["mark_price"])
+                self._msg_count += 1
                 self._last_msg_time = time.time()
                 print(f"[PRICE] {self.symbol}: {self.latest_price:.2f}")
 
         def on_error(ws, error):
-            self._error     = str(error)
+            self._error = str(error)
             self._connected = False
             print(f"[WS ERROR] ❌ {error}")
 
@@ -170,14 +175,21 @@ class PriceFeed:
         Bot run karne ke baad kabhi bhi call karo:
             price_feed.status()
         """
-        thread_ok  = "✅ Chal raha hai" if self.is_running()    else "❌ Band hai"
-        ws_ok      = "✅ Connected"     if self.is_connected()  else "❌ Disconnected"
-        price_ok   = "✅ Aa rahi hai"  if self.is_receiving()  else "⚠️  Nahi aa rahi (stale)"
-        price_val  = f"{self.latest_price:.2f}" if self.latest_price else "—"
-        last_sec   = f"{time.time() - self._last_msg_time:.1f}s pehle" if self._last_msg_time else "kabhi nahi"
+        thread_ok = "✅ Chal raha hai" if self.is_running() else "❌ Band hai"
+        ws_ok = "✅ Connected" if self.is_connected() else "❌ Disconnected"
+        price_ok = (
+            "✅ Aa rahi hai" if self.is_receiving() else "⚠️  Nahi aa rahi (stale)"
+        )
+        price_val = f"{self.latest_price:.2f}" if self.latest_price else "—"
+        last_sec = (
+            f"{time.time() - self._last_msg_time:.1f}s pehle"
+            if self._last_msg_time
+            else "kabhi nahi"
+        )
         error_info = f"  Last Error : {self._error}" if self._error else ""
 
-        print(f"""
+        print(
+            f"""
 ┌─────────────────────────────────────┐
 │         PriceFeed STATUS            │
 ├─────────────────────────────────────┤
@@ -188,7 +200,8 @@ class PriceFeed:
 │  Last Price  : {price_val:<22}│
 │  Last Update : {last_sec:<22}│
 │  Msg Count   : {str(self._msg_count):<22}│{error_info}
-└─────────────────────────────────────┘""")
+└─────────────────────────────────────┘"""
+        )
 
     def get_price(self) -> float | None:
         return self.latest_price
@@ -196,8 +209,6 @@ class PriceFeed:
 
 # ─────────────────────────────────────────────
 # 4. ORDER HELPERS
-# Bug Fix: GET aur DELETE requests ke liye bhi
-#          fresh signature banana zaroori hai
 # ─────────────────────────────────────────────
 def get_order_status(order_id: int) -> str:
     """Order ka current status fetch karo"""
@@ -228,10 +239,15 @@ def cancel_order(order_id: int) -> bool:
         return False
 
 
-def place_order(product_id: int, side: str, size: int,
-                order_type: str, limit_price: float = None,
-                stop_price: float = None,
-                post_only: bool = False) -> dict | None:
+def place_order(
+    product_id: int,
+    side: str,
+    size: int,
+    order_type: str,
+    limit_price: float = None,
+    stop_price: float = None,
+    post_only: bool = False,
+) -> dict | None:
     """
     Generic order placer.
     order_type : 'limit_order' | 'stop_market_order'
@@ -247,8 +263,8 @@ def place_order(product_id: int, side: str, size: int,
 
     body_dict = {
         "product_id": product_id,
-        "size":       size,
-        "side":       side,
+        "size": size,
+        "side": side,
         "order_type": order_type,
         "time_in_force": "gtc",
     }
@@ -266,7 +282,7 @@ def place_order(product_id: int, side: str, size: int,
         body_dict["post_only"] = True
 
     body_json = json.dumps(body_dict, separators=(",", ":"))
-    headers   = make_headers("POST", path, body=body_json)
+    headers = make_headers("POST", path, body=body_json)
 
     resp = requests.post(BASE_URL + path, headers=headers, data=body_json, timeout=10)
     data = resp.json()
@@ -291,8 +307,14 @@ def place_order(product_id: int, side: str, size: int,
 # 5. MAIN TRADE FLOW
 # Entry → Wait Fill → SL + TP → OCO Monitor
 # ─────────────────────────────────────────────
-def execute_trade(product_id: int, side: str, size: int,
-                  limit_price: float, stop_price: float, target_price: float):
+def execute_trade(
+    product_id: int,
+    side: str,
+    size: int,
+    limit_price: float,
+    stop_price: float,
+    target_price: float,
+):
     """
     Pura trade lifecycle:
     1. Entry limit order
@@ -303,8 +325,9 @@ def execute_trade(product_id: int, side: str, size: int,
 
     # ── 1. ENTRY ORDER ──────────────────────
     print(f"\n[TRADE] Entry: {side.upper()} {size} @ {limit_price} [MAKER]")
-    entry = place_order(product_id, side, size, "limit_order",
-                        limit_price=limit_price, post_only=True)
+    entry = place_order(
+        product_id, side, size, "limit_order", limit_price=limit_price, post_only=True
+    )
     # post_only=True → Maker order — agar taker bana toh reject hoga
     # Agar reject hua toh price thodi adjust karke retry karo
     if not entry:
@@ -331,13 +354,21 @@ def execute_trade(product_id: int, side: str, size: int,
     exit_side = "sell" if side == "buy" else "buy"
 
     print(f"[SL] Placing Stop Loss @ {stop_price}")
-    sl = place_order(product_id, exit_side, size, "stop_market_order", stop_price=stop_price)
+    sl = place_order(
+        product_id, exit_side, size, "stop_market_order", stop_price=stop_price
+    )
 
     time.sleep(1)  # slight delay between orders
 
     print(f"[TP] Placing Take Profit @ {target_price} [MAKER]")
-    tp = place_order(product_id, exit_side, size, "limit_order",
-                     limit_price=target_price, post_only=True)
+    tp = place_order(
+        product_id,
+        exit_side,
+        size,
+        "limit_order",
+        limit_price=target_price,
+        post_only=True,
+    )
     # TP bhi Maker — jab price wahan pahunche tab fill hoga
 
     if not sl or not tp:
@@ -382,23 +413,23 @@ def backtest(candles: list[dict], strategy_fn) -> dict:
 
     Returns: {'trades': [...], 'total_pnl': float, 'win_rate': float}
     """
-    trades   = []
-    wins     = 0
+    trades = []
+    wins = 0
     total_pnl = 0.0
 
     for i in range(1, len(candles)):
         past_candles = candles[:i]
-        signal       = strategy_fn(past_candles)
+        signal = strategy_fn(past_candles)
 
         if not signal:
             continue
 
         # Simulate: next candle pe execute
         next_c = candles[i]
-        side   = signal["side"]
-        entry  = signal["limit_price"]
-        sl     = signal["stop_price"]
-        tp     = signal["target_price"]
+        side = signal["side"]
+        entry = signal["limit_price"]
+        sl = signal["stop_price"]
+        tp = signal["target_price"]
 
         # Check agar SL ya TP hit hua next candle mein
         if side == "buy":
@@ -424,15 +455,17 @@ def backtest(candles: list[dict], strategy_fn) -> dict:
         if result == "TP":
             wins += 1
 
-        trades.append({
-            "candle_index": i,
-            "side":   side,
-            "entry":  entry,
-            "sl":     sl,
-            "tp":     tp,
-            "pnl":    round(pnl, 2),
-            "result": result,
-        })
+        trades.append(
+            {
+                "candle_index": i,
+                "side": side,
+                "entry": entry,
+                "sl": sl,
+                "tp": tp,
+                "pnl": round(pnl, 2),
+                "result": result,
+            }
+        )
 
     win_rate = (wins / len(trades) * 100) if trades else 0.0
 
@@ -468,9 +501,9 @@ def example_strategy(candles: list[dict]) -> dict | None:
     if c1["close"] < c2["close"] < c3["close"]:
         price = c3["close"]
         return {
-            "side":        "buy",
+            "side": "buy",
             "limit_price": price,
-            "stop_price":  price * 0.98,   # 2% SL
+            "stop_price": price * 0.98,  # 2% SL
             "target_price": price * 1.04,  # 4% TP
         }
     return None
@@ -481,12 +514,12 @@ def example_strategy(candles: list[dict]) -> dict | None:
 # ─────────────────────────────────────────────
 if __name__ == "__main__":
 
-    SYMBOL       = "BTCUSD"      # Bug Fix: pehle SYMBOL defined nahi tha
-    SIDE         = "sell"
-    SIZE         = 1
-    LIMIT_PRICE  = 30000
-    STOP_PRICE   = 35000
-    TARGET_PRICE = 68140
+    SYMBOL = "BTCUSD"  # Bug Fix: pehle SYMBOL defined nahi tha
+    SIDE = "buy"
+    SIZE = 1
+    LIMIT_PRICE = 67250
+    STOP_PRICE = 67100
+    TARGET_PRICE = 67300
 
     # ── Product ID fetch ──
     product_id = get_product_id(SYMBOL)
@@ -494,41 +527,41 @@ if __name__ == "__main__":
         print("[ABORT] Product ID nahi mila.")
         exit(1)
 
-    # ── Live Price Feed shuru karo (background) ──
-    price_feed = PriceFeed(SYMBOL)
-    price_feed.start()
+    # # ── Live Price Feed shuru karo (background) ──
+    # price_feed = PriceFeed(SYMBOL)
+    # price_feed.start()
 
-    # Pehli price aane ka smartly wait karo (max 15 sec)
-    print("[WAIT] Pehli price ka intezaar...")
-    for i in range(15):
-        time.sleep(1)
-        if price_feed.get_price() is not None:
-            print(f"[OK] Pehli price aayi ({i+1}s mein): {price_feed.get_price():.2f}")
-            break
-        print(f"       {i+1}s... abhi nahi aayi")
-    else:
-        print("[WARN] 15 sec mein price nahi aayi!")
+    # # Pehli price aane ka smartly wait karo (max 15 sec)
+    # print("[WAIT] Pehli price ka intezaar...")
+    # for i in range(15):
+    #     time.sleep(1)
+    #     if price_feed.get_price() is not None:
+    #         print(f"[OK] Pehli price aayi ({i+1}s mein): {price_feed.get_price():.2f}")
+    #         break
+    #     print(f"       {i+1}s... abhi nahi aayi")
+    # else:
+    #     print("[WARN] 15 sec mein price nahi aayi!")
 
-    # ✅ STATUS CHECK — ab sahi status dikhega
-    price_feed.status()
+    # # ✅ STATUS CHECK — ab sahi status dikhega
+    # price_feed.status()
 
     # ── Trade execute karo ──
     execute_trade(
-        product_id   = product_id,
-        side         = SIDE,
-        size         = SIZE,
-        limit_price  = LIMIT_PRICE,
-        stop_price   = STOP_PRICE,
-        target_price = TARGET_PRICE,
+        product_id=product_id,
+        side=SIDE,
+        size=SIZE,
+        limit_price=LIMIT_PRICE,
+        stop_price=STOP_PRICE,
+        target_price=TARGET_PRICE,
     )
 
-    # ── Backtest example ──
-    # (Real candles Delta API se fetch karo, yeh sirf demo data hai)
-    sample_candles = [
-        {"open": 29000, "high": 29500, "low": 28800, "close": 29200, "volume": 100},
-        {"open": 29200, "high": 29800, "low": 29100, "close": 29600, "volume": 120},
-        {"open": 29600, "high": 30200, "low": 29500, "close": 30000, "volume": 150},
-        {"open": 30000, "high": 30800, "low": 29900, "close": 30500, "volume": 200},
-        {"open": 30500, "high": 31000, "low": 29800, "close": 29900, "volume": 180},
-    ]
-    backtest(sample_candles, example_strategy)
+    # # ── Backtest example ──
+    # # (Real candles Delta API se fetch karo, yeh sirf demo data hai)
+    # sample_candles = [
+    #     {"open": 29000, "high": 29500, "low": 28800, "close": 29200, "volume": 100},
+    #     {"open": 29200, "high": 29800, "low": 29100, "close": 29600, "volume": 120},
+    #     {"open": 29600, "high": 30200, "low": 29500, "close": 30000, "volume": 150},
+    #     {"open": 30000, "high": 30800, "low": 29900, "close": 30500, "volume": 200},
+    #     {"open": 30500, "high": 31000, "low": 29800, "close": 29900, "volume": 180},
+    # ]
+    # backtest(sample_candles, example_strategy)
