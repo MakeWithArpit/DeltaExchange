@@ -1587,3 +1587,6 @@ Feature Importances:
 2026-03-12 01:34:51,375 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '110.226.200.63'}}, 'success': False}}
 2026-03-12 01:34:51,376 [WARNING] Wallet fetch failed — API unreachable or bad credentials
 2026-03-12 01:34:51,377 [WARNING] Using local capital: $188.81
+2026-03-12 01:34:51,979 [INFO]   BTCUSD: $70,433.90 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:34:52,820 [INFO]   ETHUSD: $2,070.55 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:34:53,470 [INFO]   SOLUSD: $85.73 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
