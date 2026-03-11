@@ -1223,3 +1223,5 @@ Feature Importances:
 2026-03-12 00:30:13,318 [INFO] 
 -- Cycle #18 | 00:30:13 | Capital: $188.81 --
 2026-03-12 00:30:14,008 [INFO]   BTCUSD: $70,582.20 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-12 00:30:14,676 [INFO]   ETHUSD: $2,075.80 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-12 00:30:15,358 [INFO]   SOLUSD: $85.73 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.0x
