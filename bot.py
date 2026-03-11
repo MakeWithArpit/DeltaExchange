@@ -295,12 +295,12 @@ class TradingBot:
                 pnl = -trade["risk_usdt"]
                 self.db.close_trade(trade["id"], sl, "stop_loss", -1.0, pnl)
                 self.capital += pnl
-                logger.info(f"❌ Trade #{trade['id']} SL | {trade['symbol']} ${pnl:.2f}")
+                logger.info(f"[SL] Trade #{trade['id']} SL | {trade['symbol']} ${pnl:.2f}")
             elif tp_hit:
                 pnl = trade["reward_usdt"] - trade["fees_usdt"]
                 self.db.close_trade(trade["id"], tp, "take_profit", RR_RATIO, pnl)
                 self.capital += pnl
-                logger.info(f"✅ Trade #{trade['id']} TP | {trade['symbol']} +${pnl:.2f}")
+                logger.info(f"[TP] Trade #{trade['id']} TP | {trade['symbol']} +${pnl:.2f}")
 
     # -- DISPLAY --────────────────────────────────────────────────
     def _print_trade_alert(self, sig, calc, ml, trade_id, paper):
@@ -334,9 +334,9 @@ class TradingBot:
 
         print(f"""
 ╔══════════════════════════════════════════════════════════════╗
-║  BB SQUEEZE BOT  {'[PAUSED ⛔]' if paused else '[RUNNING ✅]':^20}  {datetime.now().strftime('%H:%M:%S'):>8}             ║
+║  BB SQUEEZE BOT  {'[PAUSED ⛔]' if paused else '[RUNNING ✅]':^20}  {datetime.now().strftime('%H:%M:%S'):>8}  ║
 ╠══════════════════════════════════════════════════════════════╣
-║  MODE: {'PAPER 📝' if PAPER_TRADE else 'LIVE  💰':<10}  ML: {'ON ✅' if USE_ML_FILTER else 'OFF ❌'}  Lev: {LEVERAGE}x  RR: {RR_RATIO}:1            ║
+║  MODE: {'PAPER 📝' if PAPER_TRADE else 'LIVE  💰':<10}  ML: {'ON ✅' if USE_ML_FILTER else 'OFF ❌'}  Lev: {LEVERAGE}x  RR: {RR_RATIO}:1  ║
 ╠══════════════════════════════════════════════════════════════╣
 ║  WALLET (live from Delta Exchange)                           ║""")
 
@@ -345,12 +345,12 @@ class TradingBot:
                 avail = float(info.get("available_balance", info.get("available", 0)))
                 total = float(info.get("balance", avail))
                 if total < 0.000001: continue
-                print(f"║  {asset:<6}: total={total:>14,.4f}  free={avail:>14,.4f}           ║")
+                print(f"║  {asset:<6}: total={total:>14,.4f}  free={avail:>14,.4f}  ║")
         else:
             print("║  (no wallet data — add API keys to config/settings.py)      ║")
 
         print(f"╠══════════════════════════════════════════════════════════════╣")
-        print(f"║  Capital available : ${self.capital:>10,.2f}  USDT                       ║")
+        print(f"║  Capital available : ${self.capital:>10,.2f}  USDT                  ║")
         print(f"╠══════════════════════════════════════════════════════════════╣")
         print(f"║  PERFORMANCE (last 30 days)                                  ║")
         _t   = int(stats.get('total',0)    or 0)
@@ -358,10 +358,10 @@ class TradingBot:
         _wr  = float(stats.get('wr',0.0)   or 0.0)
         _r   = float(stats.get('net_r',0)  or 0.0)
         _pnl = float(stats.get('pnl_usdt',0) or 0.0)
-        print(f"║  Trades: {_t:<5}  Wins: {_w:<5}  WR: {_wr:>5.1f}%                      ║")
-        print(f"║  Net R : {_r:>+7.1f}R   PnL: ${_pnl:>+8.2f}                           ║")
+        print(f"║  Trades: {_t:<5}  Wins: {_w:<5}  WR: {_wr:>5.1f}%           ║")
+        print(f"║  Net R : {_r:>+7.1f}R   PnL: ${_pnl:>+8.2f}              ║")
         print(f"╠══════════════════════════════════════════════════════════════╣")
-        print(f"║  OPEN TRADES  ({len(open_t)} paper / {len(live_pos)} live on exchange)                 ║")
+        print(f"║  OPEN TRADES  ({len(open_t)} paper / {len(live_pos)} live on exchange)          ║")
 
         for t in open_t:
             icon = "🟢" if t["direction"]=="long" else "🔴"
@@ -413,7 +413,7 @@ class TradingBot:
 
             paused, reason = self._check_circuit_breaker()
             if paused:
-                logger.warning(f"⛔ CIRCUIT BREAKER: {reason}")
+                logger.warning(f"[STOP] CIRCUIT BREAKER: {reason}")
                 self.print_dashboard()
                 time.sleep(CHECK_INTERVAL_SEC * 5)
                 continue
@@ -430,17 +430,17 @@ class TradingBot:
                     if action == "trade":
                         self.execute_trade(result)
                     elif action == "ml_filtered":
-                        logger.info(f"  ⏭️  {symbol}: ML skip — {result.get('reason','')}")
+                        logger.info(f"  [SKIP] {symbol}: ML skip — {result.get('reason','')}")
                     elif action == "no_signal":
                         s = result.get("state", {})
                         logger.info(
                             f"  {symbol}: ${s.get('price',0):,.2f} | "
-                            f"Squeeze: {'🔴YES' if s.get('bb_squeeze') else 'NO'} "
+                            f"Squeeze: {'[SQUEEZE]' if s.get('bb_squeeze') else 'no'} "
                             f"({s.get('squeeze_dur',0)} bars) | "
                             f"4H: {s.get('trend_4h','?')} | "
                             f"Vol: {s.get('vol_ratio',1):.1f}x")
                     elif action == "insufficient_margin":
-                        logger.warning(f"  ⚠️  {symbol}: {result.get('reason','')}")
+                        logger.warning(f"  [WARN] {symbol}: {result.get('reason','')}")
                     elif action == "max_trades_reached":
                         logger.info(f"  {symbol}: max trades open")
                     elif action == "insufficient_data":
