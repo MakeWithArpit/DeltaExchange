@@ -1469,3 +1469,4 @@ Feature Importances:
 2026-03-12 01:14:05,741 [WARNING] Using local capital: $188.81
 2026-03-12 01:14:06,398 [INFO]   BTCUSD: $70,592.50 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
 2026-03-12 01:14:07,050 [INFO]   ETHUSD: $2,071.65 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:14:08,005 [INFO]   SOLUSD: $85.73 | Squeeze: [SQUEEZE] (1 bars) | 4H: bullish | Vol: 0.0x
