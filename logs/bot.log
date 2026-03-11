@@ -1400,3 +1400,10 @@ Feature Importances:
 2026-03-12 01:02:31,787 [INFO]   BTCUSD: $70,458.10 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.0x
 2026-03-12 01:02:32,401 [INFO]   ETHUSD: $2,069.30 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.0x
 2026-03-12 01:02:33,055 [INFO]   SOLUSD: $85.72 | Squeeze: no (0 bars) | 4H: bullish | Vol: 2.5x
+2026-03-12 01:03:33,067 [INFO] 
+-- Cycle #50 | 01:03:33 | Capital: $188.81 --
+2026-03-12 01:03:33,067 [INFO] Refreshing wallet...
+2026-03-12 01:03:43,075 [ERROR] GET /v2/wallet/balances failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Read timed out. (read timeout=10)
+2026-03-12 01:03:43,076 [ERROR] Balance fetch failed: {'success': False, 'error': "HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Read timed out. (read timeout=10)"}
+2026-03-12 01:03:43,077 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-12 01:03:43,077 [WARNING] Using local capital: $188.81
