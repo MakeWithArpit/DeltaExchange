@@ -1407,3 +1407,6 @@ Feature Importances:
 2026-03-12 01:03:43,076 [ERROR] Balance fetch failed: {'success': False, 'error': "HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Read timed out. (read timeout=10)"}
 2026-03-12 01:03:43,077 [WARNING] Wallet fetch failed — API unreachable or bad credentials
 2026-03-12 01:03:43,077 [WARNING] Using local capital: $188.81
+2026-03-12 01:03:43,743 [INFO]   BTCUSD: $70,526.00 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-12 01:03:44,480 [INFO]   ETHUSD: $2,071.50 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-12 01:03:45,152 [INFO]   SOLUSD: $85.73 | Squeeze: [SQUEEZE] (1 bars) | 4H: bullish | Vol: 0.0x
