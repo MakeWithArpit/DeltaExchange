@@ -1,0 +1,1057 @@
+2026-03-05 14:15:20,146 [INFO] Training ML model from historical CSVs...
+2026-03-05 14:15:20,146 [WARNING] No CSVs found — ML disabled.
+2026-03-05 14:15:20,185 [INFO] Fetching wallet...
+2026-03-05 14:15:20,879 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:15:20,879 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:15:20,879 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:15:20,879 [WARNING] Using local capital: $0.00
+2026-03-05 14:15:21,080 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070320&end=1772700320
+2026-03-05 14:15:21,080 [WARNING] Candle fetch failed for BTCUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070320&end=1772700320'}
+2026-03-05 14:15:21,080 [ERROR] No candle data available for BTCUSDT
+2026-03-05 14:15:21,089 [INFO] BTCUSDT: insufficient_data
+2026-03-05 14:15:21,281 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070321&end=1772700321
+2026-03-05 14:15:21,282 [WARNING] Candle fetch failed for ETHUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070321&end=1772700321'}
+2026-03-05 14:15:21,285 [ERROR] No candle data available for ETHUSDT
+2026-03-05 14:15:21,286 [INFO] ETHUSDT: insufficient_data
+2026-03-05 14:15:21,478 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070321&end=1772700321
+2026-03-05 14:15:21,478 [WARNING] Candle fetch failed for SOLUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070321&end=1772700321'}
+2026-03-05 14:15:21,478 [ERROR] No candle data available for SOLUSDT
+2026-03-05 14:15:21,478 [INFO] SOLUSDT: insufficient_data
+2026-03-05 14:15:21,478 [WARNING] Wallet returned 0 — using fallback $800.0
+2026-03-05 14:15:21,489 [INFO] 30d stats: {'total': 0, 'wins': None, 'net_r': None, 'pnl_usdt': None, 'fees': None, 'losses': 0, 'wr': 0.0}
+2026-03-05 14:16:57,606 [INFO] Training ML model from historical CSVs...
+2026-03-05 14:16:57,606 [WARNING] No CSVs found — ML disabled.
+2026-03-05 14:16:57,606 [INFO] =================================================================
+2026-03-05 14:16:57,606 [INFO]   BB SQUEEZE TRADING BOT
+2026-03-05 14:16:57,606 [INFO]   Mode: PAPER | Leverage: 5x | Risk: 1.0%/trade
+2026-03-05 14:16:57,606 [INFO] =================================================================
+2026-03-05 14:16:57,606 [INFO] Step 1/3: Fetching wallet balance from Delta Exchange...
+2026-03-05 14:16:58,220 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:16:58,221 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:16:58,222 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:16:58,223 [WARNING] Using local capital: $0.00
+2026-03-05 14:16:58,224 [INFO] Step 2/3: Testing API connection...
+2026-03-05 14:16:58,453 [ERROR] GET /v2/profile failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/profile
+2026-03-05 14:16:58,689 [INFO] Step 3/3: Starting main loop. Capital: $0.00
+2026-03-05 14:16:58,689 [WARNING] Wallet fetch returned 0 — using fallback $800.0
+2026-03-05 14:16:58,953 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070418&end=1772700418
+2026-03-05 14:16:58,955 [WARNING] Candle fetch failed for BTCUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070418&end=1772700418'}
+2026-03-05 14:16:58,955 [ERROR] No candle data available for BTCUSDT
+2026-03-05 14:16:58,955 [WARNING]   BTCUSDT: insufficient data
+2026-03-05 14:16:59,138 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070418&end=1772700418
+2026-03-05 14:16:59,138 [WARNING] Candle fetch failed for ETHUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070418&end=1772700418'}
+2026-03-05 14:16:59,153 [ERROR] No candle data available for ETHUSDT
+2026-03-05 14:16:59,155 [WARNING]   ETHUSDT: insufficient data
+2026-03-05 14:16:59,335 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070419&end=1772700419
+2026-03-05 14:16:59,335 [WARNING] Candle fetch failed for SOLUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070419&end=1772700419'}
+2026-03-05 14:16:59,335 [ERROR] No candle data available for SOLUSDT
+2026-03-05 14:16:59,335 [WARNING]   SOLUSDT: insufficient data
+2026-03-05 14:17:59,550 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070479&end=1772700479
+2026-03-05 14:17:59,550 [WARNING] Candle fetch failed for BTCUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=BTCUSDT&start=1772070479&end=1772700479'}
+2026-03-05 14:17:59,550 [ERROR] No candle data available for BTCUSDT
+2026-03-05 14:17:59,568 [WARNING]   BTCUSDT: insufficient data
+2026-03-05 14:17:59,751 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070479&end=1772700479
+2026-03-05 14:17:59,751 [WARNING] Candle fetch failed for ETHUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=ETHUSDT&start=1772070479&end=1772700479'}
+2026-03-05 14:17:59,751 [ERROR] No candle data available for ETHUSDT
+2026-03-05 14:17:59,751 [WARNING]   ETHUSDT: insufficient data
+2026-03-05 14:17:59,951 [ERROR] GET /v2/history/candles failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070479&end=1772700479
+2026-03-05 14:17:59,951 [WARNING] Candle fetch failed for SOLUSDT: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/history/candles?resolution=30&symbol=SOLUSDT&start=1772070479&end=1772700479'}
+2026-03-05 14:17:59,951 [ERROR] No candle data available for SOLUSDT
+2026-03-05 14:17:59,951 [WARNING]   SOLUSDT: insufficient data
+2026-03-05 14:18:40,165 [INFO] Bot stopped.
+2026-03-05 14:18:50,548 [INFO] Training ML model from historical CSVs...
+2026-03-05 14:18:50,548 [WARNING] No CSVs found — ML disabled.
+2026-03-05 14:18:51,147 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:18:51,147 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:18:51,147 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:18:51,147 [WARNING] Using local capital: $0.00
+2026-03-05 14:20:28,438 [INFO] Training ML model from historical CSVs...
+2026-03-05 14:20:28,438 [WARNING] No CSVs found — ML disabled.
+2026-03-05 14:20:29,023 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:20:29,037 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:20:29,039 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:20:29,040 [WARNING] Using local capital: $0.00
+2026-03-05 14:30:03,216 [INFO] Training ML model from historical CSVs...
+2026-03-05 14:30:07,880 [INFO] Collecting training data from BTC...
+2026-03-05 14:30:57,311 [INFO]   BTC: 1437 samples, WR=41.1%
+2026-03-05 14:30:57,318 [INFO] Collecting training data from ETH...
+2026-03-05 14:31:46,301 [INFO]   ETH: 1521 samples, WR=41.2%
+2026-03-05 14:31:46,317 [INFO] Collecting training data from SOL...
+2026-03-05 14:32:15,143 [INFO]   SOL: 846 samples, WR=40.0%
+2026-03-05 14:32:15,145 [INFO] 
+Total samples: 3804, WR: 40.9%
+2026-03-05 14:32:16,570 [INFO]   Fold 1: accuracy=0.539
+2026-03-05 14:32:17,904 [INFO]   Fold 2: accuracy=0.518
+2026-03-05 14:32:19,369 [INFO]   Fold 3: accuracy=0.562
+2026-03-05 14:32:19,512 [INFO] 
+Final Model Report:
+2026-03-05 14:32:19,548 [INFO]               precision    recall  f1-score   support
+
+        Loss       0.70      0.71      0.71      2249
+         Win       0.58      0.57      0.57      1555
+
+    accuracy                           0.65      3804
+   macro avg       0.64      0.64      0.64      3804
+weighted avg       0.65      0.65      0.65      3804
+
+2026-03-05 14:32:19,644 [INFO] 
+Feature Importances:
+2026-03-05 14:32:20,521 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:32:20,521 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:32:20,521 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:32:20,521 [WARNING] Using local capital: $0.00
+2026-03-05 14:34:59,675 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:34:59,675 [INFO] ML model loaded.
+2026-03-05 14:35:00,092 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:35:00,092 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:35:00,092 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:35:00,092 [WARNING] Using local capital: $0.00
+2026-03-05 14:35:32,860 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:35:32,861 [INFO] ML model loaded.
+2026-03-05 14:35:33,173 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:35:33,173 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:35:33,173 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:35:33,173 [WARNING] Using local capital: $0.00
+2026-03-05 14:35:59,037 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:35:59,037 [INFO] ML model loaded.
+2026-03-05 14:35:59,380 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:35:59,380 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:35:59,380 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:35:59,380 [WARNING] Using local capital: $0.00
+2026-03-05 14:36:29,069 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:36:29,069 [INFO] ML model loaded.
+2026-03-05 14:36:29,917 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:36:29,921 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:36:29,922 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:36:29,923 [WARNING] Using local capital: $0.00
+2026-03-05 14:36:53,733 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:36:53,733 [INFO] ML model loaded.
+2026-03-05 14:36:54,066 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:36:54,066 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:36:54,066 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:36:54,066 [WARNING] Using local capital: $0.00
+2026-03-05 14:37:16,731 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:37:16,733 [INFO] ML model loaded.
+2026-03-05 14:37:17,091 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:37:17,092 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:37:17,093 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:37:17,094 [WARNING] Using local capital: $0.00
+2026-03-05 14:37:37,352 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:37:37,353 [INFO] ML model loaded.
+2026-03-05 14:37:37,969 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:37:37,970 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:37:37,971 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:37:37,972 [WARNING] Using local capital: $0.00
+2026-03-05 14:39:05,957 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:39:05,957 [INFO] ML model loaded.
+2026-03-05 14:39:06,755 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:39:06,757 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:39:06,757 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:39:06,757 [WARNING] Using local capital: $0.00
+2026-03-05 14:40:01,586 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 14:40:01,586 [INFO] ML model loaded.
+2026-03-05 14:40:01,886 [ERROR] GET /v2/wallet/balances failed: 401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances
+2026-03-05 14:40:01,886 [ERROR] Balance fetch failed: {'success': False, 'error': '401 Client Error: Unauthorized for url: https://cdn-ind.testnet.deltaex.org/v2/wallet/balances'}
+2026-03-05 14:40:01,886 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 14:40:01,886 [WARNING] Using local capital: $0.00
+2026-03-05 18:30:17,283 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:30:17,283 [INFO] ML model loaded.
+2026-03-05 18:30:17,750 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.2.52'}}, 'success': False}
+2026-03-05 18:30:17,750 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.2.52'}}, 'success': False}}
+2026-03-05 18:30:17,750 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:30:17,764 [WARNING] Using local capital: $0.00
+2026-03-05 18:31:40,693 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:31:40,713 [INFO] ML model loaded.
+2026-03-05 18:31:41,208 [WARNING]   USDT balance = 0 — wallet may be empty or wrong asset key
+2026-03-05 18:31:41,210 [WARNING]   Raw wallet keys received: ['ETH', 'BTC', 'USD', 'INR']
+2026-03-05 18:33:04,504 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:33:04,504 [INFO] ML model loaded.
+2026-03-05 18:33:05,041 [WARNING]   USDT balance = 0 — wallet may be empty or wrong asset key
+2026-03-05 18:33:05,041 [WARNING]   Raw wallet keys received: ['ETH', 'BTC', 'USD', 'INR']
+2026-03-05 18:37:49,959 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:37:49,959 [INFO] ML model loaded.
+2026-03-05 18:37:50,366 [WARNING]   USDT balance = 0 — wallet may be empty or wrong asset key
+2026-03-05 18:37:50,366 [WARNING]   Raw wallet keys received: ['ETH', 'BTC', 'USD', 'INR']
+2026-03-05 18:38:31,858 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:38:31,859 [INFO] ML model loaded.
+2026-03-05 18:38:32,197 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:38:32,197 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:40:33,420 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:40:33,420 [INFO] ML model loaded.
+2026-03-05 18:41:16,836 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:41:16,836 [INFO] ML model loaded.
+2026-03-05 18:41:17,203 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:41:17,236 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:42:31,812 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:42:31,812 [INFO] ML model loaded.
+2026-03-05 18:42:31,954 [INFO] Fetching wallet...
+2026-03-05 18:42:32,379 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:42:32,379 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:42:32,679 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:42:32,679 [WARNING] Candles failed for BTCUSDT: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:42:32,679 [ERROR] No candle data available for BTCUSDT
+2026-03-05 18:42:32,694 [INFO] BTCUSDT: insufficient_data
+2026-03-05 18:42:32,960 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:42:32,975 [WARNING] Candles failed for ETHUSDT: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:42:32,975 [ERROR] No candle data available for ETHUSDT
+2026-03-05 18:42:32,975 [INFO] ETHUSDT: insufficient_data
+2026-03-05 18:42:33,245 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:42:33,262 [WARNING] Candles failed for SOLUSDT: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:42:33,284 [ERROR] No candle data available for SOLUSDT
+2026-03-05 18:42:33,301 [INFO] SOLUSDT: insufficient_data
+2026-03-05 18:42:33,329 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:45:38,832 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:45:38,854 [INFO] ML model loaded.
+2026-03-05 18:45:39,178 [INFO] Fetching wallet...
+2026-03-05 18:45:39,865 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:45:39,866 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:45:40,196 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:45:40,200 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:45:40,210 [ERROR] No candle data available for BTCUSD
+2026-03-05 18:45:40,227 [INFO] BTCUSD: insufficient_data
+2026-03-05 18:45:40,541 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:45:40,546 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:45:40,561 [ERROR] No candle data available for ETHUSD
+2026-03-05 18:45:40,571 [INFO] ETHUSD: insufficient_data
+2026-03-05 18:45:40,863 [ERROR] PUBLIC GET /v2/history/candles 400: {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}
+2026-03-05 18:45:40,929 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': {'error': {'code': 'bad_schema', 'context': {'schema_errors': [{'code': 'validation_error', 'message': 'Allowed values are 5s,1m,3m,5m,15m,30m,1h,2h,4h,6h,12h,1d,1w', 'param': 'resolution'}]}}, 'success': False}}
+2026-03-05 18:45:41,074 [ERROR] No candle data available for SOLUSD
+2026-03-05 18:45:41,131 [INFO] SOLUSD: insufficient_data
+2026-03-05 18:45:41,148 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:47:00,459 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:47:00,459 [INFO] ML model loaded.
+2026-03-05 18:48:38,652 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:48:38,652 [INFO] ML model loaded.
+2026-03-05 18:48:38,652 [INFO] --- Single scan ---
+2026-03-05 18:48:38,652 [INFO] Fetching wallet...
+2026-03-05 18:48:39,135 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:48:39,135 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:48:39,135 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:48:39,135 [WARNING] Using local capital: $0.00
+2026-03-05 18:48:39,914 [INFO] BTCUSD: no_signal
+2026-03-05 18:48:39,914 [INFO]   $72,648.90 | Squeeze=False | Trend=bullish
+2026-03-05 18:48:40,475 [INFO] ETHUSD: no_signal
+2026-03-05 18:48:40,476 [INFO]   $2,127.55 | Squeeze=False | Trend=bullish
+2026-03-05 18:48:41,007 [INFO] SOLUSD: no_signal
+2026-03-05 18:48:41,007 [INFO]   $91.48 | Squeeze=False | Trend=bullish
+2026-03-05 18:48:41,008 [WARNING] Wallet returned 0 — using fallback $800.0
+2026-03-05 18:48:41,011 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:51:01,624 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:51:01,624 [INFO] ML model loaded.
+2026-03-05 18:51:02,014 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:51:02,014 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:51:02,014 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:51:02,014 [WARNING] Using local capital: $0.00
+2026-03-05 18:51:02,241 [ERROR] GET /v2/positions/margined 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:53:05,749 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:53:05,749 [INFO] ML model loaded.
+2026-03-05 18:53:05,763 [INFO] --- Single scan ---
+2026-03-05 18:53:05,763 [INFO] Fetching wallet...
+2026-03-05 18:53:06,414 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:53:06,415 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:53:06,415 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:53:06,415 [WARNING] Using local capital: $0.00
+2026-03-05 18:53:07,051 [INFO] BTCUSD: no_signal
+2026-03-05 18:53:07,051 [INFO]   $72,560.20 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:07,834 [INFO] ETHUSD: no_signal
+2026-03-05 18:53:07,836 [INFO]   $2,123.45 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:08,649 [INFO] SOLUSD: no_signal
+2026-03-05 18:53:08,649 [INFO]   $91.27 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:08,649 [WARNING] Wallet returned 0 — using fallback $800.0
+2026-03-05 18:53:08,649 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:53:55,378 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:53:55,378 [INFO] ML model loaded.
+2026-03-05 18:53:55,378 [INFO] --- Single scan ---
+2026-03-05 18:53:55,378 [INFO] Fetching wallet...
+2026-03-05 18:53:55,794 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:53:55,794 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:53:55,794 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:53:55,794 [WARNING] Using local capital: $0.00
+2026-03-05 18:53:56,478 [INFO] BTCUSD: no_signal
+2026-03-05 18:53:56,478 [INFO]   $72,560.20 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:57,145 [INFO] ETHUSD: no_signal
+2026-03-05 18:53:57,145 [INFO]   $2,123.45 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:57,712 [INFO] SOLUSD: no_signal
+2026-03-05 18:53:57,712 [INFO]   $91.27 | Squeeze=False | Trend=bullish
+2026-03-05 18:53:57,712 [WARNING] Wallet returned 0 — using fallback $800.0
+2026-03-05 18:53:57,712 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:54:17,327 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:54:17,327 [INFO] ML model loaded.
+2026-03-05 18:54:28,143 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:54:28,143 [INFO] ML model loaded.
+2026-03-05 18:54:28,559 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:54:28,559 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:54:28,559 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:54:28,559 [WARNING] Using local capital: $0.00
+2026-03-05 18:54:28,758 [ERROR] GET /v2/positions/margined 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:54:41,226 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:54:41,229 [INFO] ML model loaded.
+2026-03-05 18:54:41,230 [INFO] --- Single scan ---
+2026-03-05 18:54:41,231 [INFO] Fetching wallet...
+2026-03-05 18:54:41,558 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:54:41,558 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:54:41,558 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:54:41,558 [WARNING] Using local capital: $0.00
+2026-03-05 18:54:42,125 [INFO] BTCUSD: no_signal
+2026-03-05 18:54:42,142 [INFO]   $72,547.90 | Squeeze=False | Trend=bullish
+2026-03-05 18:54:42,842 [INFO] ETHUSD: no_signal
+2026-03-05 18:54:42,842 [INFO]   $2,123.90 | Squeeze=False | Trend=bullish
+2026-03-05 18:54:43,475 [INFO] SOLUSD: no_signal
+2026-03-05 18:54:43,489 [INFO]   $91.27 | Squeeze=False | Trend=bullish
+2026-03-05 18:54:43,492 [WARNING] Wallet returned 0 — using fallback $800.0
+2026-03-05 18:54:43,500 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:55:01,573 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:55:01,573 [INFO] ML model loaded.
+2026-03-05 18:55:01,966 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'invalid_api_key'}, 'success': False}
+2026-03-05 18:55:01,966 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'invalid_api_key'}, 'success': False}}
+2026-03-05 18:55:01,966 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 18:55:01,966 [WARNING] Using local capital: $0.00
+2026-03-05 18:58:48,590 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:58:48,590 [INFO] ML model loaded.
+2026-03-05 18:58:49,055 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:58:49,055 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:59:02,317 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:59:02,320 [INFO] ML model loaded.
+2026-03-05 18:59:02,321 [INFO] --- Single scan ---
+2026-03-05 18:59:02,323 [INFO] Fetching wallet...
+2026-03-05 18:59:02,838 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:59:02,847 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:59:03,423 [INFO] BTCUSD: no_signal
+2026-03-05 18:59:03,438 [INFO]   $72,464.80 | Squeeze=False | Trend=bullish
+2026-03-05 18:59:03,980 [INFO] ETHUSD: no_signal
+2026-03-05 18:59:03,980 [INFO]   $2,119.70 | Squeeze=False | Trend=bullish
+2026-03-05 18:59:04,588 [INFO] SOLUSD: no_signal
+2026-03-05 18:59:04,589 [INFO]   $86.39 | Squeeze=False | Trend=bearish
+2026-03-05 18:59:04,589 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 18:59:14,405 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:59:14,405 [INFO] ML model loaded.
+2026-03-05 18:59:14,793 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 18:59:14,794 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 18:59:30,300 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 18:59:30,363 [INFO] ML model loaded.
+2026-03-05 19:00:37,316 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:00:37,316 [INFO] ML model loaded.
+2026-03-05 19:00:37,316 [INFO] =================================================================
+2026-03-05 19:00:37,316 [INFO]   BB SQUEEZE TRADING BOT
+2026-03-05 19:00:37,316 [INFO]   Mode: PAPER | Leverage: 5x | Risk: 1.0%/trade
+2026-03-05 19:00:37,316 [INFO] =================================================================
+2026-03-05 19:00:37,316 [INFO] Step 1/3: Fetching wallet balance from Delta Exchange...
+2026-03-05 19:00:37,699 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:00:37,699 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:00:37,715 [INFO] Step 2/3: Testing API connection...
+2026-03-05 19:00:38,034 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-05 19:00:38,034 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-05 19:00:38,034 [INFO] 
+-- Cycle #1 | 19:00:38 | Capital: $188.81 --
+2026-03-05 19:00:38,599 [INFO]   BTCUSD: $72,485.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.9x
+2026-03-05 19:00:39,141 [INFO]   ETHUSD: $2,121.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:00:39,869 [INFO]   SOLUSD: $91.18 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 19:01:39,883 [INFO] 
+-- Cycle #2 | 19:01:39 | Capital: $188.81 --
+2026-03-05 19:01:40,561 [INFO]   BTCUSD: $72,368.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:01:41,100 [INFO]   ETHUSD: $2,117.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:01:41,728 [INFO]   SOLUSD: $91.07 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:02:41,737 [INFO] 
+-- Cycle #3 | 19:02:41 | Capital: $188.81 --
+2026-03-05 19:02:42,594 [INFO]   BTCUSD: $72,202.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:02:43,356 [INFO]   ETHUSD: $2,110.45 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:02:45,139 [INFO]   SOLUSD: $90.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:03:45,149 [INFO] 
+-- Cycle #4 | 19:03:45 | Capital: $188.81 --
+2026-03-05 19:03:45,944 [INFO]   BTCUSD: $72,274.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:03:46,635 [INFO]   ETHUSD: $2,113.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:03:47,168 [INFO]   SOLUSD: $90.43 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:04:47,178 [INFO] 
+-- Cycle #5 | 19:04:47 | Capital: $188.81 --
+2026-03-05 19:04:47,180 [INFO] Refreshing wallet...
+2026-03-05 19:04:47,755 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:04:47,756 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:04:48,347 [INFO]   BTCUSD: $72,281.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:04:49,055 [INFO]   ETHUSD: $2,111.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:04:49,831 [INFO]   SOLUSD: $90.67 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:05:49,843 [INFO] 
+-- Cycle #6 | 19:05:49 | Capital: $188.81 --
+2026-03-05 19:05:50,970 [INFO]   BTCUSD: $72,310.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:05:51,642 [INFO]   ETHUSD: $2,113.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:05:52,175 [INFO]   SOLUSD: $90.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:06:52,187 [INFO] 
+-- Cycle #7 | 19:06:52 | Capital: $188.81 --
+2026-03-05 19:06:53,371 [INFO]   BTCUSD: $72,266.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:06:54,438 [INFO]   ETHUSD: $2,111.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:06:55,404 [INFO]   SOLUSD: $90.53 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:07:55,415 [INFO] 
+-- Cycle #8 | 19:07:55 | Capital: $188.81 --
+2026-03-05 19:07:56,383 [INFO]   BTCUSD: $72,327.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:07:57,927 [INFO]   ETHUSD: $2,112.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:07:58,942 [INFO]   SOLUSD: $90.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:08:58,955 [INFO] 
+-- Cycle #9 | 19:08:58 | Capital: $188.81 --
+2026-03-05 19:09:06,907 [INFO]   BTCUSD: $72,318.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:09:07,835 [INFO]   ETHUSD: $2,112.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:09:08,628 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:10:08,638 [INFO] 
+-- Cycle #10 | 19:10:08 | Capital: $188.81 --
+2026-03-05 19:10:08,639 [INFO] Refreshing wallet...
+2026-03-05 19:10:09,124 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:10:09,124 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:10:09,841 [INFO]   BTCUSD: $72,323.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:10:10,758 [INFO]   ETHUSD: $2,111.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:10:11,527 [INFO]   SOLUSD: $90.72 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:11:11,567 [INFO] 
+-- Cycle #11 | 19:11:11 | Capital: $188.81 --
+2026-03-05 19:11:12,152 [INFO]   BTCUSD: $72,330.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:11:12,752 [INFO]   ETHUSD: $2,112.35 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:11:13,335 [INFO]   SOLUSD: $90.72 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:12:13,346 [INFO] 
+-- Cycle #12 | 19:12:13 | Capital: $188.81 --
+2026-03-05 19:12:14,956 [INFO]   BTCUSD: $72,341.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:12:16,230 [INFO]   ETHUSD: $2,113.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:12:17,661 [INFO]   SOLUSD: $90.78 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:13:17,694 [INFO] 
+-- Cycle #13 | 19:13:17 | Capital: $188.81 --
+2026-03-05 19:13:18,863 [INFO]   BTCUSD: $72,470.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:13:19,709 [INFO]   ETHUSD: $2,118.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:13:20,476 [INFO]   SOLUSD: $90.87 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:13:35,171 [INFO] Bot stopped.
+2026-03-05 19:13:45,407 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:13:45,407 [INFO] ML model loaded.
+2026-03-05 19:13:45,903 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:13:45,903 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:14:57,368 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:14:57,368 [INFO] ML model loaded.
+2026-03-05 19:14:58,385 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:14:58,385 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:15:41,580 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:15:41,585 [INFO] ML model loaded.
+2026-03-05 19:15:41,586 [INFO] --- Single scan ---
+2026-03-05 19:15:41,587 [INFO] Fetching wallet...
+2026-03-05 19:15:42,832 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:15:42,856 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:15:44,682 [INFO] BTCUSD: no_signal
+2026-03-05 19:15:44,682 [INFO]   $72,490.50 | Squeeze=False | Trend=bullish
+2026-03-05 19:15:45,871 [INFO] ETHUSD: no_signal
+2026-03-05 19:15:45,872 [INFO]   $2,117.90 | Squeeze=False | Trend=bullish
+2026-03-05 19:15:47,334 [INFO] SOLUSD: no_signal
+2026-03-05 19:15:47,334 [INFO]   $90.79 | Squeeze=False | Trend=bullish
+2026-03-05 19:15:47,334 [INFO] 30d stats: {'total': 0, 'wins': 0, 'net_r': 0.0, 'pnl_usdt': 0.0, 'fees': 0.0, 'losses': 0, 'wr': 0.0}
+2026-03-05 19:15:58,180 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:15:58,180 [INFO] ML model loaded.
+2026-03-05 19:15:59,872 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:15:59,873 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:16:39,444 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:16:39,444 [INFO] ML model loaded.
+2026-03-05 19:16:40,294 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:16:40,294 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:17:25,124 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:17:25,124 [INFO] ML model loaded.
+2026-03-05 19:17:26,523 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:17:26,523 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:18:30,369 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:18:30,369 [INFO] ML model loaded.
+2026-03-05 19:18:31,570 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:18:31,570 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:19:01,517 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:19:01,517 [INFO] ML model loaded.
+2026-03-05 19:19:03,500 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:19:03,500 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:19:32,062 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:19:32,063 [INFO] ML model loaded.
+2026-03-05 19:19:33,264 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:19:33,264 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:19:55,246 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:19:55,246 [INFO] ML model loaded.
+2026-03-05 19:19:56,779 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:19:56,795 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:21:19,167 [INFO] Model loaded (trained: 2026-03-05 14:32:19.806046)
+2026-03-05 19:21:19,183 [INFO] ML model loaded.
+2026-03-05 19:21:19,183 [INFO] =================================================================
+2026-03-05 19:21:19,183 [INFO]   BB SQUEEZE TRADING BOT
+2026-03-05 19:21:19,183 [INFO]   Mode: PAPER | Leverage: 5x | Risk: 1.0%/trade
+2026-03-05 19:21:19,183 [INFO] =================================================================
+2026-03-05 19:21:19,183 [INFO] Step 1/3: Fetching wallet balance from Delta Exchange...
+2026-03-05 19:21:20,451 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:21:20,451 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:21:20,451 [INFO] Step 2/3: Testing API connection...
+2026-03-05 19:21:21,592 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-05 19:21:21,592 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-05 19:21:21,592 [INFO] 
+-- Cycle #1 | 19:21:21 | Capital: $188.81 --
+2026-03-05 19:21:23,080 [INFO]   BTCUSD: $72,644.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:21:25,298 [INFO]   ETHUSD: $2,125.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.3x
+2026-03-05 19:21:26,597 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:22:26,605 [INFO] 
+-- Cycle #2 | 19:22:26 | Capital: $188.81 --
+2026-03-05 19:22:28,591 [INFO]   BTCUSD: $72,632.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:22:30,014 [INFO]   ETHUSD: $2,124.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.3x
+2026-03-05 19:22:31,390 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:23:31,399 [INFO] 
+-- Cycle #3 | 19:23:31 | Capital: $188.81 --
+2026-03-05 19:23:33,261 [INFO]   BTCUSD: $72,611.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:23:36,295 [INFO]   ETHUSD: $2,124.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.3x
+2026-03-05 19:23:38,265 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:24:38,276 [INFO] 
+-- Cycle #4 | 19:24:38 | Capital: $188.81 --
+2026-03-05 19:24:40,231 [INFO]   BTCUSD: $72,609.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:24:42,279 [INFO]   ETHUSD: $2,122.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.3x
+2026-03-05 19:24:43,547 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:25:43,556 [INFO] 
+-- Cycle #5 | 19:25:43 | Capital: $188.81 --
+2026-03-05 19:25:43,556 [INFO] Refreshing wallet...
+2026-03-05 19:25:44,636 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:25:44,637 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:25:46,543 [INFO]   BTCUSD: $72,588.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:25:49,577 [INFO]   ETHUSD: $2,122.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.4x
+2026-03-05 19:25:53,833 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:26:53,843 [INFO] 
+-- Cycle #6 | 19:26:53 | Capital: $188.81 --
+2026-03-05 19:26:55,800 [INFO]   BTCUSD: $72,550.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:26:57,595 [INFO]   ETHUSD: $2,121.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.4x
+2026-03-05 19:26:59,428 [INFO]   SOLUSD: $90.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 19:27:59,436 [INFO] 
+-- Cycle #7 | 19:27:59 | Capital: $188.81 --
+2026-03-05 19:28:01,656 [INFO]   BTCUSD: $72,424.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 19:28:03,037 [INFO]   ETHUSD: $2,115.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.4x
+2026-03-05 19:28:05,849 [INFO]   SOLUSD: $110.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:29:05,861 [INFO] 
+-- Cycle #8 | 19:29:05 | Capital: $188.81 --
+2026-03-05 19:29:07,766 [INFO]   BTCUSD: $72,377.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 19:29:09,036 [INFO]   ETHUSD: $2,114.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.4x
+2026-03-05 19:29:10,896 [INFO]   SOLUSD: $90.78 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 19:30:10,902 [INFO] 
+-- Cycle #9 | 19:30:10 | Capital: $188.81 --
+2026-03-05 19:30:12,809 [INFO]   BTCUSD: $72,435.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 19:30:14,653 [INFO]   ETHUSD: $2,116.35 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.5x
+2026-03-05 19:30:15,940 [INFO]   SOLUSD: $90.74 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.6x
+2026-03-05 19:31:15,948 [INFO] 
+-- Cycle #10 | 19:31:15 | Capital: $188.81 --
+2026-03-05 19:31:15,948 [INFO] Refreshing wallet...
+2026-03-05 19:31:18,704 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:31:18,704 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:31:22,443 [INFO]   BTCUSD: $72,447.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:31:24,081 [INFO]   ETHUSD: $2,116.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:31:26,224 [INFO]   SOLUSD: $90.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 19:32:26,249 [INFO] 
+-- Cycle #11 | 19:32:26 | Capital: $188.81 --
+2026-03-05 19:32:28,161 [INFO]   BTCUSD: $72,455.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:32:30,691 [INFO]   ETHUSD: $2,115.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:32:32,521 [INFO]   SOLUSD: $90.71 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 19:33:32,531 [INFO] 
+-- Cycle #12 | 19:33:32 | Capital: $188.81 --
+2026-03-05 19:33:34,423 [INFO]   BTCUSD: $72,491.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:33:37,598 [INFO]   ETHUSD: $2,117.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:33:40,851 [INFO]   SOLUSD: $90.76 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 19:34:40,861 [INFO] 
+-- Cycle #13 | 19:34:40 | Capital: $188.81 --
+2026-03-05 19:34:44,520 [INFO]   BTCUSD: $72,477.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:34:46,349 [INFO]   ETHUSD: $2,118.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 19:34:50,807 [INFO]   SOLUSD: $90.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 19:35:50,816 [INFO] 
+-- Cycle #14 | 19:35:50 | Capital: $188.81 --
+2026-03-05 19:35:52,709 [INFO]   BTCUSD: $72,493.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:35:54,586 [INFO]   ETHUSD: $2,117.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:35:55,729 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 19:36:55,738 [INFO] 
+-- Cycle #15 | 19:36:55 | Capital: $188.81 --
+2026-03-05 19:36:55,738 [INFO] Refreshing wallet...
+2026-03-05 19:36:57,504 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:36:57,504 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:37:00,429 [INFO]   BTCUSD: $72,548.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:37:02,760 [INFO]   ETHUSD: $2,121.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:37:07,561 [INFO]   SOLUSD: $90.99 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.1x
+2026-03-05 19:38:07,572 [INFO] 
+-- Cycle #16 | 19:38:07 | Capital: $188.81 --
+2026-03-05 19:38:09,685 [INFO]   BTCUSD: $72,516.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:38:11,951 [INFO]   ETHUSD: $2,119.15 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:38:13,889 [INFO]   SOLUSD: $90.91 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 19:39:13,899 [INFO] 
+-- Cycle #17 | 19:39:13 | Capital: $188.81 --
+2026-03-05 19:39:14,792 [INFO]   BTCUSD: $72,336.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:39:15,526 [INFO]   ETHUSD: $2,114.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:39:16,464 [INFO]   SOLUSD: $90.63 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 19:40:16,474 [INFO] 
+-- Cycle #18 | 19:40:16 | Capital: $188.81 --
+2026-03-05 19:40:19,336 [INFO]   BTCUSD: $72,478.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:40:24,062 [INFO]   ETHUSD: $2,118.85 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 19:40:25,218 [INFO]   SOLUSD: $90.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 19:41:25,244 [INFO] 
+-- Cycle #19 | 19:41:25 | Capital: $188.81 --
+2026-03-05 19:41:27,460 [INFO]   BTCUSD: $72,497.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:41:29,168 [INFO]   ETHUSD: $2,119.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:41:30,830 [INFO]   SOLUSD: $90.91 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 19:42:30,837 [INFO] 
+-- Cycle #20 | 19:42:30 | Capital: $188.81 --
+2026-03-05 19:42:30,837 [INFO] Refreshing wallet...
+2026-03-05 19:42:32,401 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:42:32,401 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:42:33,984 [INFO]   BTCUSD: $72,455.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:42:35,470 [INFO]   ETHUSD: $2,119.05 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:42:36,940 [INFO]   SOLUSD: $90.94 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 19:43:36,950 [INFO] 
+-- Cycle #21 | 19:43:36 | Capital: $188.81 --
+2026-03-05 19:43:37,763 [INFO]   BTCUSD: $72,508.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:43:38,921 [INFO]   ETHUSD: $2,119.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:43:39,546 [INFO]   SOLUSD: $90.94 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 19:44:39,556 [INFO] 
+-- Cycle #22 | 19:44:39 | Capital: $188.81 --
+2026-03-05 19:44:40,570 [INFO]   BTCUSD: $72,556.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:44:41,387 [INFO]   ETHUSD: $2,120.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:44:42,180 [INFO]   SOLUSD: $90.83 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:45:42,194 [INFO] 
+-- Cycle #23 | 19:45:42 | Capital: $188.81 --
+2026-03-05 19:45:43,082 [INFO]   BTCUSD: $72,578.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:45:43,801 [INFO]   ETHUSD: $2,121.45 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 19:45:44,395 [INFO]   SOLUSD: $90.83 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:46:44,407 [INFO] 
+-- Cycle #24 | 19:46:44 | Capital: $188.81 --
+2026-03-05 19:46:45,298 [INFO]   BTCUSD: $72,535.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:46:45,970 [INFO]   ETHUSD: $2,119.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:46:46,564 [INFO]   SOLUSD: $90.98 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:47:46,574 [INFO] 
+-- Cycle #25 | 19:47:46 | Capital: $188.81 --
+2026-03-05 19:47:46,574 [INFO] Refreshing wallet...
+2026-03-05 19:47:47,058 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:47:47,058 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:47:47,700 [INFO]   BTCUSD: $72,518.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:47:48,263 [INFO]   ETHUSD: $2,119.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:47:48,872 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:48:48,883 [INFO] 
+-- Cycle #26 | 19:48:48 | Capital: $188.81 --
+2026-03-05 19:48:50,307 [INFO]   BTCUSD: $72,413.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:48:51,308 [INFO]   ETHUSD: $2,114.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 19:48:52,574 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:49:52,583 [INFO] 
+-- Cycle #27 | 19:49:52 | Capital: $188.81 --
+2026-03-05 19:49:54,199 [INFO]   BTCUSD: $72,442.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:49:55,184 [INFO]   ETHUSD: $2,114.95 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:49:56,148 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:50:56,157 [INFO] 
+-- Cycle #28 | 19:50:56 | Capital: $188.81 --
+2026-03-05 19:50:56,752 [INFO]   BTCUSD: $72,442.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:50:57,472 [INFO]   ETHUSD: $2,115.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:50:58,050 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:51:58,061 [INFO] 
+-- Cycle #29 | 19:51:58 | Capital: $188.81 --
+2026-03-05 19:51:59,344 [INFO]   BTCUSD: $72,455.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:52:00,000 [INFO]   ETHUSD: $2,114.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:52:00,563 [INFO]   SOLUSD: $90.86 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 19:53:00,566 [INFO] 
+-- Cycle #30 | 19:53:00 | Capital: $188.81 --
+2026-03-05 19:53:00,566 [INFO] Refreshing wallet...
+2026-03-05 19:53:02,450 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 19:53:02,450 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 19:53:04,031 [INFO]   BTCUSD: $72,491.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:53:05,781 [INFO]   ETHUSD: $2,116.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:53:07,675 [INFO]   SOLUSD: $86.83 | Squeeze: NO (0 bars) | 4H: bearish | Vol: 1.5x
+2026-03-05 19:54:08,428 [INFO] 
+-- Cycle #31 | 19:54:08 | Capital: $188.81 --
+2026-03-05 19:54:09,394 [INFO]   BTCUSD: $72,471.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:54:10,161 [INFO]   ETHUSD: $2,116.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:54:10,938 [INFO]   SOLUSD: $86.83 | Squeeze: NO (0 bars) | 4H: bearish | Vol: 1.5x
+2026-03-05 19:55:10,949 [INFO] 
+-- Cycle #32 | 19:55:10 | Capital: $188.81 --
+2026-03-05 19:55:11,867 [INFO]   BTCUSD: $72,459.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:55:12,982 [INFO]   ETHUSD: $2,115.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 19:55:13,673 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 19:56:13,682 [INFO] 
+-- Cycle #33 | 19:56:13 | Capital: $188.81 --
+2026-03-05 19:56:15,452 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:56:16,929 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:56:18,401 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 19:57:18,411 [INFO] 
+-- Cycle #34 | 19:57:18 | Capital: $188.81 --
+2026-03-05 19:57:18,413 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:57:18,413 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:57:18,564 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:57:18,564 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:57:18,564 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:57:18,714 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:57:18,730 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:57:18,730 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090838&end=1772720838 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:57:18,872 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 19:58:18,888 [INFO] 
+-- Cycle #35 | 19:58:18 | Capital: $188.81 --
+2026-03-05 19:58:18,889 [INFO] Refreshing wallet...
+2026-03-05 19:58:28,904 [ERROR] GET /v2/wallet/balances failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Read timed out. (read timeout=10)
+2026-03-05 19:58:28,904 [ERROR] Balance fetch failed: {'success': False, 'error': "HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Read timed out. (read timeout=10)"}
+2026-03-05 19:58:28,904 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 19:58:28,904 [WARNING] Using local capital: $188.81
+2026-03-05 19:58:28,904 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090908&end=1772720908 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:58:28,904 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090908&end=1772720908 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:58:29,014 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:58:29,029 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090909&end=1772720909 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:58:29,029 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090909&end=1772720909 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:58:29,175 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:58:29,175 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090909&end=1772720909 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:58:29,175 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090909&end=1772720909 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:58:29,308 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 19:59:29,318 [INFO] 
+-- Cycle #36 | 19:59:29 | Capital: $188.81 --
+2026-03-05 19:59:29,325 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:59:29,325 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:59:29,471 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:59:29,471 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:59:29,471 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:59:29,604 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 19:59:29,604 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 19:59:29,604 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772090969&end=1772720969 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 19:59:29,737 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:00:29,746 [INFO] 
+-- Cycle #37 | 20:00:29 | Capital: $188.81 --
+2026-03-05 20:00:29,749 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091029&end=1772721029 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:00:29,749 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091029&end=1772721029 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:00:29,881 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:00:29,881 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091029&end=1772721029 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:00:29,881 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091029&end=1772721029 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:00:30,021 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:00:30,021 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091030&end=1772721030 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:00:30,037 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091030&end=1772721030 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:00:30,166 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:01:30,177 [INFO] 
+-- Cycle #38 | 20:01:30 | Capital: $188.81 --
+2026-03-05 20:01:30,177 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:01:30,177 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:01:30,312 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:01:30,328 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:01:30,328 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:01:30,461 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:01:30,461 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:01:30,476 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091090&end=1772721090 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:01:30,595 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:02:30,621 [INFO] 
+-- Cycle #39 | 20:02:30 | Capital: $188.81 --
+2026-03-05 20:02:30,624 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:02:30,624 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:02:30,757 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:02:30,757 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:02:30,757 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:02:30,887 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:02:30,887 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:02:30,887 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091150&end=1772721150 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:02:31,028 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:03:31,039 [INFO] 
+-- Cycle #40 | 20:03:31 | Capital: $188.81 --
+2026-03-05 20:03:31,039 [INFO] Refreshing wallet...
+2026-03-05 20:03:31,039 [ERROR] GET /v2/wallet/balances failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/wallet/balances (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:03:31,039 [ERROR] Balance fetch failed: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/wallet/balances (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:03:31,039 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 20:03:31,039 [WARNING] Using local capital: $188.81
+2026-03-05 20:03:31,039 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:03:31,051 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:03:31,170 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:03:31,170 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:03:31,184 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:03:31,319 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:03:31,319 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:03:31,319 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091211&end=1772721211 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:03:31,453 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:04:31,479 [INFO] 
+-- Cycle #41 | 20:04:31 | Capital: $188.81 --
+2026-03-05 20:04:31,481 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:04:31,481 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:04:31,615 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:04:31,631 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:04:31,631 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:04:31,765 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:04:31,765 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:04:31,765 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091271&end=1772721271 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:04:31,910 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:05:31,922 [INFO] 
+-- Cycle #42 | 20:05:31 | Capital: $188.81 --
+2026-03-05 20:05:31,922 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091331&end=1772721331 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:05:31,922 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091331&end=1772721331 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:05:32,047 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:05:32,047 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091332&end=1772721332 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:05:32,047 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091332&end=1772721332 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:05:32,194 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:05:32,194 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091332&end=1772721332 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:05:32,194 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091332&end=1772721332 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:05:32,343 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:06:32,370 [INFO] 
+-- Cycle #43 | 20:06:32 | Capital: $188.81 --
+2026-03-05 20:06:32,372 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:06:32,372 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:06:32,506 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:06:32,506 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:06:32,522 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:06:32,655 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:06:32,655 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:06:32,655 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091392&end=1772721392 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:06:32,803 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:07:32,817 [INFO] 
+-- Cycle #44 | 20:07:32 | Capital: $188.81 --
+2026-03-05 20:07:32,818 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091452&end=1772721452 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:07:32,818 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091452&end=1772721452 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:07:32,960 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:07:32,960 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091452&end=1772721452 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:07:32,960 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091452&end=1772721452 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:07:33,072 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:07:33,082 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091453&end=1772721453 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:07:33,083 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091453&end=1772721453 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:07:33,201 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:08:33,213 [INFO] 
+-- Cycle #45 | 20:08:33 | Capital: $188.81 --
+2026-03-05 20:08:33,213 [INFO] Refreshing wallet...
+2026-03-05 20:08:33,213 [ERROR] GET /v2/wallet/balances failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/wallet/balances (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:08:33,213 [ERROR] Balance fetch failed: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/wallet/balances (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:08:33,213 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-05 20:08:33,213 [WARNING] Using local capital: $188.81
+2026-03-05 20:08:33,213 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:08:33,213 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:08:33,364 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:08:33,364 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:08:33,364 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:08:33,512 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:08:33,514 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:08:33,514 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091513&end=1772721513 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:08:33,631 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:09:33,642 [INFO] 
+-- Cycle #46 | 20:09:33 | Capital: $188.81 --
+2026-03-05 20:09:33,642 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:09:33,642 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:09:33,792 [INFO]   BTCUSD: $72,554.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:09:33,792 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:09:33,792 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:09:33,906 [INFO]   ETHUSD: $2,118.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:09:33,906 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-05 20:09:33,906 [WARNING] Candles failed for SOLUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=SOLUSD&resolution=30m&start=1772091573&end=1772721573 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-05 20:09:34,016 [INFO]   SOLUSD: $90.69 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:10:34,026 [INFO] 
+-- Cycle #47 | 20:10:34 | Capital: $188.81 --
+2026-03-05 20:10:36,454 [INFO]   BTCUSD: $72,170.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 20:10:37,885 [INFO]   ETHUSD: $2,104.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:10:39,454 [INFO]   SOLUSD: $90.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:11:39,466 [INFO] 
+-- Cycle #48 | 20:11:39 | Capital: $188.81 --
+2026-03-05 20:11:40,283 [INFO]   BTCUSD: $72,123.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 20:11:40,989 [INFO]   ETHUSD: $2,102.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:11:41,583 [INFO]   SOLUSD: $89.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:12:41,592 [INFO] 
+-- Cycle #49 | 20:12:41 | Capital: $188.81 --
+2026-03-05 20:12:43,628 [INFO]   BTCUSD: $72,134.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:12:45,060 [INFO]   ETHUSD: $2,103.15 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:12:46,526 [INFO]   SOLUSD: $89.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:13:46,538 [INFO] 
+-- Cycle #50 | 20:13:46 | Capital: $188.81 --
+2026-03-05 20:13:46,539 [INFO] Refreshing wallet...
+2026-03-05 20:13:46,950 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:13:46,950 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:13:47,807 [INFO]   BTCUSD: $72,152.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:13:48,407 [INFO]   ETHUSD: $2,103.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:13:48,965 [INFO]   SOLUSD: $89.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:14:48,992 [INFO] 
+-- Cycle #51 | 20:14:48 | Capital: $188.81 --
+2026-03-05 20:14:50,102 [INFO]   BTCUSD: $72,005.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:14:50,736 [INFO]   ETHUSD: $2,100.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:14:51,367 [INFO]   SOLUSD: $90.01 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:15:51,379 [INFO] 
+-- Cycle #52 | 20:15:51 | Capital: $188.81 --
+2026-03-05 20:15:53,283 [INFO]   BTCUSD: $71,960.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:15:55,080 [INFO]   ETHUSD: $2,099.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:15:56,214 [INFO]   SOLUSD: $89.98 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:16:56,225 [INFO] 
+-- Cycle #53 | 20:16:56 | Capital: $188.81 --
+2026-03-05 20:16:58,809 [INFO]   BTCUSD: $71,931.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:17:00,209 [INFO]   ETHUSD: $2,097.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:17:01,540 [INFO]   SOLUSD: $89.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:18:01,553 [INFO] 
+-- Cycle #54 | 20:18:01 | Capital: $188.81 --
+2026-03-05 20:18:03,438 [INFO]   BTCUSD: $72,169.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:18:05,355 [INFO]   ETHUSD: $2,107.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:18:07,270 [INFO]   SOLUSD: $89.79 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:19:07,281 [INFO] 
+-- Cycle #55 | 20:19:07 | Capital: $188.81 --
+2026-03-05 20:19:07,282 [INFO] Refreshing wallet...
+2026-03-05 20:19:08,101 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:19:08,101 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:19:09,070 [INFO]   BTCUSD: $72,217.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:19:09,867 [INFO]   ETHUSD: $2,108.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:19:10,800 [INFO]   SOLUSD: $90.33 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:20:10,810 [INFO] 
+-- Cycle #56 | 20:20:10 | Capital: $188.81 --
+2026-03-05 20:20:11,545 [INFO]   BTCUSD: $72,081.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:20:12,218 [INFO]   ETHUSD: $2,102.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:20:12,924 [INFO]   SOLUSD: $90.33 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:21:12,936 [INFO] 
+-- Cycle #57 | 20:21:12 | Capital: $188.81 --
+2026-03-05 20:21:13,691 [INFO]   BTCUSD: $72,209.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:21:14,474 [INFO]   ETHUSD: $2,107.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:21:15,055 [INFO]   SOLUSD: $90.34 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:22:15,067 [INFO] 
+-- Cycle #58 | 20:22:15 | Capital: $188.81 --
+2026-03-05 20:22:15,914 [INFO]   BTCUSD: $72,427.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:22:16,636 [INFO]   ETHUSD: $2,117.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.1x
+2026-03-05 20:22:17,251 [INFO]   SOLUSD: $90.71 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:23:17,263 [INFO] 
+-- Cycle #59 | 20:23:17 | Capital: $188.81 --
+2026-03-05 20:23:17,894 [INFO]   BTCUSD: $72,320.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:23:18,580 [INFO]   ETHUSD: $2,110.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.1x
+2026-03-05 20:23:19,181 [INFO]   SOLUSD: $90.44 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:24:19,192 [INFO] 
+-- Cycle #60 | 20:24:19 | Capital: $188.81 --
+2026-03-05 20:24:19,193 [INFO] Refreshing wallet...
+2026-03-05 20:24:19,643 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:24:19,658 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:24:20,260 [INFO]   BTCUSD: $72,454.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.8x
+2026-03-05 20:24:20,878 [INFO]   ETHUSD: $2,113.85 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:24:21,510 [INFO]   SOLUSD: $90.72 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:25:21,520 [INFO] 
+-- Cycle #61 | 20:25:21 | Capital: $188.81 --
+2026-03-05 20:25:22,422 [INFO]   BTCUSD: $72,452.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.8x
+2026-03-05 20:25:23,239 [INFO]   ETHUSD: $2,112.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:25:23,996 [INFO]   SOLUSD: $90.72 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:26:24,006 [INFO] 
+-- Cycle #62 | 20:26:24 | Capital: $188.81 --
+2026-03-05 20:26:24,991 [INFO]   BTCUSD: $72,503.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.8x
+2026-03-05 20:26:25,648 [INFO]   ETHUSD: $2,113.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:26:26,284 [INFO]   SOLUSD: $90.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:27:26,295 [INFO] 
+-- Cycle #63 | 20:27:26 | Capital: $188.81 --
+2026-03-05 20:27:27,229 [INFO]   BTCUSD: $72,398.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.8x
+2026-03-05 20:27:27,956 [INFO]   ETHUSD: $2,110.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:27:28,812 [INFO]   SOLUSD: $90.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:28:28,823 [INFO] 
+-- Cycle #64 | 20:28:28 | Capital: $188.81 --
+2026-03-05 20:28:29,558 [INFO]   BTCUSD: $72,456.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.9x
+2026-03-05 20:28:30,141 [INFO]   ETHUSD: $2,110.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:28:30,725 [INFO]   SOLUSD: $90.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:29:30,735 [INFO] 
+-- Cycle #65 | 20:29:30 | Capital: $188.81 --
+2026-03-05 20:29:30,736 [INFO] Refreshing wallet...
+2026-03-05 20:29:31,218 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:29:31,220 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:29:31,787 [INFO]   BTCUSD: $72,611.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.0x
+2026-03-05 20:29:32,420 [INFO]   ETHUSD: $2,120.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:29:33,120 [INFO]   SOLUSD: $91.18 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:30:33,132 [INFO] 
+-- Cycle #66 | 20:30:33 | Capital: $188.81 --
+2026-03-05 20:30:33,926 [INFO]   BTCUSD: $72,570.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 2.0x
+2026-03-05 20:30:34,666 [INFO]   ETHUSD: $2,117.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:30:35,266 [INFO]   SOLUSD: $90.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:31:35,275 [INFO] 
+-- Cycle #67 | 20:31:35 | Capital: $188.81 --
+2026-03-05 20:31:35,970 [INFO]   BTCUSD: $72,691.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 20:31:36,711 [INFO]   ETHUSD: $2,120.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:31:37,311 [INFO]   SOLUSD: $91.02 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:32:37,338 [INFO] 
+-- Cycle #68 | 20:32:37 | Capital: $188.81 --
+2026-03-05 20:32:37,918 [INFO]   BTCUSD: $72,562.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 20:32:38,506 [INFO]   ETHUSD: $2,114.95 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 20:32:39,027 [INFO]   SOLUSD: $90.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:33:39,039 [INFO] 
+-- Cycle #69 | 20:33:39 | Capital: $188.81 --
+2026-03-05 20:33:39,619 [INFO]   BTCUSD: $72,514.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 20:33:40,185 [INFO]   ETHUSD: $2,114.35 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 20:33:40,751 [INFO]   SOLUSD: $90.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:34:40,764 [INFO] 
+-- Cycle #70 | 20:34:40 | Capital: $188.81 --
+2026-03-05 20:34:40,781 [INFO] Refreshing wallet...
+2026-03-05 20:34:41,147 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:34:41,147 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:34:41,731 [INFO]   BTCUSD: $72,383.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 20:34:42,314 [INFO]   ETHUSD: $2,108.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 20:34:42,894 [INFO]   SOLUSD: $90.97 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:35:42,921 [INFO] 
+-- Cycle #71 | 20:35:42 | Capital: $188.81 --
+2026-03-05 20:35:43,624 [INFO]   BTCUSD: $72,232.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 20:35:44,293 [INFO]   ETHUSD: $2,105.05 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 20:35:45,016 [INFO]   SOLUSD: $90.42 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:36:45,026 [INFO] 
+-- Cycle #72 | 20:36:45 | Capital: $188.81 --
+2026-03-05 20:36:45,621 [INFO]   BTCUSD: $72,196.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 20:36:46,338 [INFO]   ETHUSD: $2,103.85 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:36:46,994 [INFO]   SOLUSD: $90.32 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:37:47,006 [INFO] 
+-- Cycle #73 | 20:37:47 | Capital: $188.81 --
+2026-03-05 20:37:47,896 [INFO]   BTCUSD: $72,163.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.5x
+2026-03-05 20:37:48,514 [INFO]   ETHUSD: $2,102.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:37:49,217 [INFO]   SOLUSD: $90.17 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:38:49,227 [INFO] 
+-- Cycle #74 | 20:38:49 | Capital: $188.81 --
+2026-03-05 20:38:49,924 [INFO]   BTCUSD: $72,021.60 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:38:50,729 [INFO]   ETHUSD: $2,096.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.4x
+2026-03-05 20:38:51,712 [INFO]   SOLUSD: $90.17 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:39:51,721 [INFO] 
+-- Cycle #75 | 20:39:51 | Capital: $188.81 --
+2026-03-05 20:39:51,722 [INFO] Refreshing wallet...
+2026-03-05 20:39:52,157 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:39:52,157 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:39:52,893 [INFO]   BTCUSD: $71,791.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:39:53,608 [INFO]   ETHUSD: $2,089.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.6x
+2026-03-05 20:39:54,345 [INFO]   SOLUSD: $89.76 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:40:54,350 [INFO] 
+-- Cycle #76 | 20:40:54 | Capital: $188.81 --
+2026-03-05 20:40:54,946 [INFO]   BTCUSD: $71,801.10 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:40:55,636 [INFO]   ETHUSD: $2,086.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.7x
+2026-03-05 20:40:56,186 [INFO]   SOLUSD: $89.76 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:41:56,196 [INFO] 
+-- Cycle #77 | 20:41:56 | Capital: $188.81 --
+2026-03-05 20:41:57,130 [INFO]   BTCUSD: $71,796.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:41:57,749 [INFO]   ETHUSD: $2,087.35 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.8x
+2026-03-05 20:41:58,281 [INFO]   SOLUSD: $89.76 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:42:58,291 [INFO] 
+-- Cycle #78 | 20:42:58 | Capital: $188.81 --
+2026-03-05 20:42:58,985 [INFO]   BTCUSD: $71,577.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:42:59,561 [INFO]   ETHUSD: $2,083.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:43:00,144 [INFO]   SOLUSD: $89.43 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:44:00,153 [INFO] 
+-- Cycle #79 | 20:44:00 | Capital: $188.81 --
+2026-03-05 20:44:00,902 [INFO]   BTCUSD: $71,843.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:44:01,472 [INFO]   ETHUSD: $2,092.25 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.9x
+2026-03-05 20:44:02,139 [INFO]   SOLUSD: $89.43 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:45:02,165 [INFO] 
+-- Cycle #80 | 20:45:02 | Capital: $188.81 --
+2026-03-05 20:45:02,166 [INFO] Refreshing wallet...
+2026-03-05 20:45:02,501 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:45:02,501 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:45:03,201 [INFO]   BTCUSD: $71,770.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:45:03,784 [INFO]   ETHUSD: $2,087.65 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:45:04,365 [INFO]   SOLUSD: $89.43 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:46:04,379 [INFO] 
+-- Cycle #81 | 20:46:04 | Capital: $188.81 --
+2026-03-05 20:46:05,212 [INFO]   BTCUSD: $71,799.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:46:05,830 [INFO]   ETHUSD: $2,091.20 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:46:06,445 [INFO]   SOLUSD: $89.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:47:06,457 [INFO] 
+-- Cycle #82 | 20:47:06 | Capital: $188.81 --
+2026-03-05 20:47:07,242 [INFO]   BTCUSD: $71,633.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.3x
+2026-03-05 20:47:07,808 [INFO]   ETHUSD: $2,086.75 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.0x
+2026-03-05 20:47:09,742 [INFO]   SOLUSD: $89.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:48:09,752 [INFO] 
+-- Cycle #83 | 20:48:09 | Capital: $188.81 --
+2026-03-05 20:48:10,338 [INFO]   BTCUSD: $71,647.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.4x
+2026-03-05 20:48:10,994 [INFO]   ETHUSD: $2,085.05 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.1x
+2026-03-05 20:48:11,604 [INFO]   SOLUSD: $89.66 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.0x
+2026-03-05 20:49:11,614 [INFO] 
+-- Cycle #84 | 20:49:11 | Capital: $188.81 --
+2026-03-05 20:49:12,266 [INFO]   BTCUSD: $71,669.90 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:49:12,895 [INFO]   ETHUSD: $2,083.50 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.1x
+2026-03-05 20:49:13,566 [INFO]   SOLUSD: $89.62 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-05 20:50:13,576 [INFO] 
+-- Cycle #85 | 20:50:13 | Capital: $188.81 --
+2026-03-05 20:50:13,577 [INFO] Refreshing wallet...
+2026-03-05 20:50:13,908 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-05 20:50:13,908 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-05 20:50:14,478 [INFO]   BTCUSD: $71,631.40 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:50:15,060 [INFO]   ETHUSD: $2,086.05 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:50:15,594 [INFO]   SOLUSD: $89.61 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-05 20:51:15,604 [INFO] 
+-- Cycle #86 | 20:51:15 | Capital: $188.81 --
+2026-03-05 20:51:16,123 [INFO]   BTCUSD: $71,721.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:51:16,690 [INFO]   ETHUSD: $2,090.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:51:17,407 [INFO]   SOLUSD: $89.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:52:17,417 [INFO] 
+-- Cycle #87 | 20:52:17 | Capital: $188.81 --
+2026-03-05 20:52:18,152 [INFO]   BTCUSD: $71,642.30 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.5x
+2026-03-05 20:52:18,875 [INFO]   ETHUSD: $2,083.80 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:52:19,436 [INFO]   SOLUSD: $89.68 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:53:19,447 [INFO] 
+-- Cycle #88 | 20:53:19 | Capital: $188.81 --
+2026-03-05 20:53:20,019 [INFO]   BTCUSD: $71,550.70 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.6x
+2026-03-05 20:53:20,615 [INFO]   ETHUSD: $2,080.45 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:53:21,181 [INFO]   SOLUSD: $89.27 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:54:21,208 [INFO] 
+-- Cycle #89 | 20:54:21 | Capital: $188.81 --
+2026-03-05 20:54:21,777 [INFO]   BTCUSD: $71,578.00 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.7x
+2026-03-05 20:54:22,510 [INFO]   ETHUSD: $2,082.55 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 1.2x
+2026-03-05 20:54:23,326 [INFO]   SOLUSD: $89.34 | Squeeze: NO (0 bars) | 4H: bullish | Vol: 0.3x
+2026-03-05 20:54:30,576 [INFO] Bot stopped.
