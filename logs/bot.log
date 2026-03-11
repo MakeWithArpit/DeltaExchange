@@ -1640,3 +1640,13 @@ Feature Importances:
 2026-03-12 01:44:12,695 [INFO]   BTCUSD: $70,411.10 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
 2026-03-12 01:44:13,326 [INFO]   ETHUSD: $2,068.05 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
 2026-03-12 01:44:13,984 [INFO]   SOLUSD: $85.73 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:45:13,985 [INFO] 
+-- Cycle #90 | 01:45:13 | Capital: $188.81 --
+2026-03-12 01:45:13,987 [INFO] Refreshing wallet...
+2026-03-12 01:45:14,365 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '110.226.200.63'}}, 'success': False}
+2026-03-12 01:45:14,385 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '110.226.200.63'}}, 'success': False}}
+2026-03-12 01:45:14,387 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-12 01:45:14,435 [WARNING] Using local capital: $188.81
+2026-03-12 01:45:15,227 [INFO]   BTCUSD: $70,398.80 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.2x
+2026-03-12 01:45:15,901 [INFO]   ETHUSD: $2,067.90 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:45:16,511 [INFO]   SOLUSD: $85.73 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
