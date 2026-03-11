@@ -1618,3 +1618,5 @@ Feature Importances:
 2026-03-12 01:40:03,703 [WARNING] Wallet fetch failed — API unreachable or bad credentials
 2026-03-12 01:40:03,703 [WARNING] Using local capital: $188.81
 2026-03-12 01:40:04,315 [INFO]   BTCUSD: $70,451.60 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:40:04,991 [INFO]   ETHUSD: $2,070.00 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
+2026-03-12 01:40:05,780 [INFO]   SOLUSD: $85.73 | Squeeze: no (0 bars) | 4H: bullish | Vol: 0.1x
