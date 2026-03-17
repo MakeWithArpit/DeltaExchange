@@ -12,6 +12,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from config.settings import *
 from core.delta_client   import DeltaClient
 from core.strategy       import StrategyEngine
+from core.gann_strategy  import GannStrategyEngine, GannSignal
 from core.position_sizer import PositionSizer
 from ml.signal_filter    import MLSignalFilter
 from data.database       import Database
@@ -33,12 +34,18 @@ class TradingBot:
 
     def __init__(self):
         self.client  = DeltaClient()
-        self.engine  = StrategyEngine()
+        self.engine      = StrategyEngine()
+        self.gann_engine = GannStrategyEngine()
         self.ml      = MLSignalFilter()
         self.db      = Database(DB_PATH)
         self.capital = CAPITAL_USDT   # 0 at start; set from wallet on first fetch
         self.wallet  = {}             # raw wallet response from API
-        self.running = False
+        self.running           = False
+        # Monthly trailing profit tracker
+        self.monthly_peak_pct  = 0.0
+        self.monthly_protected = False
+        self.month_trading_band= False
+        self._current_month    = None
         self._load_or_train_ml()
 
     # -- ML INIT --────────────────────────────────────────────────
@@ -166,81 +173,189 @@ class TradingBot:
 
     # -- CIRCUIT BREAKER --────────────────────────────────────────
     def _check_circuit_breaker(self) -> tuple:
-        loss = self.db.get_daily_loss_pct(self.capital)
-        if loss >= MAX_DAILY_LOSS_PCT:
-            return True, f"Daily loss {loss:.1f}% >= limit {MAX_DAILY_LOSS_PCT}%"
+        """
+        Multi-level protection:
+        1. Daily loss limit
+        2. Monthly hard stop (-5%)
+        3. Monthly profit trailing (target 3%, trail 1.5%)
+        """
+        from datetime import datetime
+
+        # ── Month rollover reset ──────────────────────────────────
+        this_month = datetime.now().strftime("%Y-%m")
+        if self._current_month != this_month:
+            self._current_month     = this_month
+            self.monthly_peak_pct   = 0.0
+            self.monthly_protected  = False
+            self.month_trading_band = False
+            logger.info(f"[TRAIL] New month {this_month} — trailing reset")
+
+        # ── Already banded this month? ────────────────────────────
+        if self.month_trading_band:
+            mo = self.db.get_monthly_pnl_pct(self.capital)
+            return True, (f"[TRAIL] Month locked at {mo['pnl_pct']:+.2f}% — "
+                          f"profit protected. Next month pe resume.")
+
+        # ── Daily loss check ──────────────────────────────────────
+        daily_loss = self.db.get_daily_loss_pct(self.capital)
+        if daily_loss >= MAX_DAILY_LOSS_PCT:
+            return True, f"Daily loss {daily_loss:.1f}% >= limit {MAX_DAILY_LOSS_PCT}%"
+
+        # ── Monthly hard stop ─────────────────────────────────────
+        mo = self.db.get_monthly_pnl_pct(self.capital)
+        mo_pct = mo["pnl_pct"]
+
+        monthly_loss = abs(min(0.0, mo_pct))
+        if monthly_loss >= MONTHLY_HARD_STOP_PCT:
+            self.month_trading_band = True
+            return True, (f"[STOP] Monthly loss {monthly_loss:.1f}% >= "
+                          f"hard stop {MONTHLY_HARD_STOP_PCT}%")
+
+        # ── Monthly profit trailing ───────────────────────────────
+        if mo_pct >= MONTHLY_TARGET_PCT:
+            # Target hit — trailing mode on
+            if not self.monthly_protected:
+                self.monthly_protected = True
+                self.monthly_peak_pct  = mo_pct
+                logger.info(f"[TRAIL] Target {MONTHLY_TARGET_PCT}% HIT! "
+                            f"Current: {mo_pct:+.2f}% — trailing on")
+
+        if self.monthly_protected:
+            # Update peak
+            if mo_pct > self.monthly_peak_pct:
+                old_peak = self.monthly_peak_pct
+                self.monthly_peak_pct = mo_pct
+                logger.info(f"[TRAIL] New peak: {mo_pct:+.2f}% "
+                            f"(was {old_peak:+.2f}%) — floor = {mo_pct - MONTHLY_TRAIL_PCT:+.2f}%")
+
+            # Check if dropped below floor
+            floor = self.monthly_peak_pct - MONTHLY_TRAIL_PCT
+            if mo_pct <= floor:
+                self.month_trading_band = True
+                return True, (f"[TRAIL] Profit protected at {floor:+.2f}% "
+                              f"(peak was {self.monthly_peak_pct:+.2f}%, "
+                              f"current {mo_pct:+.2f}%) — trading band for month")
+
         return False, ""
 
     # -- SIGNAL PIPELINE --────────────────────────────────────────
     def process_symbol(self, symbol: str) -> dict:
+        """
+        Run configured strategy (BB Squeeze / Gann / Both) on one symbol.
+        Returns action dict.
+        """
         result = {"symbol": symbol, "action": "none", "signal": None}
 
         df = self.fetch_candles(symbol)
-        if df.empty or len(df) < 300:
+        if df is None or len(df) < 60:
             result["action"] = "insufficient_data"
             return result
 
-        state  = self.engine.get_current_state(symbol, df)
-        signal = self.engine.check_signal(symbol, df)
+        bb_signal   = None
+        gann_signal = None
 
-        if signal is None:
+        # ── BB Squeeze ────────────────────────────────────────────
+        if STRATEGY_MODE in ("bb", "both", "confirm"):
+            if len(df) >= 300:
+                bb_signal = self.engine.check_signal(symbol, df)
+
+        # ── Gann Strategy ─────────────────────────────────────────
+        if STRATEGY_MODE in ("gann", "both", "confirm"):
+            # Skip SOL for Gann (ref price 0 = not configured)
+            if GANN_REF_PRICES.get(symbol, 0) != 0 or symbol not in GANN_REF_PRICES:
+                gann_signal = self.gann_engine.check_signal(symbol, df)
+
+        # ── Confirm mode: both must agree ─────────────────────────
+        if STRATEGY_MODE == "confirm":
+            if (bb_signal and gann_signal and
+                    bb_signal.direction == gann_signal.direction):
+                # Both agree — high confidence
+                sig = gann_signal  # use Gann levels for SL/TP
+                sig.confidence = min(0.99, gann_signal.confidence + 0.15)
+                sig.reason = f"[BB+GANN CONFIRM] {gann_signal.reason}"
+            else:
+                sig = None
+        elif STRATEGY_MODE == "gann":
+            sig = gann_signal
+        elif STRATEGY_MODE == "bb":
+            sig = bb_signal
+        else:  # "both" — first signal that comes
+            sig = gann_signal or bb_signal
+
+        if sig is None:
+            # Show current state for dashboard
+            if STRATEGY_MODE in ("gann", "both"):
+                state = self.gann_engine.get_current_state(symbol, df)
+                state["strategy"] = "gann"
+            else:
+                state = self.engine.get_current_state(symbol, df)
+                state["strategy"] = "bb"
             result["action"] = "no_signal"
             result["state"]  = state
             return result
 
-        ml_features = {
-            "squeeze_duration":  signal.squeeze_dur,
-            "breakout_strength": signal.breakout_str,
-            "volume_ratio":      signal.vol_ratio,
-            "macd_histogram":    0,
-            "atr_normalized":    signal.atr / signal.entry if signal.entry > 0 else 0,
-            "hour_sin":          math.sin(2*math.pi*datetime.now().hour/24),
-            "hour_cos":          math.cos(2*math.pi*datetime.now().hour/24),
-            "day_of_week":       datetime.now().weekday() / 6.0,
-            "bb_width_pct":      0.5,
-            "trend_strength":    1.0 if signal.trend_4h == "bullish" else -1.0,
-        }
-        ml_result = (self.ml.predict(ml_features) if USE_ML_FILTER else
-                     {"win_prob": 0.5, "take_trade": True, "reason": "ML off"})
+        # ── ML filter (only for BB signals — Gann has its own filters) ──
+        if STRATEGY_MODE in ("bb", "confirm") and hasattr(sig, 'squeeze_dur'):
+            ml_ok, ml_conf, ml_reason = self.ml.predict(sig, df)
+            if not ml_ok:
+                result["action"] = "ml_filtered"
+                result["reason"] = ml_reason
+                return result
 
-        # Position sizing always uses live wallet capital
-        calc = PositionSizer.calculate(
-            symbol=symbol,
-            entry_price=signal.entry,
-            sl_price=signal.sl,
-            capital=self.capital,
-            risk_pct=RISK_PER_TRADE_PCT,
-            leverage=LEVERAGE,
-        )
-
-        sig_id = self.db.save_signal(signal, ml_result)
-        result.update({"signal": signal, "ml": ml_result,
-                       "calc": calc, "sig_id": sig_id, "state": state})
-
-        if not ml_result.get("take_trade", True):
-            result["action"] = "ml_filtered"
-            result["reason"] = ml_result.get("reason", "")
+        # ── Position sizing ───────────────────────────────────────
+        prod    = PRODUCTS.get(symbol, {})
+        prod_id = prod.get("product_id", 0)
+        if not prod_id:
+            result["action"] = "no_product"
             return result
 
-        if len(self.db.get_open_trades()) >= MAX_OPEN_TRADES:
+        calc = PositionSizer.calculate(
+            symbol      = symbol,
+            entry_price = sig.entry,
+            sl_price    = sig.sl,
+            capital     = self.capital,
+        )
+        if calc.get("error"):
+            result["action"] = "insufficient_margin"
+            result["reason"] = calc["error"]
+            return result
+
+        # ── Open trade limit ──────────────────────────────────────
+        open_trades = self.db.get_open_trades()
+        if len(open_trades) >= MAX_OPEN_TRADES:
             result["action"] = "max_trades_reached"
             return result
 
-        if calc.get("margin_req", 0) > self.capital * 0.9:
-            result["action"] = "insufficient_margin"
-            result["reason"] = (f"Need ${calc['margin_req']:.2f} margin, "
-                                f"only ${self.capital:.2f} available")
-            return result
-
-        result["action"] = "trade"
+        result.update({
+            "action":  "trade",
+            "signal":  sig,
+            "calc":    calc,
+            "ml":      None,
+        })
         return result
 
-    # -- TRADE EXECUTION --────────────────────────────────────────
+
     def execute_trade(self, result: dict) -> bool:
-        signal     = result["signal"]
-        calc       = result["calc"]
-        sig_id     = result["sig_id"]
-        ml         = result["ml"]
+        signal = result["signal"]
+        calc   = result["calc"]
+        ml     = result.get("ml")
+
+        # Log signal to DB — normalize fields for both BB and Gann signals
+        sig_meta = {
+            "symbol":       signal.symbol,
+            "direction":    signal.direction,
+            "confidence":   getattr(signal, "confidence", 0.5),
+            "reason":       getattr(signal, "reason", ""),
+            "squeeze_dur":  getattr(signal, "squeeze_dur", 0),
+            "breakout_str": getattr(signal, "breakout_str", 0),
+            "vol_ratio":    getattr(signal, "vol_ratio", 1.0),
+            "trend_4h":     getattr(signal, "trend_4h", "unknown"),
+            "timestamp":    getattr(signal, "timestamp", ""),
+        }
+        try:
+            sig_id = self.db.log_signal(sig_meta)
+        except Exception:
+            sig_id = 0
         product_id = PRODUCTS.get(signal.symbol, {}).get("product_id", 0)
 
         if PAPER_TRADE:
@@ -310,8 +425,8 @@ class TradingBot:
 {'='*65}
 {mode} TRADE #{trade_id}  {icon} {sig.symbol} {sig.direction.upper()}
 {'='*65}
-  Signal     : {sig.reason}
-  ML         : {ml.get('reason','N/A')}
+  Signal     : {sig.reason[:80]}
+  ML         : {ml.get('reason','N/A') if ml else 'N/A (Gann signal)'}
 
   Entry      : ${sig.entry:>12,.4f}
   Stop Loss  : ${sig.sl:>12,.4f}   risk   = ${calc['risk_usdt']:.2f}
@@ -360,6 +475,25 @@ class TradingBot:
         _pnl = float(stats.get('pnl_usdt',0) or 0.0)
         print(f"║  Trades: {_t:<5}  Wins: {_w:<5}  WR: {_wr:>5.1f}%           ║")
         print(f"║  Net R : {_r:>+7.1f}R   PnL: ${_pnl:>+8.2f}              ║")
+        print(f"╠══════════════════════════════════════════════════════════════╣")
+        # Monthly trailing profit system
+        mo_stat  = self.db.get_monthly_pnl_pct(self.capital)
+        mo_pct   = mo_stat["pnl_pct"]
+        mo_usdt  = mo_stat["pnl_usdt"]
+        if self.month_trading_band:
+            mo_icon  = "[LOCKED]"
+            floor    = self.monthly_peak_pct - MONTHLY_TRAIL_PCT
+            mo_trail = f"Profit secured >= {floor:+.1f}% — next month pe resume"
+        elif self.monthly_protected:
+            mo_icon  = "[TRAILING]"
+            floor    = self.monthly_peak_pct - MONTHLY_TRAIL_PCT
+            mo_trail = f"Peak:{self.monthly_peak_pct:+.1f}%  Floor:{floor:+.1f}%  Riding profits"
+        else:
+            mo_icon  = "[ACTIVE]"
+            mo_trail = f"Target:+{MONTHLY_TARGET_PCT}%  Trail:{MONTHLY_TRAIL_PCT}%  Stop:-{MONTHLY_HARD_STOP_PCT}%"
+        print(f"║  MONTHLY TRAILING                                            ║")
+        print(f"║  {mo_icon:<10} This month: {mo_pct:>+6.2f}%  (${mo_usdt:>+7.2f})          ║")
+        print(f"║  {mo_trail:<60} ║")
         print(f"╠══════════════════════════════════════════════════════════════╣")
         print(f"║  OPEN TRADES  ({len(open_t)} paper / {len(live_pos)} live on exchange)          ║")
 
@@ -433,12 +567,26 @@ class TradingBot:
                         logger.info(f"  [SKIP] {symbol}: ML skip — {result.get('reason','')}")
                     elif action == "no_signal":
                         s = result.get("state", {})
-                        logger.info(
-                            f"  {symbol}: ${s.get('price',0):,.2f} | "
-                            f"Squeeze: {'[SQUEEZE]' if s.get('bb_squeeze') else 'no'} "
-                            f"({s.get('squeeze_dur',0)} bars) | "
-                            f"4H: {s.get('trend_4h','?')} | "
-                            f"Vol: {s.get('vol_ratio',1):.1f}x")
+                        strat = s.get("strategy", "bb")
+                        if strat == "gann":
+                            r1     = float(s.get('gann_r1') or 0)
+                            s1     = float(s.get('gann_s1') or 0)
+                            dist_r = float(s.get('dist_r1') or 0)
+                            dist_s = float(s.get('dist_s1') or 0)
+                            logger.info(
+                                f"  {symbol}: ${float(s.get('price',0)):,.2f} | "
+                                f"Gann R1={r1:,.0f}(+{dist_r:.2f}%) "
+                                f"S1={s1:,.0f}(-{dist_s:.2f}%) | "
+                                f"RSI={float(s.get('rsi',0)):.0f} | "
+                                f"4H: {s.get('trend_4h','?')} | "
+                                f"Vol: {float(s.get('vol_ratio',1)):.1f}x")
+                        else:
+                            logger.info(
+                                f"  {symbol}: ${s.get('price',0):,.2f} | "
+                                f"Squeeze: {'[SQUEEZE]' if s.get('bb_squeeze') else 'no'} "
+                                f"({s.get('squeeze_dur',0)} bars) | "
+                                f"4H: {s.get('trend_4h','?')} | "
+                                f"Vol: {s.get('vol_ratio',1):.1f}x")
                     elif action == "insufficient_margin":
                         logger.warning(f"  [WARN] {symbol}: {result.get('reason','')}")
                     elif action == "max_trades_reached":
