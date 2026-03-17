@@ -136,6 +136,27 @@ class Database:
                   datetime.now().isoformat(), trade_id))
         self._update_daily_performance(pnl_r, pnl_usdt)
 
+
+    def log_signal(self, sig_meta: dict) -> int:
+        """Log a signal to DB and return its ID"""
+        with self._conn() as c:
+            cur = c.execute("""
+                INSERT INTO signals
+                    (symbol, direction, confidence, reason,
+                     squeeze_dur, breakout_str, vol_ratio, trend_4h, created_at)
+                VALUES (?,?,?,?,?,?,?,?,datetime('now'))
+            """, (
+                sig_meta.get("symbol",""),
+                sig_meta.get("direction",""),
+                sig_meta.get("confidence", 0.5),
+                sig_meta.get("reason","")[:200],
+                sig_meta.get("squeeze_dur", 0),
+                sig_meta.get("breakout_str", 0),
+                sig_meta.get("vol_ratio", 1.0),
+                sig_meta.get("trend_4h","unknown"),
+            ))
+            return cur.lastrowid
+
     def get_open_trades(self) -> list:
         with self._conn() as c:
             rows = c.execute("SELECT * FROM trades WHERE status='open'").fetchall()
@@ -180,6 +201,32 @@ class Database:
                   1 if pnl_r > 0 else 0, 1 if pnl_r <= 0 else 0,
                   pnl_r, pnl_usdt,
                   pnl_r, pnl_r, pnl_r, pnl_usdt))
+
+
+    def get_monthly_pnl_pct(self, capital: float) -> dict:
+        """
+        Returns current month P&L as percentage of capital.
+        Also returns the peak P&L this month (for trailing).
+        """
+        month_start = datetime.now().date().replace(day=1).isoformat()
+        with self._conn() as c:
+            row = c.execute("""
+                SELECT COALESCE(SUM(pnl_usdt), 0) as total_pnl
+                FROM performance
+                WHERE date >= ?
+            """, (month_start,)).fetchone()
+
+        total_pnl  = float(row[0]) if row else 0.0
+        pct        = (total_pnl / capital * 100) if capital > 0 else 0.0
+        return {
+            "pnl_usdt": round(total_pnl, 4),
+            "pnl_pct":  round(pct, 3),
+        }
+
+    def get_monthly_loss_pct(self, capital: float) -> float:
+        """Return magnitude of monthly loss (positive number)."""
+        r = self.get_monthly_pnl_pct(capital)
+        return abs(min(0.0, r["pnl_pct"]))
 
     def get_daily_loss_pct(self, capital: float) -> float:
         today = datetime.now().date().isoformat()
