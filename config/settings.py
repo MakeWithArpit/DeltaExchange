@@ -7,8 +7,8 @@ Demo account ke liye: https://testnet.delta.exchange
 """
 
 # ── API CREDENTIALS ─────────────────────────────────────────────
-API_KEY    = "YOUR_API_KEY_HERE"
-API_SECRET = "YOUR_API_SECRET_HERE"
+API_KEY    = "7bidqvVgWDCuBOmrakyGecz4NBtgb8"
+API_SECRET = "tepQPqi7Dul7tLR0ygFNUN8xKwjaM5TRdkL3cTvKdZzEDZIsqTSN9kIawQGj"
 
 # Demo (testnet) ya Live
 USE_TESTNET = True   # True = demo account, False = real money ⚠️
