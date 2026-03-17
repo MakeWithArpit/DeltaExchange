@@ -116,6 +116,11 @@ class PositionSizer:
         notional      = contracts * entry_price
         margin_req    = notional / leverage
 
+        # Guard: margin > capital → can't trade
+        if margin_req > capital * 0.95:
+            return {"error": f"Insufficient margin: need ${margin_req:.2f}, have ${capital:.2f}",
+                    "margin_req": round(margin_req, 2), "capital": round(capital, 2)}
+
         # Actual risk (after rounding to lots)
         actual_risk   = contracts * sl_distance
 
