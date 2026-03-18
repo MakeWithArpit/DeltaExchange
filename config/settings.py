@@ -130,7 +130,7 @@ GANN_RSI_SHORT_MIN= 38.0    # tighter RSI band    # RSI must be above this for s
 STRATEGY_MODE = "both"
 
 # ── ENHANCED FILTERS (data-tested) ──────────────────────────────
-BB_VOL_FILTER      = 2.0     # BB squeeze: vol>2x avg = +4.6% WR
+BB_VOL_FILTER      = 1.5     # BB squeeze: vol>2x avg = +4.6% WR
 GANN_MIN_RR        = 1.0     # optimal per backtest     # Minimum risk:reward to take trade
 BB_MIN_SQUEEZE_BARS= 3       # Minimum squeeze duration
 SUPERTREND_MULT    = 3.0     # Supertrend ATR multiplier
