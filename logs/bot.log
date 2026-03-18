@@ -3112,3 +3112,8 @@ Feature Importances:
 2026-03-18 10:31:05,577 [INFO] ML model loaded.
 2026-03-18 10:31:05,941 [INFO]   Capital (live wallet): $188.81 USD available
 2026-03-18 10:31:05,942 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 10:32:30,267 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:32:30,268 [INFO] ML model loaded.
+2026-03-18 10:32:30,677 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 10:32:30,677 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 10:32:30,681 [INFO] [TRAIL] New month 2026-03 — trailing reset
