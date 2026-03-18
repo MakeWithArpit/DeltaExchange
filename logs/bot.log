@@ -3108,3 +3108,7 @@ Feature Importances:
 2026-03-18 10:30:22,187 [INFO]   ETHUSD: $2,326.60 | Gann R1=2,401(+3.20%) S1=2,305(-0.93%) | RSI=43 | 4H: bullish | Vol: 2.1x
 2026-03-18 10:30:23,075 [INFO]   SOLUSD: $85.72 | Gann R1=101(+17.83%) S1=81(-5.50%) | RSI=37 | 4H: bearish | Vol: 2.5x
 2026-03-18 10:30:50,476 [INFO] Bot stopped.
+2026-03-18 10:31:05,576 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:31:05,577 [INFO] ML model loaded.
+2026-03-18 10:31:05,941 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 10:31:05,942 [INFO]   Capital (total     ): $188.81 USD total
