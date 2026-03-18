@@ -55,9 +55,9 @@ class TradingBot:
             return
         logger.info("Training ML model from historical CSVs...")
         datasets = {}
-        for fname, name in [("bitcoin_30min.csv","BTC"),
-                             ("eth_30min.csv","ETH"),
-                             ("sol_30min.csv","SOL")]:
+        for fname, name in [("Historical CSVs/bitcoin_30min.csv","BTC"),
+                             ("Historical CSVs/eth_30min.csv","ETH"),
+                             ("Historical CSVs/sol_30min.csv","SOL")]:
             if os.path.exists(fname):
                 df = pd.read_csv(fname)
                 df.columns = df.columns.str.strip().str.lower()
