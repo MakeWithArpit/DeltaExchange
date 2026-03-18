@@ -3070,3 +3070,7 @@ Feature Importances:
 2026-03-18 10:20:25,380 [INFO] ML model loaded.
 2026-03-18 10:22:24,009 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
 2026-03-18 10:22:24,010 [INFO] ML model loaded.
+2026-03-18 10:26:45,015 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:26:45,016 [INFO] ML model loaded.
+2026-03-18 10:26:45,489 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 10:26:45,490 [INFO]   Capital (total     ): $188.81 USD total
