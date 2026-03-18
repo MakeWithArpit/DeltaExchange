@@ -3506,3 +3506,4 @@ Feature Importances:
 2026-03-18 11:39:49,294 [INFO]   BTCUSD: $74,013.30 | Gann R1=74,529(+0.70%) S1=73,985(-0.04%) | RSI=46 | 4H: bullish | Vol: 1.0x
 2026-03-18 11:39:50,045 [INFO]   ETHUSD: $2,319.45 | Gann R1=2,401(+3.52%) S1=2,305(-0.62%) | RSI=45 | 4H: bullish | Vol: 0.2x
 2026-03-18 11:39:50,708 [INFO]   SOLUSD: $93.60 | Gann R1=101(+7.91%) S1=81(-13.46%) | RSI=52 | 4H: bullish | Vol: 2.5x
+2026-03-18 11:40:03,398 [INFO] Bot stopped.
