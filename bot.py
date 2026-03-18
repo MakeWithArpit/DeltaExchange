@@ -1,7 +1,7 @@
 """
 ╔══════════════════════════════════════════════════════════════════╗
-║         MAIN TRADING BOT — BB SQUEEZE STRATEGY                  ║
-║         Delta Exchange India | BTC + ETH + SOL                  ║
+║         MAIN TRADING BOT — BB SQUEEZE STRATEGY                   ║
+║         Delta Exchange India | BTC + ETH + SOL                   ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
 import sys
