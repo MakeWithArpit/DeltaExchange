@@ -3045,3 +3045,26 @@
 2026-03-18 10:18:48,212 [INFO] Collecting training data from BTC...
 2026-03-18 10:19:24,440 [INFO]   BTC: 1437 samples, WR=41.1%
 2026-03-18 10:19:24,444 [INFO] Collecting training data from ETH...
+2026-03-18 10:20:04,336 [INFO]   ETH: 1521 samples, WR=41.2%
+2026-03-18 10:20:04,340 [INFO] Collecting training data from SOL...
+2026-03-18 10:20:21,724 [INFO]   SOL: 846 samples, WR=40.0%
+2026-03-18 10:20:21,725 [INFO] 
+Total samples: 3804, WR: 40.9%
+2026-03-18 10:20:22,686 [INFO]   Fold 1: accuracy=0.539
+2026-03-18 10:20:23,692 [INFO]   Fold 2: accuracy=0.518
+2026-03-18 10:20:24,795 [INFO]   Fold 3: accuracy=0.562
+2026-03-18 10:20:24,917 [INFO] 
+Final Model Report:
+2026-03-18 10:20:24,931 [INFO]               precision    recall  f1-score   support
+
+        Loss       0.70      0.71      0.71      2249
+         Win       0.58      0.57      0.57      1555
+
+    accuracy                           0.65      3804
+   macro avg       0.64      0.64      0.64      3804
+weighted avg       0.65      0.65      0.65      3804
+
+2026-03-18 10:20:25,028 [INFO] 
+Feature Importances:
+2026-03-18 10:20:25,379 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:20:25,380 [INFO] ML model loaded.
