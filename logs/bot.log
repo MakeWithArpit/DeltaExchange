@@ -3184,3 +3184,5 @@ Feature Importances:
 2026-03-18 10:42:13,840 [INFO]   Capital (live wallet): $188.81 USD available
 2026-03-18 10:42:13,842 [INFO]   Capital (total     ): $188.81 USD total
 2026-03-18 10:42:14,599 [INFO]   BTCUSD: $74,244.50 | Gann R1=74,529(+0.38%) S1=73,985(-0.35%) | RSI=48 | 4H: bullish | Vol: 0.5x
+2026-03-18 10:42:15,389 [INFO]   ETHUSD: $2,329.15 | Gann R1=2,401(+3.08%) S1=2,305(-1.04%) | RSI=50 | 4H: bullish | Vol: 1.5x
+2026-03-18 10:42:16,065 [INFO]   SOLUSD: $85.71 | Gann R1=101(+17.84%) S1=81(-5.49%) | RSI=37 | 4H: bearish | Vol: 0.5x
