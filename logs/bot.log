@@ -3329,3 +3329,4 @@ Feature Importances:
 -- Cycle #34 | 11:07:23 | Capital: $188.81 --
 2026-03-18 11:07:24,673 [INFO]   BTCUSD: $74,042.10 | Gann R1=74,529(+0.66%) S1=73,985(-0.08%) | RSI=44 | 4H: bullish | Vol: 0.7x
 2026-03-18 11:07:25,434 [INFO]   ETHUSD: $2,324.15 | Gann R1=2,401(+3.31%) S1=2,305(-0.82%) | RSI=46 | 4H: bullish | Vol: 0.5x
+2026-03-18 11:07:26,210 [INFO]   SOLUSD: $85.99 | Gann R1=101(+17.46%) S1=81(-5.80%) | RSI=42 | 4H: bearish | Vol: 0.6x
