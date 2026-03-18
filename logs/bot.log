@@ -3117,3 +3117,21 @@ Feature Importances:
 2026-03-18 10:32:30,677 [INFO]   Capital (live wallet): $188.81 USD available
 2026-03-18 10:32:30,677 [INFO]   Capital (total     ): $188.81 USD total
 2026-03-18 10:32:30,681 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-18 10:32:47,482 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:32:47,483 [INFO] ML model loaded.
+2026-03-18 10:32:47,483 [INFO] =================================================================
+2026-03-18 10:32:47,484 [INFO]   BB SQUEEZE TRADING BOT
+2026-03-18 10:32:47,485 [INFO]   Mode: PAPER | Leverage: 5x | Risk: 0.5%/trade
+2026-03-18 10:32:47,485 [INFO] =================================================================
+2026-03-18 10:32:47,486 [INFO] Step 1/3: Fetching wallet balance from Delta Exchange...
+2026-03-18 10:32:47,885 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 10:32:47,885 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 10:32:47,886 [INFO] Step 2/3: Testing API connection...
+2026-03-18 10:32:48,232 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-18 10:32:48,233 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-18 10:32:48,234 [INFO] 
+-- Cycle #1 | 10:32:48 | Capital: $188.81 --
+2026-03-18 10:32:48,235 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-18 10:32:49,674 [INFO]   BTCUSD: $74,187.90 | Gann R1=74,529(+0.46%) S1=73,985(-0.27%) | RSI=46 | 4H: bullish | Vol: 0.1x
+2026-03-18 10:32:50,752 [INFO]   ETHUSD: $2,328.15 | Gann R1=2,401(+3.13%) S1=2,305(-0.99%) | RSI=50 | 4H: bullish | Vol: 0.2x
+2026-03-18 10:32:51,512 [INFO]   SOLUSD: $94.15 | Gann R1=101(+7.28%) S1=81(-13.96%) | RSI=49 | 4H: bullish | Vol: 0.3x
