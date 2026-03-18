@@ -3068,3 +3068,5 @@ weighted avg       0.65      0.65      0.65      3804
 Feature Importances:
 2026-03-18 10:20:25,379 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
 2026-03-18 10:20:25,380 [INFO] ML model loaded.
+2026-03-18 10:22:24,009 [INFO] Model loaded (trained: 2026-03-18 10:20:25.225505)
+2026-03-18 10:22:24,010 [INFO] ML model loaded.
