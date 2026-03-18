@@ -3150,3 +3150,11 @@ Feature Importances:
 2026-03-18 10:35:57,746 [INFO]   BTCUSD: $74,124.20 | Gann R1=74,529(+0.55%) S1=73,985(-0.19%) | RSI=44 | 4H: bullish | Vol: 0.3x
 2026-03-18 10:35:58,447 [INFO]   ETHUSD: $2,326.85 | Gann R1=2,401(+3.19%) S1=2,305(-0.94%) | RSI=49 | 4H: bullish | Vol: 0.8x
 2026-03-18 10:35:59,198 [INFO]   SOLUSD: $94.05 | Gann R1=101(+7.39%) S1=81(-13.88%) | RSI=49 | 4H: bullish | Vol: 0.3x
+2026-03-18 10:36:59,205 [INFO] 
+-- Cycle #5 | 10:36:59 | Capital: $188.81 --
+2026-03-18 10:36:59,207 [INFO] Refreshing wallet...
+2026-03-18 10:37:00,040 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 10:37:00,040 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 10:37:01,167 [INFO]   BTCUSD: $74,190.90 | Gann R1=74,529(+0.46%) S1=73,985(-0.28%) | RSI=46 | 4H: bullish | Vol: 0.3x
+2026-03-18 10:37:02,401 [INFO]   ETHUSD: $2,326.75 | Gann R1=2,401(+3.19%) S1=2,305(-0.93%) | RSI=49 | 4H: bullish | Vol: 1.0x
+2026-03-18 10:37:03,079 [INFO]   SOLUSD: $94.05 | Gann R1=101(+7.39%) S1=81(-13.88%) | RSI=49 | 4H: bullish | Vol: 0.3x
