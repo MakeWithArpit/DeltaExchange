@@ -1,0 +1,22 @@
+2026-03-18 16:01:39,914 [INFO] --- Single scan ---
+2026-03-18 16:01:39,915 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:01:39,915 [INFO] Intraday scan:
+2026-03-18 16:01:39,916 [INFO]   [Intraday] No new entries after 15:00
+2026-03-18 16:01:39,916 [INFO] Pairs scan:
+2026-03-18 16:01:42,379 [INFO]   BAJFIN_KOTAK: zscore=+0.58 | watching
+2026-03-18 16:01:43,358 [INFO]   ICICI_SBIN: zscore=+0.23 | watching
+2026-03-18 16:01:44,401 [INFO]   RELIANCE_WIPRO: zscore=+0.34 | watching
+2026-03-18 16:04:19,063 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:05:06,553 [INFO] --- Single scan ---
+2026-03-18 16:05:06,554 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:05:06,554 [INFO] Intraday scan:
+2026-03-18 16:05:06,555 [INFO]   [Intraday] No new entries after 15:00
+2026-03-18 16:05:06,555 [INFO] Pairs scan:
+2026-03-18 16:05:09,388 [INFO]   BAJFIN_KOTAK: zscore=+0.58 | watching
+2026-03-18 16:05:10,519 [INFO]   ICICI_SBIN: zscore=+0.23 | watching
+2026-03-18 16:05:11,526 [INFO]   RELIANCE_WIPRO: zscore=+0.34 | watching
+2026-03-18 16:05:26,999 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:06:25,508 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:06:44,947 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:07:33,004 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-18 16:07:57,616 [INFO]   [Paper] Capital: Rs 50,000.00

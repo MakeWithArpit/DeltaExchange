@@ -1,0 +1,212 @@
+2026-03-18 11:42:21,580 [INFO] Training ML model from historical CSVs...
+2026-03-18 11:42:41,319 [INFO] Training ML model from historical CSVs...
+2026-03-18 11:42:43,697 [INFO] Collecting training data from BTC...
+2026-03-18 11:43:19,257 [INFO]   BTC: 1383 samples, WR=36.7%
+2026-03-18 11:43:19,261 [INFO] Collecting training data from ETH...
+2026-03-18 11:43:52,177 [INFO]   ETH: 1470 samples, WR=36.5%
+2026-03-18 11:43:52,181 [INFO] Collecting training data from SOL...
+2026-03-18 11:44:09,659 [INFO]   SOL: 814 samples, WR=35.1%
+2026-03-18 11:44:09,661 [INFO] 
+Total samples: 3667, WR: 36.3%
+2026-03-18 11:44:10,439 [INFO]   Fold 1: accuracy=0.553
+2026-03-18 11:44:11,271 [INFO]   Fold 2: accuracy=0.521
+2026-03-18 11:44:12,203 [INFO]   Fold 3: accuracy=0.594
+2026-03-18 11:44:12,313 [INFO] 
+Final Model Report:
+2026-03-18 11:44:12,326 [INFO]               precision    recall  f1-score   support
+
+        Loss       0.75      0.69      0.72      2337
+         Win       0.53      0.60      0.56      1330
+
+    accuracy                           0.66      3667
+   macro avg       0.64      0.65      0.64      3667
+weighted avg       0.67      0.66      0.67      3667
+
+2026-03-18 11:44:12,408 [INFO] 
+Feature Importances:
+2026-03-18 11:44:12,408 [INFO]   macd_hist           : 0.1334  ██████
+2026-03-18 11:44:12,409 [INFO]   atr_norm            : 0.1289  ██████
+2026-03-18 11:44:12,409 [INFO]   vol_ratio           : 0.1261  ██████
+2026-03-18 11:44:12,410 [INFO]   trend_str           : 0.1139  █████
+2026-03-18 11:44:12,410 [INFO]   hour_cos            : 0.1101  █████
+2026-03-18 11:44:12,411 [INFO]   breakout_str        : 0.1070  █████
+2026-03-18 11:44:12,411 [INFO]   bb_width_pct        : 0.1065  █████
+2026-03-18 11:44:12,412 [INFO]   dow                 : 0.0651  ███
+2026-03-18 11:44:12,412 [INFO]   squeeze_dur         : 0.0578  ██
+2026-03-18 11:44:12,413 [INFO]   hour_sin            : 0.0511  ██
+2026-03-18 11:44:12,484 [INFO] Model saved → data/ml_model.pkl
+2026-03-18 11:44:12,541 [INFO] Model loaded (trained: 2026-03-18 11:44:12.414463)
+2026-03-18 11:44:12,541 [INFO] ML model loaded.
+2026-03-18 11:44:33,634 [INFO] Model loaded (trained: 2026-03-18 11:44:12.414463)
+2026-03-18 11:44:33,635 [INFO] ML model loaded.
+2026-03-18 11:44:33,636 [INFO] =================================================================
+2026-03-18 11:44:33,636 [INFO]   BB SQUEEZE BOT v2.0 — 4H Timeframe
+2026-03-18 11:44:33,637 [INFO]   Mode: PAPER | TF: 4h | RR: 2.5 | Risk: 0.75%/trade
+2026-03-18 11:44:33,637 [INFO]   Partial TP: ON @ 1.0R | Trailing SL: ON
+2026-03-18 11:44:33,638 [INFO] =================================================================
+2026-03-18 11:44:33,638 [INFO] Step 1/3: Fetching wallet...
+2026-03-18 11:44:34,230 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 11:44:34,231 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 11:44:34,233 [INFO] Step 2/3: Testing connection...
+2026-03-18 11:44:34,779 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-18 11:44:34,780 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-18 11:44:34,781 [INFO] 
+-- Cycle #1 | 11:44:34 | TF:4h | Capital: $188.81 --
+2026-03-18 11:44:34,783 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-18 11:44:35,575 [INFO]   BTCUSD: $74,039.30 | Gann R1=74,529 S1=73,985 | RSI=61 | 4H:bullish | Vol:0.5x
+2026-03-18 11:44:36,356 [INFO]   ETHUSD: $2,322.05 | Gann R1=2,401 S1=2,305 | RSI=76 | 4H:bullish | Vol:0.4x
+2026-03-18 11:49:36,367 [INFO] 
+-- Cycle #2 | 11:49:36 | TF:4h | Capital: $188.81 --
+2026-03-18 11:49:37,650 [INFO]   BTCUSD: $74,046.80 | Gann R1=74,529 S1=73,985 | RSI=61 | 4H:bullish | Vol:0.5x
+2026-03-18 11:49:38,668 [INFO]   ETHUSD: $2,323.50 | Gann R1=2,401 S1=2,305 | RSI=77 | 4H:bullish | Vol:0.5x
+2026-03-18 11:54:38,674 [INFO] 
+-- Cycle #3 | 11:54:38 | TF:4h | Capital: $188.81 --
+2026-03-18 11:54:39,856 [INFO]   BTCUSD: $74,075.00 | Gann R1=74,529 S1=73,985 | RSI=61 | 4H:bullish | Vol:0.6x
+2026-03-18 11:54:40,687 [INFO]   ETHUSD: $2,323.85 | Gann R1=2,401 S1=2,305 | RSI=77 | 4H:bullish | Vol:0.5x
+2026-03-18 11:59:40,693 [INFO] 
+-- Cycle #4 | 11:59:40 | TF:4h | Capital: $188.81 --
+2026-03-18 11:59:41,894 [INFO]   BTCUSD: $74,148.20 | Gann R1=74,529 S1=73,985 | RSI=62 | 4H:bullish | Vol:0.6x
+2026-03-18 11:59:42,726 [INFO]   ETHUSD: $2,328.85 | Gann R1=2,401 S1=2,305 | RSI=78 | 4H:bullish | Vol:0.5x
+2026-03-18 12:04:42,728 [INFO] 
+-- Cycle #5 | 12:04:42 | TF:4h | Capital: $188.81 --
+2026-03-18 12:04:43,919 [INFO]   BTCUSD: $74,175.90 | Gann R1=74,529 S1=73,985 | RSI=62 | 4H:bullish | Vol:0.6x
+2026-03-18 12:04:44,848 [INFO]   ETHUSD: $2,328.35 | Gann R1=2,401 S1=2,305 | RSI=78 | 4H:bullish | Vol:0.5x
+2026-03-18 12:09:44,851 [INFO] 
+-- Cycle #6 | 12:09:44 | TF:4h | Capital: $188.81 --
+2026-03-18 12:09:44,852 [INFO] Refreshing wallet...
+2026-03-18 12:09:45,421 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 12:09:45,422 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 12:09:46,391 [INFO]   BTCUSD: $74,100.80 | Gann R1=74,529 S1=73,985 | RSI=61 | 4H:bullish | Vol:0.6x
+2026-03-18 12:09:47,326 [INFO]   ETHUSD: $2,326.05 | Gann R1=2,401 S1=2,305 | RSI=77 | 4H:bullish | Vol:0.5x
+2026-03-18 12:14:47,331 [INFO] 
+-- Cycle #7 | 12:14:47 | TF:4h | Capital: $188.81 --
+2026-03-18 12:14:47,339 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=4h&start=1770936287&end=1773816287 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-18 12:14:47,340 [WARNING] Candles failed for BTCUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=BTCUSD&resolution=4h&start=1770936287&end=1773816287 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-18 12:14:47,489 [INFO]   BTCUSD: $74,100.80 | Gann R1=74,529 S1=73,985 | RSI=61 | 4H:bullish | Vol:0.6x
+2026-03-18 12:14:47,494 [ERROR] PUBLIC GET /v2/history/candles failed: HTTPSConnectionPool(host='cdn-ind.testnet.deltaex.org', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=4h&start=1770936287&end=1773816287 (Caused by NameResolutionError("HTTPSConnection(host='cdn-ind.testnet.deltaex.org', port=443): Failed to resolve 'cdn-ind.testnet.deltaex.org' ([Errno 11001] getaddrinfo failed)"))
+2026-03-18 12:14:47,495 [WARNING] Candles failed for ETHUSD: {'success': False, 'error': 'HTTPSConnectionPool(host=\'cdn-ind.testnet.deltaex.org\', port=443): Max retries exceeded with url: /v2/history/candles?symbol=ETHUSD&resolution=4h&start=1770936287&end=1773816287 (Caused by NameResolutionError("HTTPSConnection(host=\'cdn-ind.testnet.deltaex.org\', port=443): Failed to resolve \'cdn-ind.testnet.deltaex.org\' ([Errno 11001] getaddrinfo failed)"))'}
+2026-03-18 12:14:47,595 [INFO]   ETHUSD: $2,326.05 | Gann R1=2,401 S1=2,305 | RSI=77 | 4H:bullish | Vol:0.5x
+2026-03-18 14:54:09,718 [INFO] Model loaded (trained: 2026-03-18 11:44:12.414463)
+2026-03-18 14:54:09,732 [INFO] ML model loaded.
+2026-03-18 14:54:09,733 [INFO] =================================================================
+2026-03-18 14:54:09,734 [INFO]   BB SQUEEZE BOT v2.0 — 4H Timeframe
+2026-03-18 14:54:09,734 [INFO]   Mode: PAPER | TF: 4h | RR: 2.5 | Risk: 0.75%/trade
+2026-03-18 14:54:09,735 [INFO]   Partial TP: ON @ 1.0R | Trailing SL: ON
+2026-03-18 14:54:09,735 [INFO] =================================================================
+2026-03-18 14:54:09,736 [INFO] Step 1/3: Fetching wallet...
+2026-03-18 14:54:10,335 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 14:54:10,338 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 14:54:10,341 [INFO] Step 2/3: Testing connection...
+2026-03-18 14:54:10,760 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-18 14:54:10,761 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-18 14:54:10,762 [INFO] 
+-- Cycle #1 | 14:54:10 | TF:4h | Capital: $188.81 --
+2026-03-18 14:54:10,763 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-18 14:54:11,672 [INFO]   BTCUSD: $74,116.30 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.4x
+2026-03-18 14:54:12,375 [INFO]   ETHUSD: $2,328.85 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.3x
+2026-03-18 14:54:15,471 [INFO] Bot stopped.
+2026-03-18 14:55:05,781 [INFO] Model loaded (trained: 2026-03-18 11:44:12.414463)
+2026-03-18 14:55:05,782 [INFO] ML model loaded.
+2026-03-18 14:55:05,783 [INFO] =================================================================
+2026-03-18 14:55:05,783 [INFO]   BB SQUEEZE BOT v2.0 — 4H Timeframe
+2026-03-18 14:55:05,784 [INFO]   Mode: PAPER | TF: 4h | RR: 2.5 | Risk: 0.75%/trade
+2026-03-18 14:55:05,784 [INFO]   Partial TP: ON @ 1.0R | Trailing SL: ON
+2026-03-18 14:55:05,784 [INFO] =================================================================
+2026-03-18 14:55:05,785 [INFO] Step 1/3: Fetching wallet...
+2026-03-18 14:55:06,175 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 14:55:06,176 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 14:55:06,176 [INFO] Step 2/3: Testing connection...
+2026-03-18 14:55:06,415 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-18 14:55:06,415 [INFO] Step 3/3: Starting main loop. Capital: $188.81
+2026-03-18 14:55:06,416 [INFO] 
+-- Cycle #1 | 14:55:06 | TF:4h | Capital: $188.81 --
+2026-03-18 14:55:06,416 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-18 14:55:07,159 [INFO]   BTCUSD: $74,087.40 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.4x
+2026-03-18 14:55:07,940 [INFO]   ETHUSD: $2,328.85 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.3x
+2026-03-18 15:00:07,942 [INFO] 
+-- Cycle #2 | 15:00:07 | TF:4h | Capital: $188.81 --
+2026-03-18 15:00:09,068 [INFO]   BTCUSD: $74,109.90 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.4x
+2026-03-18 15:00:09,823 [INFO]   ETHUSD: $2,327.70 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.3x
+2026-03-18 15:05:09,837 [INFO] 
+-- Cycle #3 | 15:05:09 | TF:4h | Capital: $188.81 --
+2026-03-18 15:05:10,964 [INFO]   BTCUSD: $74,151.10 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.4x
+2026-03-18 15:05:12,138 [INFO]   ETHUSD: $2,328.95 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.3x
+2026-03-18 15:10:12,156 [INFO] 
+-- Cycle #4 | 15:10:12 | TF:4h | Capital: $188.81 --
+2026-03-18 15:10:13,313 [INFO]   BTCUSD: $74,195.20 | Gann R1=74,529 S1=73,985 | RSI=56 | 4H:bullish | Vol:0.5x
+2026-03-18 15:10:14,163 [INFO]   ETHUSD: $2,330.60 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.3x
+2026-03-18 15:15:14,174 [INFO] 
+-- Cycle #5 | 15:15:14 | TF:4h | Capital: $188.81 --
+2026-03-18 15:15:15,323 [INFO]   BTCUSD: $74,203.60 | Gann R1=74,529 S1=73,985 | RSI=56 | 4H:bullish | Vol:0.5x
+2026-03-18 15:15:16,290 [INFO]   ETHUSD: $2,330.40 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.4x
+2026-03-18 15:20:16,294 [INFO] 
+-- Cycle #6 | 15:20:16 | TF:4h | Capital: $188.81 --
+2026-03-18 15:20:16,295 [INFO] Refreshing wallet...
+2026-03-18 15:20:16,764 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 15:20:16,765 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 15:20:17,800 [INFO]   BTCUSD: $74,169.60 | Gann R1=74,529 S1=73,985 | RSI=56 | 4H:bullish | Vol:0.5x
+2026-03-18 15:20:18,600 [INFO]   ETHUSD: $2,329.30 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.4x
+2026-03-18 15:25:18,614 [INFO] 
+-- Cycle #7 | 15:25:18 | TF:4h | Capital: $188.81 --
+2026-03-18 15:25:19,515 [INFO]   BTCUSD: $74,080.70 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.5x
+2026-03-18 15:25:20,351 [INFO]   ETHUSD: $2,326.30 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.4x
+2026-03-18 15:30:20,365 [INFO] 
+-- Cycle #8 | 15:30:20 | TF:4h | Capital: $188.81 --
+2026-03-18 15:30:21,710 [INFO]   BTCUSD: $74,141.50 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.5x
+2026-03-18 15:30:22,605 [INFO]   ETHUSD: $2,328.20 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.4x
+2026-03-18 15:35:22,621 [INFO] 
+-- Cycle #9 | 15:35:22 | TF:4h | Capital: $188.81 --
+2026-03-18 15:35:24,021 [INFO]   BTCUSD: $74,087.40 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.5x
+2026-03-18 15:35:24,803 [INFO]   ETHUSD: $2,325.00 | Gann R1=2,401 S1=2,305 | RSI=69 | 4H:bullish | Vol:0.4x
+2026-03-18 15:40:24,815 [INFO] 
+-- Cycle #10 | 15:40:24 | TF:4h | Capital: $188.81 --
+2026-03-18 15:40:26,162 [INFO]   BTCUSD: $74,105.80 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.5x
+2026-03-18 15:40:26,981 [INFO]   ETHUSD: $2,325.75 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.4x
+2026-03-18 15:45:26,992 [INFO] 
+-- Cycle #11 | 15:45:26 | TF:4h | Capital: $188.81 --
+2026-03-18 15:45:28,157 [INFO]   BTCUSD: $74,205.00 | Gann R1=74,529 S1=73,985 | RSI=56 | 4H:bullish | Vol:0.6x
+2026-03-18 15:45:28,847 [INFO]   ETHUSD: $2,330.00 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.5x
+2026-03-18 15:50:28,848 [INFO] 
+-- Cycle #12 | 15:50:28 | TF:4h | Capital: $188.81 --
+2026-03-18 15:50:28,849 [INFO] Refreshing wallet...
+2026-03-18 15:50:29,295 [INFO]   Capital (live wallet): $188.81 USD available
+2026-03-18 15:50:29,295 [INFO]   Capital (total     ): $188.81 USD total
+2026-03-18 15:50:30,344 [INFO]   BTCUSD: $74,177.90 | Gann R1=74,529 S1=73,985 | RSI=56 | 4H:bullish | Vol:0.6x
+2026-03-18 15:50:31,416 [INFO]   ETHUSD: $2,329.10 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.5x
+2026-03-18 15:55:31,442 [INFO] 
+-- Cycle #13 | 15:55:31 | TF:4h | Capital: $188.81 --
+2026-03-18 15:55:32,594 [INFO]   BTCUSD: $74,128.20 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.6x
+2026-03-18 15:55:33,429 [INFO]   ETHUSD: $2,327.40 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.5x
+2026-03-18 16:00:33,442 [INFO] 
+-- Cycle #14 | 16:00:33 | TF:4h | Capital: $188.81 --
+2026-03-18 16:00:34,635 [INFO]   BTCUSD: $74,134.70 | Gann R1=74,529 S1=73,985 | RSI=55 | 4H:bullish | Vol:0.6x
+2026-03-18 16:00:35,531 [INFO]   ETHUSD: $2,329.65 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.5x
+2026-03-18 16:05:35,539 [INFO] 
+-- Cycle #15 | 16:05:35 | TF:4h | Capital: $188.81 --
+2026-03-18 16:05:36,879 [INFO]   BTCUSD: $74,045.00 | Gann R1=74,529 S1=73,985 | RSI=54 | 4H:bullish | Vol:0.6x
+2026-03-18 16:05:37,668 [INFO]   ETHUSD: $2,326.75 | Gann R1=2,401 S1=2,305 | RSI=70 | 4H:bullish | Vol:0.5x
+2026-03-18 16:10:37,672 [INFO] 
+-- Cycle #16 | 16:10:37 | TF:4h | Capital: $188.81 --
+2026-03-18 16:10:38,446 [INFO]   BTCUSD: $73,948.20 | Gann R1=73,985 S1=73,441 | RSI=54 | 4H:bullish | Vol:0.6x
+2026-03-18 16:10:39,232 [INFO]   ETHUSD: $2,321.55 | Gann R1=2,401 S1=2,305 | RSI=69 | 4H:bullish | Vol:0.6x
+2026-03-18 16:15:39,236 [INFO] 
+-- Cycle #17 | 16:15:39 | TF:4h | Capital: $188.81 --
+2026-03-18 16:15:40,410 [INFO]   BTCUSD: $73,837.10 | Gann R1=73,985 S1=73,441 | RSI=53 | 4H:bullish | Vol:0.7x
+2026-03-18 16:15:41,108 [INFO]   ETHUSD: $2,313.25 | Gann R1=2,401 S1=2,305 | RSI=67 | 4H:bullish | Vol:0.6x
+2026-03-18 16:20:41,123 [INFO] 
+-- Cycle #18 | 16:20:41 | TF:4h | Capital: $188.81 --
+2026-03-18 16:20:41,124 [INFO] Refreshing wallet...
+2026-03-18 16:20:41,472 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.1.206'}}, 'success': False}
+2026-03-18 16:20:41,472 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.1.206'}}, 'success': False}}
+2026-03-18 16:20:41,473 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-18 16:20:41,473 [WARNING] Using local capital: $188.81
+2026-03-18 16:20:42,596 [INFO]   BTCUSD: $73,893.40 | Gann R1=73,985 S1=73,441 | RSI=53 | 4H:bullish | Vol:0.7x
+2026-03-18 16:20:43,371 [INFO]   ETHUSD: $2,312.10 | Gann R1=2,401 S1=2,305 | RSI=67 | 4H:bullish | Vol:0.6x
+2026-03-18 16:25:43,376 [INFO] 
+-- Cycle #19 | 16:25:43 | TF:4h | Capital: $188.81 --
+2026-03-18 16:25:44,502 [INFO]   BTCUSD: $73,866.20 | Gann R1=73,985 S1=73,441 | RSI=53 | 4H:bullish | Vol:0.7x
+2026-03-18 16:25:45,250 [INFO]   ETHUSD: $2,309.30 | Gann R1=2,401 S1=2,305 | RSI=66 | 4H:bullish | Vol:0.6x
+2026-03-18 16:30:45,251 [INFO] 
+-- Cycle #20 | 16:30:45 | TF:4h | Capital: $188.81 --
+2026-03-18 16:30:46,022 [INFO]   BTCUSD: $73,888.20 | Gann R1=73,985 S1=73,441 | RSI=53 | 4H:bullish | Vol:0.7x
+2026-03-18 16:30:46,689 [INFO]   ETHUSD: $2,311.75 | Gann R1=2,401 S1=2,305 | RSI=67 | 4H:bullish | Vol:0.7x
