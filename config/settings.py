@@ -27,17 +27,17 @@ BASE_URL = (
 PRODUCTS = {
     "BTCUSD": {
         "symbol":        "BTCUSD",
-        "product_id":    27,           # production India product ID
-        "lot_size":      0.001,        # 1 lot = 0.001 BTC
+        "product_id":    84,           # testnet ID ✅
+        "lot_size":      0.001,
         "min_lots":      1,
-        "tick_size":     0.5,
+        "tick_size":     0.1,          # 0.5 → 0.1 ✅
         "contract_type": "perpetual_futures",
         "active":        True,
     },
     "ETHUSD": {
         "symbol":        "ETHUSD",
-        "product_id":    3136,         # production India product ID
-        "lot_size":      0.01,         # 1 lot = 0.01 ETH
+        "product_id":    1699,         # testnet ID ✅
+        "lot_size":      0.01,
         "min_lots":      1,
         "tick_size":     0.05,
         "contract_type": "perpetual_futures",
@@ -45,10 +45,10 @@ PRODUCTS = {
     },
     "SOLUSD": {
         "symbol":        "SOLUSD",
-        "product_id":    9376,         # production India product ID
-        "lot_size":      0.1,          # 1 lot = 0.1 SOL
+        "product_id":    92572,        # testnet ID ✅
+        "lot_size":      1,            # 0.1 → 1 ✅ (important!)
         "min_lots":      1,
-        "tick_size":     0.01,
+        "tick_size":     0.0001,       # testnet tick ✅
         "contract_type": "perpetual_futures",
         "active":        True,
     },
