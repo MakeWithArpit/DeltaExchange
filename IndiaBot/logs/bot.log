@@ -20,3 +20,860 @@
 2026-03-18 16:06:44,947 [INFO]   [Paper] Capital: Rs 50,000.00
 2026-03-18 16:07:33,004 [INFO]   [Paper] Capital: Rs 50,000.00
 2026-03-18 16:07:57,616 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-19 08:43:51,270 [INFO] ============================================================
+2026-03-19 08:43:51,271 [INFO]   INDIA TRADING BOT STARTED
+2026-03-19 08:43:51,271 [INFO]   Mode: PAPER
+2026-03-19 08:43:51,272 [INFO]   Capital: Rs 50,000.00
+2026-03-19 08:43:51,272 [INFO]   Intraday: ['TCS', 'MARUTI', 'RELIANCE', 'HDFCBANK']
+2026-03-19 08:43:51,272 [INFO]   Pairs:    ['BAJFIN_KOTAK', 'ICICI_SBIN', 'RELIANCE_WIPRO']
+2026-03-19 08:43:51,273 [INFO] ============================================================
+2026-03-19 08:43:51,273 [INFO]   [Paper] Capital: Rs 50,000.00
+2026-03-19 08:43:51,273 [INFO] API keys not set — using yfinance for data (paper mode only)
+2026-03-19 08:43:51,273 [INFO] 
+-- Cycle #1 | 08:43:51 | Rs 50,000.00 --
+2026-03-19 08:43:51,274 [INFO]   Market closed — waiting...
+2026-03-19 08:48:51,275 [INFO] 
+-- Cycle #2 | 08:48:51 | Rs 50,000.00 --
+2026-03-19 08:48:51,276 [INFO]   Market closed — waiting...
+2026-03-19 08:53:51,277 [INFO] 
+-- Cycle #3 | 08:53:51 | Rs 50,000.00 --
+2026-03-19 08:53:51,277 [INFO]   Market closed — waiting...
+2026-03-19 08:58:51,289 [INFO] 
+-- Cycle #4 | 08:58:51 | Rs 50,000.00 --
+2026-03-19 08:58:51,289 [INFO]   Market closed — waiting...
+2026-03-19 09:03:51,296 [INFO] 
+-- Cycle #5 | 09:03:51 | Rs 50,000.00 --
+2026-03-19 09:03:51,297 [INFO]   Market closed — waiting...
+2026-03-19 09:08:51,300 [INFO] 
+-- Cycle #6 | 09:08:51 | Rs 50,000.00 --
+2026-03-19 09:08:51,301 [INFO]   Market closed — waiting...
+2026-03-19 09:13:51,310 [INFO] 
+-- Cycle #7 | 09:13:51 | Rs 50,000.00 --
+2026-03-19 09:13:51,311 [INFO]   Market closed — waiting...
+2026-03-19 09:18:51,323 [INFO] 
+-- Cycle #8 | 09:18:51 | Rs 50,000.00 --
+2026-03-19 09:18:51,327 [INFO]   -- Intraday Scan --
+2026-03-19 09:18:58,962 [INFO]   TCS: Rs 2,411.40 | RSI=58 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 09:18:59,411 [INFO]   MARUTI: Rs 12,720.00 | RSI=35 | Vol=0.0x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:18:59,817 [INFO]   RELIANCE: Rs 1,402.10 | RSI=52 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 09:19:00,222 [INFO]   HDFCBANK: Rs 806.00 | RSI=24 | Vol=1.9x | Squeeze=no | Trend=DOWN
+2026-03-19 09:19:00,222 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:19:00,871 [INFO]   BAJFIN_KOTAK: zscore=+0.13 | watching
+2026-03-19 09:19:01,541 [INFO]   ICICI_SBIN: zscore=+0.05 | watching
+2026-03-19 09:19:01,913 [INFO]   RELIANCE_WIPRO: zscore=+0.99 | watching
+2026-03-19 09:24:01,923 [INFO] 
+-- Cycle #9 | 09:24:01 | Rs 50,000.00 --
+2026-03-19 09:24:01,926 [INFO]   -- Intraday Scan --
+2026-03-19 09:24:02,383 [INFO]   TCS: Rs 2,409.30 | RSI=57 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 09:24:02,787 [INFO]   MARUTI: Rs 12,767.00 | RSI=37 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:24:03,184 [INFO]   RELIANCE: Rs 1,400.60 | RSI=50 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 09:24:03,597 [INFO]   HDFCBANK: Rs 808.35 | RSI=25 | Vol=3.8x | Squeeze=no | Trend=DOWN
+2026-03-19 09:24:03,597 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:24:04,266 [INFO]   BAJFIN_KOTAK: zscore=-0.20 | watching
+2026-03-19 09:24:04,903 [INFO]   ICICI_SBIN: zscore=-0.59 | watching
+2026-03-19 09:24:05,574 [INFO]   RELIANCE_WIPRO: zscore=+1.17 | watching
+2026-03-19 09:29:05,579 [INFO] 
+-- Cycle #10 | 09:29:05 | Rs 50,000.00 --
+2026-03-19 09:29:05,581 [INFO]   -- Intraday Scan --
+2026-03-19 09:29:07,248 [INFO]   TCS: Rs 2,406.50 | RSI=56 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 09:29:07,747 [INFO]   MARUTI: Rs 12,773.00 | RSI=37 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:29:08,149 [INFO]   RELIANCE: Rs 1,404.60 | RSI=54 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 09:29:08,652 [INFO]   HDFCBANK: Rs 809.85 | RSI=25 | Vol=4.7x | Squeeze=no | Trend=DOWN
+2026-03-19 09:29:08,652 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:29:09,297 [INFO]   BAJFIN_KOTAK: zscore=-0.30 | watching
+2026-03-19 09:29:09,897 [INFO]   ICICI_SBIN: zscore=-0.60 | watching
+2026-03-19 09:29:10,511 [INFO]   RELIANCE_WIPRO: zscore=+1.38 | watching
+2026-03-19 09:34:10,517 [INFO] 
+-- Cycle #11 | 09:34:10 | Rs 50,000.00 --
+2026-03-19 09:34:10,519 [INFO]   -- Intraday Scan --
+2026-03-19 09:34:11,179 [INFO]   TCS: Rs 2,403.20 | RSI=55 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 09:34:11,678 [INFO]   MARUTI: Rs 12,772.00 | RSI=37 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:34:12,059 [INFO]   RELIANCE: Rs 1,402.50 | RSI=52 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 09:34:12,454 [INFO]   HDFCBANK: Rs 807.60 | RSI=24 | Vol=5.4x | Squeeze=no | Trend=DOWN
+2026-03-19 09:34:12,455 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:34:13,050 [INFO]   BAJFIN_KOTAK: zscore=-0.06 | watching
+2026-03-19 09:34:13,816 [INFO]   ICICI_SBIN: zscore=-0.84 | watching
+2026-03-19 09:34:14,399 [INFO]   RELIANCE_WIPRO: zscore=+1.53 | watching
+2026-03-19 09:39:14,402 [INFO] 
+-- Cycle #12 | 09:39:14 | Rs 50,000.00 --
+2026-03-19 09:39:14,405 [INFO]   -- Intraday Scan --
+2026-03-19 09:39:14,918 [INFO]   TCS: Rs 2,406.80 | RSI=56 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 09:39:15,479 [INFO]   MARUTI: Rs 12,736.00 | RSI=36 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:39:16,045 [INFO]   RELIANCE: Rs 1,400.30 | RSI=50 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 09:39:16,672 [INFO]   HDFCBANK: Rs 801.55 | RSI=23 | Vol=6.1x | Squeeze=no | Trend=DOWN
+2026-03-19 09:39:16,688 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:39:17,817 [INFO]   BAJFIN_KOTAK: zscore=-0.47 | watching
+2026-03-19 09:39:18,713 [INFO]   ICICI_SBIN: zscore=-1.13 | watching
+2026-03-19 09:39:20,323 [INFO]   RELIANCE_WIPRO: zscore=+1.40 | watching
+2026-03-19 09:44:20,329 [INFO] 
+-- Cycle #13 | 09:44:20 | Rs 50,000.00 --
+2026-03-19 09:44:20,336 [INFO]   -- Intraday Scan --
+2026-03-19 09:44:20,828 [INFO]   TCS: Rs 2,409.70 | RSI=57 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 09:44:21,321 [INFO]   MARUTI: Rs 12,753.00 | RSI=37 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:44:21,784 [INFO]   RELIANCE: Rs 1,400.60 | RSI=50 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 09:44:22,225 [INFO]   HDFCBANK: Rs 802.85 | RSI=23 | Vol=6.3x | Squeeze=no | Trend=DOWN
+2026-03-19 09:44:22,225 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:44:22,958 [INFO]   BAJFIN_KOTAK: zscore=-0.62 | watching
+2026-03-19 09:44:23,658 [INFO]   ICICI_SBIN: zscore=-1.46 | watching
+2026-03-19 09:44:24,444 [INFO]   RELIANCE_WIPRO: zscore=+1.42 | watching
+2026-03-19 09:49:24,448 [INFO] 
+-- Cycle #14 | 09:49:24 | Rs 50,000.00 --
+2026-03-19 09:49:24,451 [INFO]   -- Intraday Scan --
+2026-03-19 09:49:25,230 [INFO]   TCS: Rs 2,404.70 | RSI=56 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 09:49:25,718 [INFO]   MARUTI: Rs 12,742.00 | RSI=36 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:49:26,121 [INFO]   RELIANCE: Rs 1,401.40 | RSI=51 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 09:49:26,655 [INFO]   HDFCBANK: Rs 800.00 | RSI=22 | Vol=7.0x | Squeeze=no | Trend=DOWN
+2026-03-19 09:49:26,655 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:49:27,458 [INFO]   BAJFIN_KOTAK: zscore=-0.43 | watching
+2026-03-19 09:49:28,089 [INFO]   ICICI_SBIN: zscore=-1.34 | watching
+2026-03-19 09:49:28,907 [INFO]   RELIANCE_WIPRO: zscore=+1.57 | watching
+2026-03-19 09:54:28,909 [INFO] 
+-- Cycle #15 | 09:54:28 | Rs 50,000.00 --
+2026-03-19 09:54:28,911 [INFO]   -- Intraday Scan --
+2026-03-19 09:54:29,321 [INFO]   TCS: Rs 2,406.00 | RSI=56 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 09:54:29,720 [INFO]   MARUTI: Rs 12,747.00 | RSI=36 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:54:30,133 [INFO]   RELIANCE: Rs 1,402.90 | RSI=52 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 09:54:30,495 [INFO]   HDFCBANK: Rs 800.85 | RSI=22 | Vol=7.6x | Squeeze=no | Trend=DOWN
+2026-03-19 09:54:30,495 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:54:31,122 [INFO]   BAJFIN_KOTAK: zscore=-0.04 | watching
+2026-03-19 09:54:31,753 [INFO]   ICICI_SBIN: zscore=-1.25 | watching
+2026-03-19 09:54:32,375 [INFO]   RELIANCE_WIPRO: zscore=+1.55 | watching
+2026-03-19 09:59:32,376 [INFO] 
+-- Cycle #16 | 09:59:32 | Rs 50,000.00 --
+2026-03-19 09:59:32,378 [INFO]   -- Intraday Scan --
+2026-03-19 09:59:32,814 [INFO]   TCS: Rs 2,407.00 | RSI=56 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 09:59:33,216 [INFO]   MARUTI: Rs 12,730.00 | RSI=36 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 09:59:33,751 [INFO]   RELIANCE: Rs 1,404.20 | RSI=54 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 09:59:34,169 [INFO]   HDFCBANK: Rs 800.75 | RSI=22 | Vol=7.7x | Squeeze=no | Trend=DOWN
+2026-03-19 09:59:34,170 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 09:59:34,908 [INFO]   BAJFIN_KOTAK: zscore=-0.31 | watching
+2026-03-19 09:59:35,580 [INFO]   ICICI_SBIN: zscore=-1.20 | watching
+2026-03-19 09:59:36,240 [INFO]   RELIANCE_WIPRO: zscore=+1.62 | watching
+2026-03-19 10:04:36,253 [INFO] 
+-- Cycle #17 | 10:04:36 | Rs 50,000.00 --
+2026-03-19 10:04:36,256 [INFO]   -- Intraday Scan --
+2026-03-19 10:04:36,664 [INFO]   TCS: Rs 2,403.00 | RSI=55 | Vol=1.2x | Squeeze=no | Trend=DOWN
+2026-03-19 10:04:37,033 [INFO]   MARUTI: Rs 12,734.00 | RSI=36 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:04:37,455 [INFO]   RELIANCE: Rs 1,406.00 | RSI=55 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 10:04:37,847 [INFO]   HDFCBANK: Rs 804.20 | RSI=23 | Vol=8.0x | Squeeze=no | Trend=DOWN
+2026-03-19 10:04:37,848 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:04:38,469 [INFO]   BAJFIN_KOTAK: zscore=-0.47 | watching
+2026-03-19 10:04:39,266 [INFO]   ICICI_SBIN: zscore=-0.95 | watching
+2026-03-19 10:04:39,923 [INFO]   RELIANCE_WIPRO: zscore=+1.74 | watching
+2026-03-19 10:09:39,936 [INFO] 
+-- Cycle #18 | 10:09:39 | Rs 50,000.00 --
+2026-03-19 10:09:39,939 [INFO]   -- Intraday Scan --
+2026-03-19 10:09:40,385 [INFO]   TCS: Rs 2,397.80 | RSI=54 | Vol=1.4x | Squeeze=no | Trend=DOWN
+2026-03-19 10:09:40,906 [INFO]   MARUTI: Rs 12,752.00 | RSI=36 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:09:41,514 [INFO]   RELIANCE: Rs 1,407.90 | RSI=57 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:09:42,029 [INFO]   HDFCBANK: Rs 801.55 | RSI=23 | Vol=8.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:09:42,029 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:09:42,813 [INFO]   BAJFIN_KOTAK: zscore=-0.69 | watching
+2026-03-19 10:09:43,541 [INFO]   ICICI_SBIN: zscore=-0.90 | watching
+2026-03-19 10:09:44,260 [INFO]   RELIANCE_WIPRO: zscore=+1.82 | watching
+2026-03-19 10:14:44,266 [INFO] 
+-- Cycle #19 | 10:14:44 | Rs 50,000.00 --
+2026-03-19 10:14:44,272 [INFO]   -- Intraday Scan --
+2026-03-19 10:14:44,781 [INFO]   TCS: Rs 2,394.70 | RSI=53 | Vol=1.5x | Squeeze=no | Trend=DOWN
+2026-03-19 10:14:45,241 [INFO]   MARUTI: Rs 12,740.00 | RSI=36 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:14:45,866 [INFO]   RELIANCE: Rs 1,406.50 | RSI=56 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:14:46,292 [INFO]   HDFCBANK: Rs 800.10 | RSI=22 | Vol=8.5x | Squeeze=no | Trend=DOWN
+2026-03-19 10:14:46,293 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:14:46,928 [INFO]   BAJFIN_KOTAK: zscore=-0.70 | watching
+2026-03-19 10:14:47,769 [INFO]   ICICI_SBIN: zscore=-1.00 | watching
+2026-03-19 10:14:48,381 [INFO]   RELIANCE_WIPRO: zscore=+1.80 | watching
+2026-03-19 10:19:48,384 [INFO] 
+-- Cycle #20 | 10:19:48 | Rs 50,000.00 --
+2026-03-19 10:19:48,387 [INFO]   -- Intraday Scan --
+2026-03-19 10:19:48,827 [INFO]   TCS: Rs 2,395.00 | RSI=51 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:19:49,224 [INFO]   MARUTI: Rs 12,703.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:19:49,615 [INFO]   RELIANCE: Rs 1,406.60 | RSI=58 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:19:50,126 [INFO]   HDFCBANK: Rs 798.20 | RSI=23 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 10:19:50,127 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:19:50,772 [INFO]   BAJFIN_KOTAK: zscore=-0.65 | watching
+2026-03-19 10:19:51,543 [INFO]   ICICI_SBIN: zscore=-1.37 | watching
+2026-03-19 10:19:51,914 [INFO]   RELIANCE_WIPRO: zscore=+1.58 | watching
+2026-03-19 10:24:51,921 [INFO] 
+-- Cycle #21 | 10:24:51 | Rs 50,000.00 --
+2026-03-19 10:24:51,923 [INFO]   -- Intraday Scan --
+2026-03-19 10:24:52,380 [INFO]   TCS: Rs 2,397.10 | RSI=51 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 10:24:52,758 [INFO]   MARUTI: Rs 12,713.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:24:53,257 [INFO]   RELIANCE: Rs 1,410.20 | RSI=61 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 10:24:53,642 [INFO]   HDFCBANK: Rs 802.00 | RSI=26 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 10:24:53,643 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:24:54,276 [INFO]   BAJFIN_KOTAK: zscore=-0.86 | watching
+2026-03-19 10:24:54,896 [INFO]   ICICI_SBIN: zscore=-0.65 | watching
+2026-03-19 10:24:55,509 [INFO]   RELIANCE_WIPRO: zscore=+1.73 | watching
+2026-03-19 10:29:55,515 [INFO] 
+-- Cycle #22 | 10:29:55 | Rs 50,000.00 --
+2026-03-19 10:29:55,517 [INFO]   -- Intraday Scan --
+2026-03-19 10:29:56,055 [INFO]   TCS: Rs 2,396.70 | RSI=51 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 10:29:56,558 [INFO]   MARUTI: Rs 12,711.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:29:57,015 [INFO]   RELIANCE: Rs 1,408.40 | RSI=60 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 10:29:57,496 [INFO]   HDFCBANK: Rs 805.25 | RSI=29 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 10:29:57,497 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:29:58,256 [INFO]   BAJFIN_KOTAK: zscore=-0.74 | watching
+2026-03-19 10:29:59,161 [INFO]   ICICI_SBIN: zscore=-0.58 | watching
+2026-03-19 10:30:00,211 [INFO]   RELIANCE_WIPRO: zscore=+1.69 | watching
+2026-03-19 10:35:00,227 [INFO] 
+-- Cycle #23 | 10:35:00 | Rs 50,000.00 --
+2026-03-19 10:35:00,229 [INFO]   -- Intraday Scan --
+2026-03-19 10:35:00,694 [INFO]   TCS: Rs 2,390.20 | RSI=50 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 10:35:01,115 [INFO]   MARUTI: Rs 12,705.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:35:01,527 [INFO]   RELIANCE: Rs 1,410.90 | RSI=62 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 10:35:01,998 [INFO]   HDFCBANK: Rs 804.15 | RSI=28 | Vol=1.3x | Squeeze=no | Trend=DOWN
+2026-03-19 10:35:01,999 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:35:02,743 [INFO]   BAJFIN_KOTAK: zscore=-0.73 | watching
+2026-03-19 10:35:03,411 [INFO]   ICICI_SBIN: zscore=-0.77 | watching
+2026-03-19 10:35:04,082 [INFO]   RELIANCE_WIPRO: zscore=+1.79 | watching
+2026-03-19 10:40:04,085 [INFO] 
+-- Cycle #24 | 10:40:04 | Rs 50,000.00 --
+2026-03-19 10:40:04,087 [INFO]   -- Intraday Scan --
+2026-03-19 10:40:04,528 [INFO]   TCS: Rs 2,390.60 | RSI=50 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 10:40:04,917 [INFO]   MARUTI: Rs 12,706.00 | RSI=42 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:40:05,315 [INFO]   RELIANCE: Rs 1,415.50 | RSI=65 | Vol=0.5x | Squeeze=no | Trend=UP
+2026-03-19 10:40:05,716 [INFO]   HDFCBANK: Rs 805.15 | RSI=29 | Vol=1.4x | Squeeze=no | Trend=DOWN
+2026-03-19 10:40:05,717 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:40:06,368 [INFO]   BAJFIN_KOTAK: zscore=-0.79 | watching
+2026-03-19 10:40:07,140 [INFO]   ICICI_SBIN: zscore=-0.99 | watching
+2026-03-19 10:40:07,963 [INFO]   RELIANCE_WIPRO: zscore=+1.93 | watching
+2026-03-19 10:45:07,978 [INFO] 
+-- Cycle #25 | 10:45:07 | Rs 50,000.00 --
+2026-03-19 10:45:07,985 [INFO]   -- Intraday Scan --
+2026-03-19 10:45:08,414 [INFO]   TCS: Rs 2,390.00 | RSI=50 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 10:45:08,807 [INFO]   MARUTI: Rs 12,688.00 | RSI=41 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:45:09,185 [INFO]   RELIANCE: Rs 1,415.00 | RSI=64 | Vol=0.5x | Squeeze=no | Trend=UP
+2026-03-19 10:45:09,592 [INFO]   HDFCBANK: Rs 805.20 | RSI=29 | Vol=1.6x | Squeeze=no | Trend=DOWN
+2026-03-19 10:45:09,592 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:45:10,255 [INFO]   BAJFIN_KOTAK: zscore=-1.08 | watching
+2026-03-19 10:45:10,930 [INFO]   ICICI_SBIN: zscore=-0.97 | watching
+2026-03-19 10:45:11,627 [INFO]   RELIANCE_WIPRO: zscore=+1.97 | watching
+2026-03-19 10:50:11,642 [INFO] 
+-- Cycle #26 | 10:50:11 | Rs 50,000.00 --
+2026-03-19 10:50:11,644 [INFO]   -- Intraday Scan --
+2026-03-19 10:50:12,419 [INFO]   TCS: Rs 2,386.00 | RSI=49 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 10:50:12,839 [INFO]   MARUTI: Rs 12,677.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:50:13,247 [INFO]   RELIANCE: Rs 1,411.70 | RSI=62 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 10:50:13,702 [INFO]   HDFCBANK: Rs 805.20 | RSI=29 | Vol=1.8x | Squeeze=no | Trend=DOWN
+2026-03-19 10:50:13,703 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:50:14,413 [INFO]   BAJFIN_KOTAK: zscore=-1.25 | watching
+2026-03-19 10:50:15,073 [INFO]   ICICI_SBIN: zscore=-0.98 | watching
+2026-03-19 10:50:15,742 [INFO]   RELIANCE_WIPRO: zscore=+1.92 | watching
+2026-03-19 10:55:15,754 [INFO] 
+-- Cycle #27 | 10:55:15 | Rs 50,000.00 --
+2026-03-19 10:55:15,756 [INFO]   -- Intraday Scan --
+2026-03-19 10:55:16,486 [INFO]   TCS: Rs 2,384.90 | RSI=48 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 10:55:17,049 [INFO]   MARUTI: Rs 12,681.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 10:55:17,481 [INFO]   RELIANCE: Rs 1,410.20 | RSI=61 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 10:55:17,873 [INFO]   HDFCBANK: Rs 805.90 | RSI=30 | Vol=1.9x | Squeeze=no | Trend=DOWN
+2026-03-19 10:55:17,874 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 10:55:18,554 [INFO]   BAJFIN_KOTAK: zscore=-1.48 | watching
+2026-03-19 10:55:19,192 [INFO]   ICICI_SBIN: zscore=-0.64 | watching
+2026-03-19 10:55:19,841 [INFO]   RELIANCE_WIPRO: zscore=+1.79 | watching
+2026-03-19 11:00:19,851 [INFO] 
+-- Cycle #28 | 11:00:19 | Rs 50,000.00 --
+2026-03-19 11:00:19,852 [INFO]   -- Intraday Scan --
+2026-03-19 11:00:21,001 [INFO]   TCS: Rs 2,382.30 | RSI=48 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 11:00:21,645 [INFO]   MARUTI: Rs 12,678.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:00:22,250 [INFO]   RELIANCE: Rs 1,406.80 | RSI=59 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 11:00:22,901 [INFO]   HDFCBANK: Rs 806.10 | RSI=30 | Vol=2.1x | Squeeze=no | Trend=DOWN
+2026-03-19 11:00:22,901 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:00:23,948 [INFO]   BAJFIN_KOTAK: zscore=-1.24 | watching
+2026-03-19 11:00:24,974 [INFO]   ICICI_SBIN: zscore=-0.72 | watching
+2026-03-19 11:00:26,039 [INFO]   RELIANCE_WIPRO: zscore=+1.71 | watching
+2026-03-19 11:05:26,042 [INFO] 
+-- Cycle #29 | 11:05:26 | Rs 50,000.00 --
+2026-03-19 11:05:26,044 [INFO]   -- Intraday Scan --
+2026-03-19 11:05:26,906 [INFO]   TCS: Rs 2,383.00 | RSI=48 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 11:05:27,713 [INFO]   MARUTI: Rs 12,642.00 | RSI=39 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:05:28,483 [INFO]   RELIANCE: Rs 1,408.40 | RSI=60 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 11:05:29,133 [INFO]   HDFCBANK: Rs 804.45 | RSI=28 | Vol=2.4x | Squeeze=no | Trend=DOWN
+2026-03-19 11:05:29,133 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:05:30,256 [INFO]   BAJFIN_KOTAK: zscore=-1.46 | watching
+2026-03-19 11:05:31,341 [INFO]   ICICI_SBIN: zscore=-0.51 | watching
+2026-03-19 11:05:32,573 [INFO]   RELIANCE_WIPRO: zscore=+1.75 | watching
+2026-03-19 11:10:32,582 [INFO] 
+-- Cycle #30 | 11:10:32 | Rs 50,000.00 --
+2026-03-19 11:10:32,584 [INFO]   -- Intraday Scan --
+2026-03-19 11:10:33,336 [INFO]   TCS: Rs 2,382.10 | RSI=48 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 11:10:34,079 [INFO]   MARUTI: Rs 12,643.00 | RSI=39 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:10:34,727 [INFO]   RELIANCE: Rs 1,408.30 | RSI=60 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 11:10:35,425 [INFO]   HDFCBANK: Rs 804.75 | RSI=29 | Vol=2.5x | Squeeze=no | Trend=DOWN
+2026-03-19 11:10:35,425 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:10:36,631 [INFO]   BAJFIN_KOTAK: zscore=-1.70 | watching
+2026-03-19 11:10:37,710 [INFO]   ICICI_SBIN: zscore=-0.39 | watching
+2026-03-19 11:10:38,893 [INFO]   RELIANCE_WIPRO: zscore=+1.79 | watching
+2026-03-19 11:15:38,899 [INFO] 
+-- Cycle #31 | 11:15:38 | Rs 50,000.00 --
+2026-03-19 11:15:38,905 [INFO]   -- Intraday Scan --
+2026-03-19 11:15:39,842 [INFO]   TCS: Rs 2,380.80 | RSI=49 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 11:15:40,549 [INFO]   MARUTI: Rs 12,643.00 | RSI=39 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:15:41,219 [INFO]   RELIANCE: Rs 1,406.00 | RSI=63 | Vol=0.0x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:15:41,823 [INFO]   HDFCBANK: Rs 803.45 | RSI=27 | Vol=2.7x | Squeeze=no | Trend=DOWN
+2026-03-19 11:15:41,824 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:15:43,110 [INFO]   BAJFIN_KOTAK: zscore=-1.74 | watching
+2026-03-19 11:15:44,529 [INFO]   ICICI_SBIN: zscore=-0.22 | watching
+2026-03-19 11:15:45,109 [INFO]   RELIANCE_WIPRO: zscore=+1.56 | watching
+2026-03-19 11:20:45,124 [INFO] 
+-- Cycle #32 | 11:20:45 | Rs 50,000.00 --
+2026-03-19 11:20:45,126 [INFO]   -- Intraday Scan --
+2026-03-19 11:20:46,081 [INFO]   TCS: Rs 2,382.50 | RSI=49 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 11:20:47,728 [INFO]   MARUTI: Rs 12,654.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:20:48,352 [INFO]   RELIANCE: Rs 1,405.80 | RSI=63 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:20:49,015 [INFO]   HDFCBANK: Rs 801.30 | RSI=26 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 11:20:49,015 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:20:50,406 [INFO] 
+============================================================
+[PAPER] PAIRS ARB #1 | BAJFIN_KOTAK
+============================================================
+  Action   : ENTER_LONG_S1
+  Signal   : Zscore=-2.04 < -2.0 | BAJFINANCE underpriced vs KOTAKBANK | Long BAJFINANCE, Short KOTAKBANK
+  Zscore   : -2.041
+  BAJFINANCE: 14 shares @ Rs 841.15
+  KOTAKBANK: 33 shares @ Rs 368.10
+  Total Notional: Rs 23,923.40
+  Fees     : Rs 24.40
+============================================================
+2026-03-19 11:20:51,574 [INFO]   ICICI_SBIN: zscore=-0.19 | watching
+2026-03-19 11:20:52,818 [INFO]   RELIANCE_WIPRO: zscore=+1.52 | watching
+2026-03-19 11:25:52,833 [INFO] 
+-- Cycle #33 | 11:25:52 | Rs 50,000.00 --
+2026-03-19 11:25:52,839 [INFO]   -- Intraday Scan --
+2026-03-19 11:25:53,917 [INFO]   TCS: Rs 2,385.10 | RSI=50 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 11:25:54,767 [INFO]   MARUTI: Rs 12,658.00 | RSI=42 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:25:55,926 [INFO]   RELIANCE: Rs 1,407.00 | RSI=64 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:25:57,183 [INFO]   HDFCBANK: Rs 802.70 | RSI=27 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 11:25:57,198 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:25:58,668 [INFO]   BAJFIN_KOTAK: zscore=-1.92 | IN TRADE
+2026-03-19 11:25:59,950 [INFO]   ICICI_SBIN: zscore=-0.21 | watching
+2026-03-19 11:26:01,311 [INFO]   RELIANCE_WIPRO: zscore=+1.62 | watching
+2026-03-19 11:31:01,313 [INFO] 
+-- Cycle #34 | 11:31:01 | Rs 50,000.00 --
+2026-03-19 11:31:01,315 [INFO]   -- Intraday Scan --
+2026-03-19 11:31:02,933 [INFO]   TCS: Rs 2,379.30 | RSI=48 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 11:31:04,672 [INFO]   MARUTI: Rs 12,660.00 | RSI=42 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:31:11,048 [INFO]   RELIANCE: Rs 1,407.10 | RSI=64 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:31:12,890 [INFO]   HDFCBANK: Rs 804.50 | RSI=28 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 11:31:12,891 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:31:15,988 [INFO]   BAJFIN_KOTAK: zscore=-2.01 | IN TRADE
+2026-03-19 11:31:24,191 [INFO]   ICICI_SBIN: zscore=-0.24 | watching
+2026-03-19 11:31:32,345 [INFO]   RELIANCE_WIPRO: zscore=+1.68 | watching
+2026-03-19 11:36:32,354 [INFO] 
+-- Cycle #35 | 11:36:32 | Rs 50,000.00 --
+2026-03-19 11:36:32,356 [INFO]   -- Intraday Scan --
+2026-03-19 11:36:33,213 [INFO]   TCS: Rs 2,378.40 | RSI=48 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 11:36:33,910 [INFO]   MARUTI: Rs 12,654.00 | RSI=42 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:36:34,585 [INFO]   RELIANCE: Rs 1,407.40 | RSI=64 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:36:35,280 [INFO]   HDFCBANK: Rs 804.80 | RSI=28 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 11:36:35,281 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:36:36,360 [INFO]   BAJFIN_KOTAK: zscore=-1.92 | IN TRADE
+2026-03-19 11:36:37,454 [INFO]   ICICI_SBIN: zscore=-0.28 | watching
+2026-03-19 11:36:38,616 [INFO]   RELIANCE_WIPRO: zscore=+1.62 | watching
+2026-03-19 11:41:38,629 [INFO] 
+-- Cycle #36 | 11:41:38 | Rs 50,000.00 --
+2026-03-19 11:41:38,632 [INFO]   -- Intraday Scan --
+2026-03-19 11:41:39,365 [INFO]   TCS: Rs 2,377.40 | RSI=48 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 11:41:40,114 [INFO]   MARUTI: Rs 12,638.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:41:40,836 [INFO]   RELIANCE: Rs 1,403.00 | RSI=59 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:41:41,653 [INFO]   HDFCBANK: Rs 806.00 | RSI=29 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 11:41:41,653 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:41:42,984 [INFO]   BAJFIN_KOTAK: zscore=-1.95 | IN TRADE
+2026-03-19 11:41:44,232 [INFO]   ICICI_SBIN: zscore=-0.17 | watching
+2026-03-19 11:41:45,441 [INFO]   RELIANCE_WIPRO: zscore=+1.50 | watching
+2026-03-19 11:46:45,450 [INFO] 
+-- Cycle #37 | 11:46:45 | Rs 50,000.00 --
+2026-03-19 11:46:45,456 [INFO]   -- Intraday Scan --
+2026-03-19 11:46:46,185 [INFO]   TCS: Rs 2,378.40 | RSI=48 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 11:46:46,801 [INFO]   MARUTI: Rs 12,645.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:46:47,779 [INFO]   RELIANCE: Rs 1,402.50 | RSI=59 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:46:48,543 [INFO]   HDFCBANK: Rs 806.40 | RSI=30 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 11:46:48,543 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:46:50,168 [INFO]   BAJFIN_KOTAK: zscore=-1.72 | IN TRADE
+2026-03-19 11:46:51,761 [INFO]   ICICI_SBIN: zscore=-0.26 | watching
+2026-03-19 11:46:52,980 [INFO]   RELIANCE_WIPRO: zscore=+1.47 | watching
+2026-03-19 11:51:53,042 [INFO] 
+-- Cycle #38 | 11:51:53 | Rs 50,000.00 --
+2026-03-19 11:51:53,086 [INFO]   -- Intraday Scan --
+2026-03-19 11:51:53,934 [INFO]   TCS: Rs 2,377.50 | RSI=48 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 11:51:54,575 [INFO]   MARUTI: Rs 12,645.00 | RSI=41 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:51:55,337 [INFO]   RELIANCE: Rs 1,400.90 | RSI=57 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:51:56,066 [INFO]   HDFCBANK: Rs 808.80 | RSI=32 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 11:51:56,066 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:51:57,162 [INFO]   BAJFIN_KOTAK: zscore=-1.78 | IN TRADE
+2026-03-19 11:51:58,348 [INFO]   ICICI_SBIN: zscore=-0.31 | watching
+2026-03-19 11:51:59,495 [INFO]   RELIANCE_WIPRO: zscore=+1.42 | watching
+2026-03-19 11:56:59,524 [INFO] 
+-- Cycle #39 | 11:56:59 | Rs 50,000.00 --
+2026-03-19 11:56:59,529 [INFO]   -- Intraday Scan --
+2026-03-19 11:57:00,392 [INFO]   TCS: Rs 2,381.40 | RSI=49 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 11:57:01,511 [INFO]   MARUTI: Rs 12,634.00 | RSI=40 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:57:02,365 [INFO]   RELIANCE: Rs 1,399.90 | RSI=56 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 11:57:03,230 [INFO]   HDFCBANK: Rs 808.65 | RSI=31 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 11:57:03,230 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 11:57:04,463 [INFO]   BAJFIN_KOTAK: zscore=-1.91 | IN TRADE
+2026-03-19 11:57:05,721 [INFO]   ICICI_SBIN: zscore=-0.28 | watching
+2026-03-19 11:57:07,056 [INFO]   RELIANCE_WIPRO: zscore=+1.38 | watching
+2026-03-19 12:02:07,067 [INFO] 
+-- Cycle #40 | 12:02:07 | Rs 50,000.00 --
+2026-03-19 12:02:07,070 [INFO]   -- Intraday Scan --
+2026-03-19 12:02:07,878 [INFO]   TCS: Rs 2,379.90 | RSI=49 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 12:02:08,518 [INFO]   MARUTI: Rs 12,636.00 | RSI=40 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:02:09,310 [INFO]   RELIANCE: Rs 1,401.40 | RSI=58 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:02:09,949 [INFO]   HDFCBANK: Rs 809.15 | RSI=32 | Vol=1.1x | Squeeze=no | Trend=DOWN
+2026-03-19 12:02:09,949 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:02:11,071 [INFO]   BAJFIN_KOTAK: zscore=-2.05 | IN TRADE
+2026-03-19 12:02:12,235 [INFO]   ICICI_SBIN: zscore=-0.19 | watching
+2026-03-19 12:02:13,310 [INFO]   RELIANCE_WIPRO: zscore=+1.43 | watching
+2026-03-19 12:07:13,321 [INFO] 
+-- Cycle #41 | 12:07:13 | Rs 50,000.00 --
+2026-03-19 12:07:13,324 [INFO]   -- Intraday Scan --
+2026-03-19 12:07:14,014 [INFO]   TCS: Rs 2,379.60 | RSI=48 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 12:07:14,656 [INFO]   MARUTI: Rs 12,618.00 | RSI=40 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:07:15,341 [INFO]   RELIANCE: Rs 1,399.70 | RSI=56 | Vol=0.6x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:07:16,008 [INFO]   HDFCBANK: Rs 810.25 | RSI=33 | Vol=1.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:07:16,009 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:07:17,103 [INFO]   BAJFIN_KOTAK: zscore=-1.95 | IN TRADE
+2026-03-19 12:07:18,165 [INFO]   ICICI_SBIN: zscore=-0.29 | watching
+2026-03-19 12:07:19,190 [INFO]   RELIANCE_WIPRO: zscore=+1.33 | watching
+2026-03-19 12:12:19,203 [INFO] 
+-- Cycle #42 | 12:12:19 | Rs 50,000.00 --
+2026-03-19 12:12:19,206 [INFO]   -- Intraday Scan --
+2026-03-19 12:12:19,953 [INFO]   TCS: Rs 2,379.80 | RSI=49 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 12:12:20,675 [INFO]   MARUTI: Rs 12,609.00 | RSI=39 | Vol=0.6x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:12:21,299 [INFO]   RELIANCE: Rs 1,398.80 | RSI=55 | Vol=0.6x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:12:21,936 [INFO]   HDFCBANK: Rs 812.50 | RSI=34 | Vol=1.4x | Squeeze=no | Trend=DOWN
+2026-03-19 12:12:21,937 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:12:23,098 [INFO]   BAJFIN_KOTAK: zscore=-2.08 | IN TRADE
+2026-03-19 12:12:24,846 [INFO]   ICICI_SBIN: zscore=+0.02 | watching
+2026-03-19 12:12:26,064 [INFO]   RELIANCE_WIPRO: zscore=+1.32 | watching
+2026-03-19 12:17:26,074 [INFO] 
+-- Cycle #43 | 12:17:26 | Rs 50,000.00 --
+2026-03-19 12:17:26,078 [INFO]   -- Intraday Scan --
+2026-03-19 12:17:26,841 [INFO]   TCS: Rs 2,383.20 | RSI=46 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 12:17:27,621 [INFO]   MARUTI: Rs 12,611.00 | RSI=31 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 12:17:28,398 [INFO]   RELIANCE: Rs 1,399.70 | RSI=50 | Vol=0.0x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:17:29,097 [INFO]   HDFCBANK: Rs 813.70 | RSI=32 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 12:17:29,097 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:17:30,318 [INFO]   BAJFIN_KOTAK: zscore=-1.83 | IN TRADE
+2026-03-19 12:17:31,551 [INFO]   ICICI_SBIN: zscore=-0.16 | watching
+2026-03-19 12:17:32,184 [INFO]   RELIANCE_WIPRO: zscore=+1.29 | watching
+2026-03-19 12:22:32,195 [INFO] 
+-- Cycle #44 | 12:22:32 | Rs 50,000.00 --
+2026-03-19 12:22:32,198 [INFO]   -- Intraday Scan --
+2026-03-19 12:22:32,991 [INFO]   TCS: Rs 2,379.40 | RSI=46 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 12:22:33,781 [INFO]   MARUTI: Rs 12,622.00 | RSI=32 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 12:22:34,604 [INFO]   RELIANCE: Rs 1,399.10 | RSI=49 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:22:35,335 [INFO]   HDFCBANK: Rs 813.35 | RSI=32 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:22:35,335 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:22:36,536 [INFO]   BAJFIN_KOTAK: zscore=-1.91 | IN TRADE
+2026-03-19 12:22:37,730 [INFO]   ICICI_SBIN: zscore=-0.02 | watching
+2026-03-19 12:22:38,940 [INFO]   RELIANCE_WIPRO: zscore=+1.26 | watching
+2026-03-19 12:27:38,941 [INFO] 
+-- Cycle #45 | 12:27:38 | Rs 50,000.00 --
+2026-03-19 12:27:38,944 [INFO]   -- Intraday Scan --
+2026-03-19 12:27:39,646 [INFO]   TCS: Rs 2,378.90 | RSI=45 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:27:40,288 [INFO]   MARUTI: Rs 12,627.00 | RSI=32 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:27:41,037 [INFO]   RELIANCE: Rs 1,399.20 | RSI=49 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:27:41,701 [INFO]   HDFCBANK: Rs 814.05 | RSI=32 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:27:41,702 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:27:42,847 [INFO]   BAJFIN_KOTAK: zscore=-1.96 | IN TRADE
+2026-03-19 12:27:43,950 [INFO]   ICICI_SBIN: zscore=+0.02 | watching
+2026-03-19 12:27:45,304 [INFO]   RELIANCE_WIPRO: zscore=+1.35 | watching
+2026-03-19 12:32:45,315 [INFO] 
+-- Cycle #46 | 12:32:45 | Rs 50,000.00 --
+2026-03-19 12:32:45,318 [INFO]   -- Intraday Scan --
+2026-03-19 12:32:46,078 [INFO]   TCS: Rs 2,378.50 | RSI=45 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:32:46,812 [INFO]   MARUTI: Rs 12,635.00 | RSI=33 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 12:32:47,575 [INFO]   RELIANCE: Rs 1,398.90 | RSI=49 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:32:48,304 [INFO]   HDFCBANK: Rs 813.05 | RSI=32 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 12:32:48,304 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:32:49,486 [INFO]   BAJFIN_KOTAK: zscore=-1.82 | IN TRADE
+2026-03-19 12:32:50,655 [INFO]   ICICI_SBIN: zscore=+0.01 | watching
+2026-03-19 12:32:51,829 [INFO]   RELIANCE_WIPRO: zscore=+1.27 | watching
+2026-03-19 12:37:51,844 [INFO] 
+-- Cycle #47 | 12:37:51 | Rs 50,000.00 --
+2026-03-19 12:37:51,846 [INFO]   -- Intraday Scan --
+2026-03-19 12:37:52,662 [INFO]   TCS: Rs 2,378.60 | RSI=45 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:37:53,348 [INFO]   MARUTI: Rs 12,639.00 | RSI=33 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:37:54,026 [INFO]   RELIANCE: Rs 1,398.00 | RSI=48 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:37:54,784 [INFO]   HDFCBANK: Rs 813.25 | RSI=32 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 12:37:54,785 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:37:55,978 [INFO]   BAJFIN_KOTAK: zscore=-1.94 | IN TRADE
+2026-03-19 12:37:57,065 [INFO]   ICICI_SBIN: zscore=-0.32 | watching
+2026-03-19 12:37:58,137 [INFO]   RELIANCE_WIPRO: zscore=+1.31 | watching
+2026-03-19 12:42:58,153 [INFO] 
+-- Cycle #48 | 12:42:58 | Rs 50,000.00 --
+2026-03-19 12:42:58,155 [INFO]   -- Intraday Scan --
+2026-03-19 12:42:59,798 [INFO]   TCS: Rs 2,377.60 | RSI=45 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:43:01,349 [INFO]   MARUTI: Rs 12,634.00 | RSI=32 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:43:03,301 [INFO]   RELIANCE: Rs 1,398.20 | RSI=48 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:43:10,016 [INFO]   HDFCBANK: Rs 812.25 | RSI=31 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 12:43:10,017 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:43:12,998 [INFO]   BAJFIN_KOTAK: zscore=-2.03 | IN TRADE
+2026-03-19 12:43:21,112 [INFO]   ICICI_SBIN: zscore=-0.13 | watching
+2026-03-19 12:43:24,349 [INFO]   RELIANCE_WIPRO: zscore=+1.32 | watching
+2026-03-19 12:48:24,368 [INFO] 
+-- Cycle #49 | 12:48:24 | Rs 50,000.00 --
+2026-03-19 12:48:24,372 [INFO]   -- Intraday Scan --
+2026-03-19 12:48:25,290 [INFO]   TCS: Rs 2,377.20 | RSI=45 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 12:48:26,100 [INFO]   MARUTI: Rs 12,621.00 | RSI=31 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:48:26,984 [INFO]   RELIANCE: Rs 1,399.50 | RSI=49 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:48:27,877 [INFO]   HDFCBANK: Rs 812.80 | RSI=31 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 12:48:27,878 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:48:29,368 [INFO]   BAJFIN_KOTAK: zscore=-2.04 | IN TRADE
+2026-03-19 12:48:30,825 [INFO]   ICICI_SBIN: zscore=+0.10 | watching
+2026-03-19 12:48:32,199 [INFO]   RELIANCE_WIPRO: zscore=+1.34 | watching
+2026-03-19 12:53:32,211 [INFO] 
+-- Cycle #50 | 12:53:32 | Rs 50,000.00 --
+2026-03-19 12:53:32,213 [INFO]   -- Intraday Scan --
+2026-03-19 12:53:33,086 [INFO]   TCS: Rs 2,374.80 | RSI=44 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 12:53:33,900 [INFO]   MARUTI: Rs 12,608.00 | RSI=30 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 12:53:34,703 [INFO]   RELIANCE: Rs 1,399.60 | RSI=50 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:53:35,539 [INFO]   HDFCBANK: Rs 814.00 | RSI=32 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 12:53:35,540 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:53:36,911 [INFO]   BAJFIN_KOTAK: zscore=-1.97 | IN TRADE
+2026-03-19 12:53:38,294 [INFO]   ICICI_SBIN: zscore=+0.25 | watching
+2026-03-19 12:53:39,653 [INFO]   RELIANCE_WIPRO: zscore=+1.31 | watching
+2026-03-19 12:58:39,666 [INFO] 
+-- Cycle #51 | 12:58:39 | Rs 50,000.00 --
+2026-03-19 12:58:39,669 [INFO]   -- Intraday Scan --
+2026-03-19 12:58:40,744 [INFO]   TCS: Rs 2,375.60 | RSI=45 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 12:58:41,606 [INFO]   MARUTI: Rs 12,613.00 | RSI=31 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 12:58:42,465 [INFO]   RELIANCE: Rs 1,400.40 | RSI=50 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 12:58:43,310 [INFO]   HDFCBANK: Rs 813.75 | RSI=32 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 12:58:43,311 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 12:58:44,855 [INFO]   BAJFIN_KOTAK: zscore=-2.06 | IN TRADE
+2026-03-19 12:58:46,314 [INFO]   ICICI_SBIN: zscore=+0.03 | watching
+2026-03-19 12:58:47,802 [INFO]   RELIANCE_WIPRO: zscore=+1.36 | watching
+2026-03-19 13:03:47,817 [INFO] 
+-- Cycle #52 | 13:03:47 | Rs 50,000.00 --
+2026-03-19 13:03:47,819 [INFO]   -- Intraday Scan --
+2026-03-19 13:03:48,772 [INFO]   TCS: Rs 2,372.80 | RSI=44 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 13:03:49,600 [INFO]   MARUTI: Rs 12,628.00 | RSI=32 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 13:03:50,408 [INFO]   RELIANCE: Rs 1,400.20 | RSI=50 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:03:51,164 [INFO]   HDFCBANK: Rs 813.85 | RSI=32 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 13:03:51,165 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:03:52,827 [INFO]   [Pairs EXIT] BAJFIN_KOTAK | zscore=-2.03 | PnL: -Rs79.40
+2026-03-19 13:03:54,216 [INFO]   ICICI_SBIN: zscore=-0.05 | watching
+2026-03-19 13:03:55,571 [INFO]   RELIANCE_WIPRO: zscore=+1.36 | watching
+2026-03-19 13:08:55,580 [INFO] 
+-- Cycle #53 | 13:08:55 | Rs 50,000.00 --
+2026-03-19 13:08:55,586 [INFO]   -- Intraday Scan --
+2026-03-19 13:08:56,761 [INFO]   TCS: Rs 2,372.10 | RSI=44 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 13:08:57,532 [INFO]   MARUTI: Rs 12,611.00 | RSI=31 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 13:08:58,328 [INFO]   RELIANCE: Rs 1,397.90 | RSI=48 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:08:59,139 [INFO]   HDFCBANK: Rs 813.90 | RSI=32 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 13:08:59,140 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:09:00,880 [INFO] 
+============================================================
+[PAPER] PAIRS ARB #2 | BAJFIN_KOTAK
+============================================================
+  Action   : ENTER_LONG_S1
+  Signal   : Zscore=-2.06 < -2.0 | BAJFINANCE underpriced vs KOTAKBANK | Long BAJFINANCE, Short KOTAKBANK
+  Zscore   : -2.063
+  BAJFINANCE: 14 shares @ Rs 841.20
+  KOTAKBANK: 33 shares @ Rs 369.10
+  Total Notional: Rs 23,957.10
+  Fees     : Rs 24.44
+============================================================
+2026-03-19 13:09:02,050 [INFO]   ICICI_SBIN: zscore=+0.04 | watching
+2026-03-19 13:09:03,409 [INFO]   RELIANCE_WIPRO: zscore=+1.31 | watching
+2026-03-19 13:14:03,411 [INFO] 
+-- Cycle #54 | 13:14:03 | Rs 50,000.00 --
+2026-03-19 13:14:03,417 [INFO]   -- Intraday Scan --
+2026-03-19 13:14:04,611 [INFO]   TCS: Rs 2,371.20 | RSI=44 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 13:14:05,847 [INFO]   MARUTI: Rs 12,613.00 | RSI=31 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 13:14:07,454 [INFO]   RELIANCE: Rs 1,396.50 | RSI=46 | Vol=0.6x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:14:08,636 [INFO]   HDFCBANK: Rs 812.40 | RSI=31 | Vol=1.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:14:08,637 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:14:11,314 [INFO]   BAJFIN_KOTAK: zscore=-2.17 | IN TRADE
+2026-03-19 13:14:12,531 [INFO]   ICICI_SBIN: zscore=+0.11 | watching
+2026-03-19 13:14:13,955 [INFO]   RELIANCE_WIPRO: zscore=+1.29 | watching
+2026-03-19 13:19:13,974 [INFO] 
+-- Cycle #55 | 13:19:13 | Rs 50,000.00 --
+2026-03-19 13:19:13,978 [INFO]   -- Intraday Scan --
+2026-03-19 13:19:15,043 [INFO]   TCS: Rs 2,372.00 | RSI=43 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:19:16,627 [INFO]   MARUTI: Rs 12,611.00 | RSI=28 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 13:19:17,209 [INFO]   RELIANCE: Rs 1,396.90 | RSI=43 | Vol=0.0x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:19:18,074 [INFO]   HDFCBANK: Rs 812.00 | RSI=31 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:19:18,075 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:19:19,083 [INFO]   BAJFIN_KOTAK: zscore=-1.96 | IN TRADE
+2026-03-19 13:19:20,261 [INFO]   ICICI_SBIN: zscore=-0.10 | watching
+2026-03-19 13:19:20,762 [INFO]   RELIANCE_WIPRO: zscore=+1.18 | watching
+2026-03-19 13:24:20,777 [INFO] 
+-- Cycle #56 | 13:24:20 | Rs 50,000.00 --
+2026-03-19 13:24:20,779 [INFO]   -- Intraday Scan --
+2026-03-19 13:24:21,445 [INFO]   TCS: Rs 2,370.00 | RSI=42 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:24:21,971 [INFO]   MARUTI: Rs 12,613.00 | RSI=28 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:24:22,527 [INFO]   RELIANCE: Rs 1,394.90 | RSI=41 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:24:23,057 [INFO]   HDFCBANK: Rs 811.50 | RSI=30 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:24:23,057 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:24:23,977 [INFO]   BAJFIN_KOTAK: zscore=-1.96 | IN TRADE
+2026-03-19 13:24:24,758 [INFO]   ICICI_SBIN: zscore=-0.16 | watching
+2026-03-19 13:24:25,649 [INFO]   RELIANCE_WIPRO: zscore=+1.15 | watching
+2026-03-19 13:29:25,653 [INFO] 
+-- Cycle #57 | 13:29:25 | Rs 50,000.00 --
+2026-03-19 13:29:25,655 [INFO]   -- Intraday Scan --
+2026-03-19 13:29:26,121 [INFO]   TCS: Rs 2,369.90 | RSI=42 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:29:26,538 [INFO]   MARUTI: Rs 12,606.00 | RSI=27 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:29:27,029 [INFO]   RELIANCE: Rs 1,394.60 | RSI=41 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:29:27,491 [INFO]   HDFCBANK: Rs 809.15 | RSI=30 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 13:29:27,492 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:29:28,270 [INFO]   BAJFIN_KOTAK: zscore=-1.95 | IN TRADE
+2026-03-19 13:29:28,920 [INFO]   ICICI_SBIN: zscore=-0.00 | watching
+2026-03-19 13:29:29,616 [INFO]   RELIANCE_WIPRO: zscore=+1.12 | watching
+2026-03-19 13:34:29,622 [INFO] 
+-- Cycle #58 | 13:34:29 | Rs 50,000.00 --
+2026-03-19 13:34:29,625 [INFO]   -- Intraday Scan --
+2026-03-19 13:34:30,125 [INFO]   TCS: Rs 2,370.90 | RSI=42 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 13:34:30,683 [INFO]   MARUTI: Rs 12,624.00 | RSI=29 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:34:31,136 [INFO]   RELIANCE: Rs 1,395.50 | RSI=42 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:34:31,642 [INFO]   HDFCBANK: Rs 809.90 | RSI=30 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 13:34:31,643 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:34:32,445 [INFO]   BAJFIN_KOTAK: zscore=-1.95 | IN TRADE
+2026-03-19 13:34:33,238 [INFO]   ICICI_SBIN: zscore=-0.03 | watching
+2026-03-19 13:34:33,941 [INFO]   RELIANCE_WIPRO: zscore=+1.08 | watching
+2026-03-19 13:39:33,948 [INFO] 
+-- Cycle #59 | 13:39:33 | Rs 50,000.00 --
+2026-03-19 13:39:33,950 [INFO]   -- Intraday Scan --
+2026-03-19 13:39:34,450 [INFO]   TCS: Rs 2,369.20 | RSI=42 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 13:39:35,015 [INFO]   MARUTI: Rs 12,622.00 | RSI=28 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 13:39:35,505 [INFO]   RELIANCE: Rs 1,397.00 | RSI=43 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:39:35,975 [INFO]   HDFCBANK: Rs 810.30 | RSI=30 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 13:39:35,976 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:39:37,013 [INFO]   BAJFIN_KOTAK: zscore=-1.98 | IN TRADE
+2026-03-19 13:39:37,720 [INFO]   ICICI_SBIN: zscore=+0.09 | watching
+2026-03-19 13:39:38,343 [INFO]   RELIANCE_WIPRO: zscore=+1.13 | watching
+2026-03-19 13:44:38,350 [INFO] 
+-- Cycle #60 | 13:44:38 | Rs 50,000.00 --
+2026-03-19 13:44:38,352 [INFO]   -- Intraday Scan --
+2026-03-19 13:44:39,053 [INFO]   TCS: Rs 2,372.40 | RSI=43 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 13:44:39,587 [INFO]   MARUTI: Rs 12,629.00 | RSI=29 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:44:40,532 [INFO]   RELIANCE: Rs 1,396.00 | RSI=42 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:44:41,128 [INFO]   HDFCBANK: Rs 811.40 | RSI=30 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 13:44:41,129 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:44:41,946 [INFO]   BAJFIN_KOTAK: zscore=-2.07 | IN TRADE
+2026-03-19 13:44:42,863 [INFO]   ICICI_SBIN: zscore=+0.04 | watching
+2026-03-19 13:44:43,807 [INFO]   RELIANCE_WIPRO: zscore=+0.99 | watching
+2026-03-19 13:49:43,837 [INFO] 
+-- Cycle #61 | 13:49:43 | Rs 50,000.00 --
+2026-03-19 13:49:43,845 [INFO]   -- Intraday Scan --
+2026-03-19 13:49:44,526 [INFO]   TCS: Rs 2,373.80 | RSI=43 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 13:49:45,213 [INFO]   MARUTI: Rs 12,625.00 | RSI=29 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 13:49:45,835 [INFO]   RELIANCE: Rs 1,394.70 | RSI=41 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:49:46,437 [INFO]   HDFCBANK: Rs 809.75 | RSI=30 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 13:49:46,437 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:49:47,247 [INFO]   BAJFIN_KOTAK: zscore=-2.14 | IN TRADE
+2026-03-19 13:49:48,101 [INFO]   ICICI_SBIN: zscore=-0.07 | watching
+2026-03-19 13:49:48,903 [INFO]   RELIANCE_WIPRO: zscore=+0.94 | watching
+2026-03-19 13:54:48,919 [INFO] 
+-- Cycle #62 | 13:54:48 | Rs 50,000.00 --
+2026-03-19 13:54:48,923 [INFO]   -- Intraday Scan --
+2026-03-19 13:54:49,476 [INFO]   TCS: Rs 2,373.10 | RSI=43 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 13:54:50,037 [INFO]   MARUTI: Rs 12,644.00 | RSI=30 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 13:54:50,636 [INFO]   RELIANCE: Rs 1,397.40 | RSI=43 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:54:51,107 [INFO]   HDFCBANK: Rs 809.65 | RSI=30 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 13:54:51,108 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:54:51,906 [INFO]   BAJFIN_KOTAK: zscore=-2.11 | IN TRADE
+2026-03-19 13:54:52,769 [INFO]   ICICI_SBIN: zscore=-0.12 | watching
+2026-03-19 13:54:53,449 [INFO]   RELIANCE_WIPRO: zscore=+1.09 | watching
+2026-03-19 13:59:53,464 [INFO] 
+-- Cycle #63 | 13:59:53 | Rs 50,000.00 --
+2026-03-19 13:59:53,468 [INFO]   -- Intraday Scan --
+2026-03-19 13:59:54,196 [INFO]   TCS: Rs 2,368.50 | RSI=42 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 13:59:54,783 [INFO]   MARUTI: Rs 12,633.00 | RSI=30 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 13:59:55,447 [INFO]   RELIANCE: Rs 1,392.90 | RSI=39 | Vol=0.7x | Squeeze=YES | Trend=DOWN
+2026-03-19 13:59:55,983 [INFO]   HDFCBANK: Rs 808.75 | RSI=30 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 13:59:55,984 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 13:59:56,989 [INFO]   BAJFIN_KOTAK: zscore=-2.23 | IN TRADE
+2026-03-19 13:59:57,976 [INFO]   ICICI_SBIN: zscore=-0.15 | watching
+2026-03-19 13:59:59,379 [INFO]   RELIANCE_WIPRO: zscore=+0.93 | watching
+2026-03-19 14:04:59,418 [INFO] 
+-- Cycle #64 | 14:04:59 | Rs 50,000.00 --
+2026-03-19 14:04:59,423 [INFO]   -- Intraday Scan --
+2026-03-19 14:05:00,197 [INFO]   TCS: Rs 2,366.80 | RSI=42 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 14:05:00,836 [INFO]   MARUTI: Rs 12,626.00 | RSI=29 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 14:05:01,512 [INFO]   RELIANCE: Rs 1,390.50 | RSI=38 | Vol=0.8x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:05:02,108 [INFO]   HDFCBANK: Rs 807.55 | RSI=29 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 14:05:02,109 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:05:03,212 [INFO]   BAJFIN_KOTAK: zscore=-2.34 | IN TRADE
+2026-03-19 14:05:04,215 [INFO]   ICICI_SBIN: zscore=-0.48 | watching
+2026-03-19 14:05:05,171 [INFO]   RELIANCE_WIPRO: zscore=+0.88 | watching
+2026-03-19 14:10:05,173 [INFO] 
+-- Cycle #65 | 14:10:05 | Rs 50,000.00 --
+2026-03-19 14:10:05,176 [INFO]   -- Intraday Scan --
+2026-03-19 14:10:05,904 [INFO]   TCS: Rs 2,365.00 | RSI=41 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 14:10:06,611 [INFO]   MARUTI: Rs 12,613.00 | RSI=28 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 14:10:07,330 [INFO]   RELIANCE: Rs 1,390.20 | RSI=37 | Vol=0.9x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:10:08,031 [INFO]   HDFCBANK: Rs 806.40 | RSI=29 | Vol=1.2x | Squeeze=no | Trend=DOWN
+2026-03-19 14:10:08,032 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:10:09,032 [INFO]   BAJFIN_KOTAK: zscore=-2.38 | IN TRADE
+2026-03-19 14:10:10,007 [INFO]   ICICI_SBIN: zscore=-0.47 | watching
+2026-03-19 14:10:11,315 [INFO]   RELIANCE_WIPRO: zscore=+0.93 | watching
+2026-03-19 14:15:11,342 [INFO] 
+-- Cycle #66 | 14:15:11 | Rs 50,000.00 --
+2026-03-19 14:15:11,346 [INFO]   -- Intraday Scan --
+2026-03-19 14:15:11,857 [INFO]   TCS: Rs 2,365.50 | RSI=41 | Vol=1.0x | Squeeze=no | Trend=DOWN
+2026-03-19 14:15:12,315 [INFO]   MARUTI: Rs 12,623.00 | RSI=29 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 14:15:12,834 [INFO]   RELIANCE: Rs 1,391.20 | RSI=38 | Vol=1.0x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:15:13,417 [INFO]   HDFCBANK: Rs 807.75 | RSI=28 | Vol=0.0x | Squeeze=no | Trend=DOWN
+2026-03-19 14:15:13,417 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:15:14,204 [INFO]   BAJFIN_KOTAK: zscore=-2.35 | IN TRADE
+2026-03-19 14:15:14,983 [INFO]   ICICI_SBIN: zscore=-0.56 | watching
+2026-03-19 14:15:15,594 [INFO]   RELIANCE_WIPRO: zscore=+0.96 | watching
+2026-03-19 14:20:15,610 [INFO] 
+-- Cycle #67 | 14:20:15 | Rs 50,000.00 --
+2026-03-19 14:20:15,614 [INFO]   -- Intraday Scan --
+2026-03-19 14:20:16,223 [INFO]   TCS: Rs 2,367.50 | RSI=44 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 14:20:16,719 [INFO]   MARUTI: Rs 12,645.00 | RSI=31 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 14:20:17,226 [INFO]   RELIANCE: Rs 1,391.10 | RSI=40 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:20:17,854 [INFO]   HDFCBANK: Rs 806.75 | RSI=28 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 14:20:17,855 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:20:19,730 [INFO]   BAJFIN_KOTAK: zscore=-2.09 | IN TRADE
+2026-03-19 14:20:20,912 [INFO]   ICICI_SBIN: zscore=-1.20 | watching
+2026-03-19 14:20:21,795 [INFO]   RELIANCE_WIPRO: zscore=+0.88 | watching
+2026-03-19 14:25:21,797 [INFO] 
+-- Cycle #68 | 14:25:21 | Rs 50,000.00 --
+2026-03-19 14:25:21,800 [INFO]   -- Intraday Scan --
+2026-03-19 14:25:22,316 [INFO]   TCS: Rs 2,366.40 | RSI=44 | Vol=0.1x | Squeeze=no | Trend=DOWN
+2026-03-19 14:25:22,785 [INFO]   MARUTI: Rs 12,629.00 | RSI=29 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 14:25:23,281 [INFO]   RELIANCE: Rs 1,392.40 | RSI=41 | Vol=0.1x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:25:23,746 [INFO]   HDFCBANK: Rs 806.70 | RSI=28 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 14:25:23,747 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:25:24,495 [INFO]   BAJFIN_KOTAK: zscore=-2.23 | IN TRADE
+2026-03-19 14:25:25,232 [INFO]   ICICI_SBIN: zscore=-1.06 | watching
+2026-03-19 14:25:26,060 [INFO]   RELIANCE_WIPRO: zscore=+0.96 | watching
+2026-03-19 14:30:26,077 [INFO] 
+-- Cycle #69 | 14:30:26 | Rs 50,000.00 --
+2026-03-19 14:30:26,080 [INFO]   -- Intraday Scan --
+2026-03-19 14:30:26,607 [INFO]   TCS: Rs 2,363.80 | RSI=43 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 14:30:27,088 [INFO]   MARUTI: Rs 12,615.00 | RSI=28 | Vol=0.2x | Squeeze=no | Trend=DOWN
+2026-03-19 14:30:27,658 [INFO]   RELIANCE: Rs 1,390.00 | RSI=39 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:30:28,093 [INFO]   HDFCBANK: Rs 805.95 | RSI=28 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 14:30:28,094 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:30:28,876 [INFO]   BAJFIN_KOTAK: zscore=-2.19 | IN TRADE
+2026-03-19 14:30:29,689 [INFO]   ICICI_SBIN: zscore=-1.39 | watching
+2026-03-19 14:30:30,496 [INFO]   RELIANCE_WIPRO: zscore=+0.86 | watching
+2026-03-19 14:35:30,508 [INFO] 
+-- Cycle #70 | 14:35:30 | Rs 50,000.00 --
+2026-03-19 14:35:30,511 [INFO]   -- Intraday Scan --
+2026-03-19 14:35:31,171 [INFO]   TCS: Rs 2,365.00 | RSI=44 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 14:35:31,826 [INFO]   MARUTI: Rs 12,631.00 | RSI=30 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 14:35:32,313 [INFO]   RELIANCE: Rs 1,392.50 | RSI=42 | Vol=0.2x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:35:32,807 [INFO]   HDFCBANK: Rs 805.00 | RSI=27 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 14:35:32,808 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:35:33,666 [INFO]   BAJFIN_KOTAK: zscore=-2.20 | IN TRADE
+2026-03-19 14:35:34,482 [INFO]   ICICI_SBIN: zscore=-1.77 | watching
+2026-03-19 14:35:35,154 [INFO]   RELIANCE_WIPRO: zscore=+0.94 | watching
+2026-03-19 14:40:35,169 [INFO] 
+-- Cycle #71 | 14:40:35 | Rs 50,000.00 --
+2026-03-19 14:40:35,172 [INFO]   -- Intraday Scan --
+2026-03-19 14:40:35,873 [INFO]   TCS: Rs 2,363.50 | RSI=43 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 14:40:36,422 [INFO]   MARUTI: Rs 12,627.00 | RSI=29 | Vol=0.3x | Squeeze=no | Trend=DOWN
+2026-03-19 14:40:36,954 [INFO]   RELIANCE: Rs 1,392.90 | RSI=42 | Vol=0.3x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:40:37,522 [INFO]   HDFCBANK: Rs 804.40 | RSI=27 | Vol=0.5x | Squeeze=no | Trend=DOWN
+2026-03-19 14:40:37,523 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:40:38,939 [INFO]   BAJFIN_KOTAK: zscore=-2.30 | IN TRADE
+2026-03-19 14:40:39,773 [INFO]   ICICI_SBIN: zscore=-1.79 | watching
+2026-03-19 14:40:40,506 [INFO]   RELIANCE_WIPRO: zscore=+1.01 | watching
+2026-03-19 14:45:40,520 [INFO] 
+-- Cycle #72 | 14:45:40 | Rs 50,000.00 --
+2026-03-19 14:45:40,524 [INFO]   -- Intraday Scan --
+2026-03-19 14:45:41,126 [INFO]   TCS: Rs 2,367.90 | RSI=44 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 14:45:41,721 [INFO]   MARUTI: Rs 12,622.00 | RSI=29 | Vol=0.4x | Squeeze=no | Trend=DOWN
+2026-03-19 14:45:42,405 [INFO]   RELIANCE: Rs 1,392.40 | RSI=41 | Vol=0.4x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:45:42,974 [INFO]   HDFCBANK: Rs 804.65 | RSI=27 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 14:45:42,975 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:45:43,739 [INFO]   BAJFIN_KOTAK: zscore=-2.24 | IN TRADE
+2026-03-19 14:45:44,998 [INFO] 
+============================================================
+[PAPER] PAIRS ARB #3 | ICICI_SBIN
+============================================================
+  Action   : ENTER_LONG_S1
+  Signal   : Zscore=-2.30 < -2.0 | ICICIBANK underpriced vs SBIN | Long ICICIBANK, Short SBIN
+  Zscore   : -2.303
+  ICICIBANK: 9 shares @ Rs 1,256.10
+  SBIN: 11 shares @ Rs 1,053.00
+  Total Notional: Rs 22,887.90
+  Fees     : Rs 23.35
+============================================================
+2026-03-19 14:45:45,804 [INFO]   RELIANCE_WIPRO: zscore=+0.91 | watching
+2026-03-19 14:50:45,820 [INFO] 
+-- Cycle #73 | 14:50:45 | Rs 50,000.00 --
+2026-03-19 14:50:45,826 [INFO]   -- Intraday Scan --
+2026-03-19 14:50:46,498 [INFO]   TCS: Rs 2,363.10 | RSI=43 | Vol=0.7x | Squeeze=no | Trend=DOWN
+2026-03-19 14:50:47,084 [INFO]   MARUTI: Rs 12,577.00 | RSI=27 | Vol=0.6x | Squeeze=no | Trend=DOWN
+2026-03-19 14:50:47,551 [INFO]   RELIANCE: Rs 1,390.00 | RSI=39 | Vol=0.5x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:50:48,034 [INFO]   HDFCBANK: Rs 802.65 | RSI=27 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 14:50:48,034 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:50:49,118 [INFO]   [Pairs EXIT] BAJFIN_KOTAK | zscore=-2.28 | PnL: -Rs304.44
+2026-03-19 14:50:49,921 [INFO]   ICICI_SBIN: zscore=-2.39 | IN TRADE
+2026-03-19 14:50:50,747 [INFO]   RELIANCE_WIPRO: zscore=+0.88 | watching
+2026-03-19 14:55:50,760 [INFO] 
+-- Cycle #74 | 14:55:50 | Rs 50,000.00 --
+2026-03-19 14:55:50,766 [INFO]   -- Intraday Scan --
+2026-03-19 14:55:51,414 [INFO]   TCS: Rs 2,357.10 | RSI=42 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 14:55:51,909 [INFO]   MARUTI: Rs 12,545.00 | RSI=26 | Vol=0.8x | Squeeze=no | Trend=DOWN
+2026-03-19 14:55:52,454 [INFO]   RELIANCE: Rs 1,386.20 | RSI=36 | Vol=0.6x | Squeeze=YES | Trend=DOWN
+2026-03-19 14:55:52,991 [INFO]   HDFCBANK: Rs 801.05 | RSI=26 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 14:55:52,992 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 14:55:54,116 [INFO] 
+============================================================
+[PAPER] PAIRS ARB #4 | BAJFIN_KOTAK
+============================================================
+  Action   : ENTER_LONG_S1
+  Signal   : Zscore=-2.26 < -2.0 | BAJFINANCE underpriced vs KOTAKBANK | Long BAJFINANCE, Short KOTAKBANK
+  Zscore   : -2.262
+  BAJFINANCE: 15 shares @ Rs 830.65
+  KOTAKBANK: 33 shares @ Rs 368.45
+  Total Notional: Rs 24,618.60
+  Fees     : Rs 25.11
+============================================================
+2026-03-19 14:55:54,899 [INFO]   ICICI_SBIN: zscore=-2.07 | IN TRADE
+2026-03-19 14:55:55,635 [INFO]   RELIANCE_WIPRO: zscore=+0.81 | watching
+2026-03-19 15:00:55,649 [INFO] 
+-- Cycle #75 | 15:00:55 | Rs 50,000.00 --
+2026-03-19 15:00:55,652 [INFO]   -- Intraday Scan --
+2026-03-19 15:00:56,336 [INFO]   TCS: Rs 2,352.70 | RSI=41 | Vol=1.2x | Squeeze=no | Trend=DOWN
+2026-03-19 15:00:56,729 [INFO]   MARUTI: Rs 12,515.00 | RSI=25 | Vol=0.9x | Squeeze=no | Trend=DOWN
+2026-03-19 15:00:57,214 [INFO]   RELIANCE: Rs 1,381.50 | RSI=33 | Vol=0.8x | Squeeze=YES | Trend=DOWN
+2026-03-19 15:00:57,670 [INFO]   HDFCBANK: Rs 800.05 | RSI=26 | Vol=1.4x | Squeeze=no | Trend=DOWN
+2026-03-19 15:00:57,671 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 15:00:58,347 [INFO]   BAJFIN_KOTAK: zscore=-2.23 | IN TRADE
+2026-03-19 15:00:59,241 [INFO]   ICICI_SBIN: zscore=-2.01 | IN TRADE
+2026-03-19 15:01:00,594 [INFO]   RELIANCE_WIPRO: zscore=+0.53 | watching
+2026-03-19 15:06:00,597 [INFO] 
+-- Cycle #76 | 15:06:00 | Rs 50,000.00 --
+2026-03-19 15:06:00,599 [INFO]   -- Intraday Scan --
+2026-03-19 15:06:00,600 [INFO]   [Intraday] No new entries after 15:00
+2026-03-19 15:06:00,600 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 15:06:01,301 [INFO]   BAJFIN_KOTAK: zscore=-2.17 | IN TRADE
+2026-03-19 15:06:02,052 [INFO]   ICICI_SBIN: zscore=-2.47 | IN TRADE
+2026-03-19 15:06:02,821 [INFO]   RELIANCE_WIPRO: zscore=+0.55 | watching
+2026-03-19 15:11:02,835 [INFO] 
+-- Cycle #77 | 15:11:02 | Rs 50,000.00 --
+2026-03-19 15:11:02,838 [INFO]   -- Intraday Scan --
+2026-03-19 15:11:02,842 [INFO]   [Intraday] No new entries after 15:00
+2026-03-19 15:11:02,843 [INFO]   -- Pairs Arbitrage Scan --
+2026-03-19 15:11:03,733 [INFO]   BAJFIN_KOTAK: zscore=-1.89 | IN TRADE
+2026-03-19 15:11:04,582 [INFO]   ICICI_SBIN: zscore=-2.20 | IN TRADE
+2026-03-19 15:11:05,345 [INFO]   RELIANCE_WIPRO: zscore=+0.75 | watching
+2026-03-19 15:16:05,345 [INFO] 
+-- Cycle #78 | 15:16:05 | Rs 50,000.00 --
+2026-03-19 15:16:05,348 [INFO]   EOD: Squaring off all intraday positions
+2026-03-19 15:21:05,359 [INFO] 
+-- Cycle #79 | 15:21:05 | Rs 50,000.00 --
+2026-03-19 15:21:05,362 [INFO]   EOD: Squaring off all intraday positions
+2026-03-19 15:26:05,385 [INFO] 
+-- Cycle #80 | 15:26:05 | Rs 50,000.00 --
+2026-03-19 15:26:05,388 [INFO]   EOD: Squaring off all intraday positions
+2026-03-19 15:31:05,390 [INFO] 
+-- Cycle #81 | 15:31:05 | Rs 50,000.00 --
+2026-03-19 15:31:05,391 [INFO]   Market closed — waiting...
+2026-03-19 15:36:05,397 [INFO] 
+-- Cycle #82 | 15:36:05 | Rs 50,000.00 --
+2026-03-19 15:36:05,398 [INFO]   Market closed — waiting...
+2026-03-19 15:41:05,411 [INFO] 
+-- Cycle #83 | 15:41:05 | Rs 50,000.00 --
+2026-03-19 15:41:05,412 [INFO]   Market closed — waiting...
+2026-03-19 15:45:53,479 [INFO] Bot stopped.
