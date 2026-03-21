@@ -210,3 +210,25 @@ Feature Importances:
 -- Cycle #20 | 16:30:45 | TF:4h | Capital: $188.81 --
 2026-03-18 16:30:46,022 [INFO]   BTCUSD: $73,888.20 | Gann R1=73,985 S1=73,441 | RSI=53 | 4H:bullish | Vol:0.7x
 2026-03-18 16:30:46,689 [INFO]   ETHUSD: $2,311.75 | Gann R1=2,401 S1=2,305 | RSI=67 | 4H:bullish | Vol:0.7x
+2026-03-21 03:49:44,333 [INFO] Model loaded (trained: 2026-03-18 11:44:12.414463)
+2026-03-21 03:49:44,336 [INFO] ML model loaded.
+2026-03-21 03:49:44,336 [INFO] =================================================================
+2026-03-21 03:49:44,337 [INFO]   BB SQUEEZE BOT v2.0 — 4H Timeframe
+2026-03-21 03:49:44,337 [INFO]   Mode: PAPER | TF: 4h | RR: 2.5 | Risk: 0.75%/trade
+2026-03-21 03:49:44,337 [INFO]   Partial TP: ON @ 1.0R | Trailing SL: ON
+2026-03-21 03:49:44,337 [INFO] =================================================================
+2026-03-21 03:49:44,337 [INFO] Step 1/3: Fetching wallet...
+2026-03-21 03:49:44,783 [ERROR] GET /v2/wallet/balances 401: {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.4.33'}}, 'success': False}
+2026-03-21 03:49:44,784 [ERROR] Balance fetch failed: {'success': False, 'error': {'error': {'code': 'ip_not_whitelisted_for_api_key', 'context': {'client_ip': '223.188.4.33'}}, 'success': False}}
+2026-03-21 03:49:44,784 [WARNING] Wallet fetch failed — API unreachable or bad credentials
+2026-03-21 03:49:44,785 [WARNING] Using local capital: $0.00
+2026-03-21 03:49:44,785 [INFO] Step 2/3: Testing connection...
+2026-03-21 03:49:45,595 [INFO] Connection: OK — https://cdn-ind.testnet.deltaex.org
+2026-03-21 03:49:45,598 [INFO] Step 3/3: Starting main loop. Capital: $0.00
+2026-03-21 03:49:45,598 [WARNING] Wallet returned 0 — using fallback $188.81
+2026-03-21 03:49:45,598 [INFO] 
+-- Cycle #1 | 03:49:45 | TF:4h | Capital: $188.81 --
+2026-03-21 03:49:45,599 [INFO] [TRAIL] New month 2026-03 — trailing reset
+2026-03-21 03:49:47,181 [INFO]   BTCUSD: $70,609.20 | Gann R1=70,757 S1=70,225 | RSI=46 | 4H:bearish | Vol:0.3x
+2026-03-21 03:49:47,665 [INFO]   ETHUSD: $2,152.35 | Gann R1=2,209 S1=2,117 | RSI=42 | 4H:bearish | Vol:0.3x
+2026-03-21 03:49:56,454 [INFO] Bot stopped.
