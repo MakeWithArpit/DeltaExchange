@@ -55,14 +55,20 @@ from data.database          import Database, IndiaDatabase
 # ── LOGGING ──────────────────────────────────────────────────────
 os.makedirs("logs", exist_ok=True)
 os.makedirs("data", exist_ok=True)
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.FileHandler(LOG_PATH, encoding='utf-8'),
-        logging.StreamHandler(sys.stdout),
-    ]
-)
+# IST timestamp log mein dikhane ke liye custom formatter
+class ISTFormatter(logging.Formatter):
+    _IST = ZoneInfo("Asia/Kolkata")
+    def formatTime(self, record, datefmt=None):
+        from datetime import datetime
+        ist_time = datetime.fromtimestamp(record.created, tz=self._IST)
+        return ist_time.strftime(datefmt or "%Y-%m-%d %H:%M:%S") + " IST"
+
+_fmt = ISTFormatter("%(asctime)s [%(levelname)s] %(message)s")
+_fh  = logging.FileHandler(LOG_PATH, encoding="utf-8")
+_sh  = logging.StreamHandler(sys.stdout)
+_fh.setFormatter(_fmt)
+_sh.setFormatter(_fmt)
+logging.basicConfig(level=logging.INFO, handlers=[_fh, _sh])
 logger = logging.getLogger(__name__)
 
 
