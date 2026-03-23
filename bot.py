@@ -14,7 +14,11 @@ sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8')
 
 import time, logging, os, argparse, math
 from datetime import datetime
+from zoneinfo import ZoneInfo   # Python 3.9+
 import pandas as pd
+
+# IST timezone — India market ke liye
+IST = ZoneInfo("Asia/Kolkata")
 
 sys.path.insert(0, os.path.dirname(__file__))
 
@@ -617,13 +621,19 @@ class IndiaBot:
                         f"action={t['action']}, bars={bars_held})")
 
     # ── MARKET HOURS + HOLIDAY CHECK ────────────────────────────
+    @staticmethod
+    def _now_ist() -> datetime:
+        """Always return current time in IST — market checks ke liye."""
+        return datetime.now(IST).replace(tzinfo=None)
+
     def _is_nse_holiday(self, date: datetime = None) -> bool:
         """
         Returns True if given date is an NSE holiday or weekend.
         Checks NSE_HOLIDAYS list from settings.py.
         Update NSE_HOLIDAYS every January for the new year's calendar.
+        NOTE: date must be in IST — use _now_ist() always.
         """
-        date = date or datetime.now()
+        date = date or self._now_ist()
         if date.weekday() >= 5:          # Saturday=5, Sunday=6
             return True
         date_str = date.strftime("%Y-%m-%d")
@@ -632,14 +642,14 @@ class IndiaBot:
         return False
 
     def _is_market_open(self) -> bool:
-        now = datetime.now()
+        now = self._now_ist()            # FIX: IST time
         if self._is_nse_holiday(now):
             return False
         t = now.strftime("%H:%M")
         return MARKET_OPEN <= t <= MARKET_CLOSE
 
     def _can_enter_new(self) -> bool:
-        now = datetime.now()
+        now = self._now_ist()            # FIX: IST time
         if self._is_nse_holiday(now):
             return False
         t = now.strftime("%H:%M")
@@ -651,7 +661,7 @@ class IndiaBot:
         On holidays, if somehow trades are open (e.g., holiday declared
         after bot started), squareoff immediately when market closes.
         """
-        now = datetime.now()
+        now = self._now_ist()            # FIX: IST time
         t   = now.strftime("%H:%M")
         if self._is_nse_holiday(now):
             # Holiday mein agar koi open trade hai to immediately squareoff
@@ -974,7 +984,7 @@ class IndiaBot:
 
     def run_cycle(self):
         """Run one India trading cycle. Only executes if market is open."""
-        now = datetime.now()
+        now = self._now_ist()            # FIX: IST time
 
         # ── Holiday / weekend check ──────────────────────────────
         if self._is_nse_holiday(now):
